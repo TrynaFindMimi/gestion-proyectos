@@ -12,7 +12,6 @@
 
 ---
 
-> **Nota de visualización:** Los diagramas están escritos en **Mermaid** y se renderizan automáticamente en GitHub, GitLab y Notion. En editores de texto plano se ven como bloques de código. Si se requiere una imagen, se puede exportar desde [mermaid.live](https://mermaid.live) o usando la extensión Mermaid de VS Code.
 
 ---
 
