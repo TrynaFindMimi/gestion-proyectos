@@ -1,4 +1,4 @@
-# ANÁLISIS DE RIESGOS
+# GESTIÓN DE RIESGOS
 
 ## SITIO WEB Y SISTEMA DE GESTIÓN — ALBERGUE "PELUCHÍN"
 
@@ -27,7 +27,7 @@
 
 ---
 
-### 1. OBJETIVO Y ALCANCE DEL ANÁLISIS
+### 1. OBJETIVO Y ALCANCE DE LA GESTIÓN DE RIESGOS
 
 El presente documento identifica, evalúa y prioriza los riesgos que podrían afectar la ejecución del proyecto **"Sitio Web y Sistema de Gestión para el Albergue Peluchín"**, tomando como base los riesgos ya identificados en el Plan del Proyecto y Cronograma (`TDR_Plan_Proyecto_Cronograma_Peluchin.md`), ampliándolos con sus **planes de mitigación** (preventivos), **planes de contingencia** (reactivos) y el **impacto cuantificado sobre el cronograma** de entregables (E1–E11) y fases del proyecto.
 
@@ -88,8 +88,6 @@ Se utiliza un análisis **cualitativo** basado en la combinación de **probabili
 | **T01** | Incompatibilidad de plugins | Técnico | Media | Alto | **Alta (6)** | Retraso de 3–5 días en sprint afectado |
 | **T02** | Vulnerabilidades de seguridad | Técnico | Media | Alto | **Alta (6)** | 2–5 días; compromete datos de adoptantes/donantes |
 | **F01** | Retraso en pagos de cuotas | Financiero | Media | Alto | **Alta (6)** | Tensión contractual; puede condicionar entrega de código |
-
-> **Conclusión ejecutiva:** El mayor riesgo del proyecto no es técnico sino **operativo**: la disponibilidad oportuna de los recursos que dependen del albergue (materiales, hosting, aprobaciones). Se recomienda una **reserva de contingencia de 5 días hábiles** en el cronograma (ver sección 6) y el cumplimiento estricto del calendario de dependencias del albergue.
 
 ---
 
@@ -579,8 +577,6 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 | **Media (2)** | T12, O08, F05 → Baja (2) | T03, T06, T07, O04, O05, O09, F02, F04 → Media (4) | T01, T02, O01, O02, F01 → **Alta (6)** |
 | **Baja (1)** | T09, F07 → Baja (1) | T04, T05, T08, O06, O10, F06 → Baja (2) | T10, T11 → Media (3) |
 
-> **Nota:** No existen riesgos en el cuadrante Crítico (9). La concentración en la banda Alta (6) corresponde a riesgos operativos y técnicos mitigables con gestión proactiva de dependencias y pruebas en staging.
-
 ---
 
 ### 6. IMPACTO ACUMULADO EN EL CRONOGRAMA Y RESERVA DE CONTINGENCIA
@@ -690,11 +686,11 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 
 ### 12. CIERRE
 
-El presente análisis de riesgos forma parte de la documentación de planificación del proyecto **"Sitio Web y Sistema de Gestión — Albergue Peluchín"** y complementa la sección de riesgos del documento `TDR_Plan_Proyecto_Cronograma_Peluchin.md`.
+La presente gestión de riesgos forma parte de la documentación de planificación del proyecto **"Sitio Web y Sistema de Gestión — Albergue Peluchín"** y complementa la sección de riesgos del documento `TDR_Plan_Proyecto_Cronograma_Peluchin.md`.
 
 El registro se mantendrá actualizado durante toda la vigencia del contrato (8 semanas de desarrollo + 8 semanas de garantía) y será revisado por el equipo en cada retrospectiva de sprint, comunicando al albergue cualquier variación significativa de severidad o la materialización de un riesgo que afecte el cronograma.
 
-En señal de conformidad con el presente análisis de riesgos:
+En señal de conformidad con la presente gestión de riesgos:
 
 <br>
 
@@ -728,7 +724,7 @@ En señal de conformidad con el presente análisis de riesgos:
 
 ### ANEXO B — Cuadro de correspondencia con el Plan del Proyecto
 
-| Riesgo del Plan (`TDR_Plan_Proyecto_Cronograma`) | ID en este análisis |
+| Riesgo del Plan (`TDR_Plan_Proyecto_Cronograma`) | ID en esta gestión |
 |---------------------------------------------------|---------------------|
 | Incompatibilidad de plugins | T01 |
 | Vulnerabilidades de seguridad en WordPress o plugins | T02 |
@@ -752,4 +748,3 @@ En señal de conformidad con el presente análisis de riesgos:
 | Incremento del alcance no presupuestado | F04 |
 | Costo de plugins premium necesarios | F05 / T12 |
 
-> Los riesgos adicionales incorporados en este análisis (T10, T11, O09, O10, F06, F07) complementan la evaluación original a partir de las dependencias del cronograma, la Cláusula Sexta del contrato (régimen fiscal) y las condiciones operativas del equipo.
