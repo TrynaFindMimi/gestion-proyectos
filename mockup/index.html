@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio — Albergue Peluchín</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======================= NAVBAR ======================= -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="logo" href="index.html">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="14" cy="14" r="5" fill="#EA7A2A"/>
+          <circle cx="26" cy="14" r="5" fill="#EA7A2A"/>
+          <circle cx="9" cy="23" r="5" fill="#EA7A2A"/>
+          <circle cx="31" cy="23" r="5" fill="#EA7A2A"/>
+          <ellipse cx="20" cy="29" rx="9" ry="8" fill="#EA7A2A"/>
+        </svg>
+        Albergue <span>Peluchín</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav>
+        <ul class="nav__list">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="adopcion.html">Adopción</a></li>
+          <li><a href="donar.html">Dona</a></li>
+          <li><a href="voluntarios.html">Voluntarios</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a class="btn btn--primary btn--sm" href="adoptar.html">Quiero Adoptar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div>
+        <span class="eyebrow">Albergue en Llojeta, La Paz</span>
+        <h1>Dales una <em>segunda oportunidad</em></h1>
+        <p>
+          Somos un albergue sin fines de lucro que rescata, rehabilita y da en
+          adopción responsable a perros y gatos. Tu ayuda los hace visibles.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="adopcion.html">Quiero Adoptar</a>
+          <a class="btn btn--secondary" href="donar.html">Quiero Donar</a>
+          <a class="btn btn--outline" href="voluntarios.html">Ser Voluntario</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><strong>40+</strong><span>Animales rescatados</span></div>
+          <div class="stat"><strong>120</strong><span>Adopciones</span></div>
+          <div class="stat"><strong>15</strong><span>Donaciones este mes</span></div>
+          <div class="stat"><strong>25</strong><span>Voluntarios activos</span></div>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div>
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#FFF3D6"/><stop offset="1" stop-color="#FFE0B2"/>
+            </linearGradient></defs>
+            <path fill="url(#hg)" d="M122 46c-14-8-31 0-39 13-5-6-12-8-19-6-11 3-19 14-16 25l4 14-13 7c-6 4-9 12-5 18l19 24-4 27c-1 8 5 16 14 17h21c8 1 16-6 17-14l3-38 11 6 11-6 3 38c1 8 9 15 17 14h21c9-1 15-9 14-17l-4-27 19-24c4-6 1-14-5-18l-13-7 4-14c3-11-5-22-16-25-7-2-14 0-19 6-8-13-25-21-39-13z"/>
+          </svg>
+          <small>Foto del albergue — Llojeta, La Paz</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= ANIMALES DESTACADOS ======================= -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Animales destacados</span>
+      <h2 class="section-title">Buscando un hogar</h2>
+      <p class="section-sub">Conócelos y dales la oportunidad de ser parte de tu familia.</p>
+
+      <div class="grid grid--3 mt-2">
+        <article class="animal-card">
+          <div class="animal-card__media">
+            <svg viewBox="0 0 200 150" aria-hidden="true">
+              <defs><linearGradient id="a1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6B545"/><stop offset="1" stop-color="#EA7A2A"/></linearGradient></defs>
+              <rect width="200" height="150" fill="url(#a1)"/>
+              <path fill="#FFF6E8" transform="translate(30,-10) scale(0.72)" d="M122 46c-14-8-31 0-39 13-5-6-12-8-19-6-11 3-19 14-16 25l4 14-13 7c-6 4-9 12-5 18l19 24-4 27c-1 8 5 16 14 17h21c8 1 16-6 17-14l3-38 11 6 11-6 3 38c1 8 9 15 17 14h21c9-1 15-9 14-17l-4-27 19-24c4-6 1-14-5-18l-13-7 4-14c3-11-5-22-16-25-7-2-14 0-19 6-8-13-25-21-39-13z"/>
+            </svg>
+            <span class="badge badge--adopt animal-card__badge">En adopción</span>
+            <div class="animal-card__hover"><a class="btn btn--primary" href="ficha.html">Conóceme</a></div>
+          </div>
+          <div class="animal-card__body">
+            <h3>Rocky</h3>
+            <div class="animal-card__meta"><span>Perro</span><span>Adulto</span><span>Mediano</span><span>Macho</span></div>
+            <a class="btn btn--secondary btn--block btn--sm" href="ficha.html">Ver ficha</a>
+          </div>
+        </article>
+
+        <article class="animal-card">
+          <div class="animal-card__media">
+            <svg viewBox="0 0 200 150" aria-hidden="true">
+              <defs><linearGradient id="a2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3A6A0"/><stop offset="1" stop-color="#C65E1B"/></linearGradient></defs>
+              <rect width="200" height="150" fill="url(#a2)"/>
+              <path fill="#FFF6E8" transform="translate(30,-14) scale(0.72)" d="M122 28l-6 18c-2 0-3-1-4-3l-4-14c-3 2-8 5-14 8-8-11-24-14-36-6-14 9-20 25-14 40l4 10-12 8c-5 4-7 11-4 17l16 22-4 26c-1 8 6 16 14 17h21c9 1 17-6 17-15l3-36 11 6 11-6 3 36c0 9 8 16 17 15h21c8-1 15-9 14-17l-4-26 16-22c3-6 1-13-4-17l-12-8 4-10c6-15 0-31-14-40-12-8-28-5-36 6-6-3-11-6-14-8l-4 14c-1 2-2 3-4 3z"/>
+            </svg>
+            <span class="badge badge--adopt animal-card__badge">En adopción</span>
+            <div class="animal-card__hover"><a class="btn btn--primary" href="ficha.html">Conóceme</a></div>
+          </div>
+          <div class="animal-card__body">
+            <h3>Misha</h3>
+            <div class="animal-card__meta"><span>Gato</span><span>Cachorro</span><span>Pequeño</span><span>Hembra</span></div>
+            <a class="btn btn--secondary btn--block btn--sm" href="ficha.html">Ver ficha</a>
+          </div>
+        </article>
+
+        <article class="animal-card">
+          <div class="animal-card__media">
+            <svg viewBox="0 0 200 150" aria-hidden="true">
+              <defs><linearGradient id="a3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9FC4E8"/><stop offset="1" stop-color="#3B82C4"/></linearGradient></defs>
+              <rect width="200" height="150" fill="url(#a3)"/>
+              <path fill="#FFF6E8" transform="translate(30,-10) scale(0.72)" d="M122 46c-14-8-31 0-39 13-5-6-12-8-19-6-11 3-19 14-16 25l4 14-13 7c-6 4-9 12-5 18l19 24-4 27c-1 8 5 16 14 17h21c8 1 16-6 17-14l3-38 11 6 11-6 3 38c1 8 9 15 17 14h21c9-1 15-9 14-17l-4-27 19-24c4-6 1-14-5-18l-13-7 4-14c3-11-5-22-16-25-7-2-14 0-19 6-8-13-25-21-39-13z"/>
+            </svg>
+            <span class="badge badge--treat animal-card__badge">En tratamiento</span>
+            <div class="animal-card__hover"><a class="btn btn--primary" href="ficha.html">Conóceme</a></div>
+          </div>
+          <div class="animal-card__body">
+            <h3>Luna</h3>
+            <div class="animal-card__meta"><span>Perra</span><span>Adulto</span><span>Grande</span><span>Hembra</span></div>
+            <a class="btn btn--secondary btn--block btn--sm" href="ficha.html">Ver ficha</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="center mt-3">
+        <a class="btn btn--primary" href="adopcion.html">Conocer a todos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= MISIÓN RESUMIDA ======================= -->
+  <section class="section section--alt">
+    <div class="container flex">
+      <div style="flex:1">
+        <span class="eyebrow">Quiénes somos</span>
+        <h2 class="section-title">Rescatamos, rehabilítamos y buscamos hogar</h2>
+        <p class="section-sub">
+          Desde Llojeta trabajamos cada día para dar una segunda oportunidad a
+          los animales que nadie quiso. Lo hacemos con donaciones, voluntarios
+          y mucha esperanza.
+        </p>
+        <a class="btn btn--secondary mt-1" href="quienes-somos.html">Conócenos</a>
+      </div>
+      <div class="hero__visual" style="flex:1">
+        <div>
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8F1E4"/><stop offset="1" stop-color="#BFE3D9"/></linearGradient></defs>
+            <path fill="url(#mg)" d="M122 28l-6 18c-2 0-3-1-4-3l-4-14c-3 2-8 5-14 8-8-11-24-14-36-6-14 9-20 25-14 40l4 10-12 8c-5 4-7 11-4 17l16 22-4 26c-1 8 6 16 14 17h21c9 1 17-6 17-15l3-36 11 6 11-6 3 36c0 9 8 16 17 15h21c8-1 15-9 14-17l-4-26 16-22c3-6 1-13-4-17l-12-8 4-10c6-15 0-31-14-40-12-8-28-5-36 6-6-3-11-6-14-8l-4 14c-1 2-2 3-4 3z"/>
+          </svg>
+          <small>Foto del albergue</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= TESTIMONIOS ======================= -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Historias</span>
+      <h2 class="section-title">Adopciones que cambiaron vidas</h2>
+      <div class="grid grid--3 mt-2">
+        <div class="testimonial">
+          <p>Adoptamos a Rocky en marzo. Ahora no nos imaginamos la vida sin él. Gracias Peluchín.</p>
+          <cite>— Familia Quispe</cite>
+        </div>
+        <div class="testimonial">
+          <p>El proceso fue claro y con seguimiento. Sabemos que Misha está feliz con nosotros.</p>
+          <cite>— Carolina M.</cite>
+        </div>
+        <div class="testimonial">
+          <p>Donamos todos los meses. Ver la transparencia del albergue nos da confianza.</p>
+          <cite>— Voluntarios Barrio Llojeta</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= BLOG (preview) ======================= -->
+  <section class="section section--sand">
+    <div class="container">
+      <span class="eyebrow">Blog</span>
+      <h2 class="section-title">Noticias y campañas</h2>
+      <div class="grid grid--3 mt-2">
+        <article class="post-card">
+          <div class="post-card__media">
+            <svg viewBox="0 0 200 112"><defs><linearGradient id="b1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6B545"/><stop offset="1" stop-color="#EA7A2A"/></linearGradient></defs><rect width="200" height="112" fill="url(#b1)"/></svg>
+          </div>
+          <div class="post-card__body">
+            <span class="post-card__cat">Adopciones</span>
+            <h3>Campaña de adopción de septiembre</h3>
+            <p>Más de 15 animales esperan un hogar este mes...</p>
+            <div class="post-card__date">12 agosto 2026</div>
+          </div>
+        </article>
+        <article class="post-card">
+          <div class="post-card__media">
+            <svg viewBox="0 0 200 112"><defs><linearGradient id="b2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9FC4E8"/><stop offset="1" stop-color="#3B82C4"/></linearGradient></defs><rect width="200" height="112" fill="url(#b2)"/></svg>
+          </div>
+          <div class="post-card__body">
+            <span class="post-card__cat">Eventos</span>
+            <h3>Feria de adopción en la plaza</h3>
+            <p>Te esperamos este sábado con nuestros rescatados...</p>
+            <div class="post-card__date">05 agosto 2026</div>
+          </div>
+        </article>
+        <article class="post-card">
+          <div class="post-card__media">
+            <svg viewBox="0 0 200 112"><defs><linearGradient id="b3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BFE3D9"/><stop offset="1" stop-color="#2E9C86"/></linearGradient></defs><rect width="200" height="112" fill="url(#b3)"/></svg>
+          </div>
+          <div class="post-card__body">
+            <span class="post-card__cat">Consejos</span>
+            <h3>Cómo preparar tu hogar para un perro</h3>
+            <p>Guía práctica para una llegada tranquila...</p>
+            <div class="post-card__date">28 julio 2026</div>
+          </div>
+        </article>
+      </div>
+      <div class="center mt-2"><a class="btn btn--ghost" href="blog.html">Ver todas las noticias</a></div>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <h4>Albergue Peluchín</h4>
+        <p>Rescatando y transformando vidas desde 2015.</p>
+      </div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="adopcion.html">Adopción</a></li>
+          <li><a href="donar.html">Dona</a></li>
+          <li><a href="voluntarios.html">Voluntarios</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li>Llojeta, La Paz, Bolivia</li>
+          <li>+591 7 000 0000</li>
+          <li>alberguepeluchin@gmail.com</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Redes sociales</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        © 2026 Albergue Peluchín. Todos los derechos reservados. <a href="#">Privacidad</a> · <a href="#">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a class="wa-float" href="#" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.5.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5 0-1 .2-3.4-.7-2.9-1.1-4.7-3.9-4.9-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.5.6c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

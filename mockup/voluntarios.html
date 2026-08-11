@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voluntarios — Albergue Peluchín</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="logo" href="index.html">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="14" cy="14" r="5" fill="#EA7A2A"/><circle cx="26" cy="14" r="5" fill="#EA7A2A"/>
+          <circle cx="9" cy="23" r="5" fill="#EA7A2A"/><circle cx="31" cy="23" r="5" fill="#EA7A2A"/>
+          <ellipse cx="20" cy="29" rx="9" ry="8" fill="#EA7A2A"/>
+        </svg>
+        Albergue <span>Peluchín</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav>
+        <ul class="nav__list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="adopcion.html">Adopción</a></li>
+          <li><a href="donar.html">Dona</a></li>
+          <li><a href="voluntarios.html" aria-current="page">Voluntarios</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a class="btn btn--primary btn--sm" href="adoptar.html">Quiero Adoptar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <div>
+        <span class="eyebrow">Voluntariado</span>
+        <h1>Dona tu <em>tiempo</em></h1>
+        <p>
+          Hay muchas formas de ayudar: pasear perros, limpiar, apoyar al
+          veterinario, difundir o coordinar eventos. Elige lo que más te guste.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#formulario">Quiero ser voluntario</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div>
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8F1E4"/><stop offset="1" stop-color="#BFE3D9"/></linearGradient></defs>
+            <path fill="url(#hg)" d="M122 28l-6 18c-2 0-3-1-4-3l-4-14c-3 2-8 5-14 8-8-11-24-14-36-6-14 9-20 25-14 40l4 10-12 8c-5 4-7 11-4 17l16 22-4 26c-1 8 6 16 14 17h21c9 1 17-6 17-15l3-36 11 6 11-6 3 36c0 9 8 16 17 15h21c8-1 15-9 14-17l-4-26 16-22c3-6 1-13-4-17l-12-8 4-10c6-15 0-31-14-40-12-8-28-5-36 6-6-3-11-6-14-8l-4 14c-1 2-2 3-4 3z"/>
+          </svg>
+          <small>Foto de voluntarios</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="formulario">
+    <div class="container">
+      <div class="center mb-2">
+        <span class="eyebrow">Registro</span>
+        <h2 class="section-title">Formulario de voluntariado</h2>
+      </div>
+
+      <form class="form-card" novalidate>
+        <div class="form-grid">
+          <div class="field field--full"><label>Nombre completo <span class="req">*</span></label><input type="text" placeholder="Tu nombre" /></div>
+          <div class="field"><label>Correo electrónico <span class="req">*</span></label><input type="email" placeholder="tucorreo@ejemplo.com" /></div>
+          <div class="field"><label>Teléfono <span class="req">*</span></label><input type="tel" placeholder="+591 7 000 0000" /></div>
+          <div class="field"><label>Edad <span class="req">*</span></label><input type="number" min="16" placeholder="Ej. 24" /></div>
+          <div class="field field--full"><label>Ocupación</label><input type="text" placeholder="Estudiante, profesional, etc." /></div>
+        </div>
+
+        <h3 class="mt-2">Áreas de interés</h3>
+        <div class="chips mt-1">
+          <label class="chip"><input type="checkbox" checked /><span>Paseo de perros</span></label>
+          <label class="chip"><input type="checkbox" /><span>Limpieza del albergue</span></label>
+          <label class="chip"><input type="checkbox" /><span>Apoyo veterinario</span></label>
+          <label class="chip"><input type="checkbox" /><span>Difusión en redes</span></label>
+          <label class="chip"><input type="checkbox" /><span>Organización de eventos</span></label>
+          <label class="chip"><input type="checkbox" /><span>Transporte</span></label>
+          <label class="chip"><input type="checkbox" /><span>Captación de donaciones</span></label>
+        </div>
+
+        <h3 class="mt-2">Disponibilidad horaria</h3>
+        <div class="chips mt-1">
+          <label class="chip"><input type="checkbox" checked /><span>Mañana (8–12)</span></label>
+          <label class="chip"><input type="checkbox" /><span>Tarde (14–18)</span></label>
+          <label class="chip"><input type="checkbox" /><span>Fines de semana</span></label>
+        </div>
+
+        <div class="field mt-2"><label>Experiencia previa (opcional)</label><textarea rows="3" placeholder="Trabajo con animales, voluntariados anteriores..."></textarea></div>
+
+        <div class="form-actions">
+          <span></span>
+          <button type="submit" class="btn btn--primary">Enviar solicitud</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div><h4>Albergue Peluchín</h4><p>Rescatando y transformando vidas desde 2015.</p></div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="adopcion.html">Adopción</a></li>
+          <li><a href="donar.html">Dona</a></li>
+          <li><a href="voluntarios.html">Voluntarios</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul><li>Llojeta, La Paz, Bolivia</li><li>+591 7 000 0000</li><li>alberguepeluchin@gmail.com</li></ul>
+      </div>
+      <div>
+        <h4>Redes sociales</h4>
+        <ul><li><a href="#">Facebook</a></li><li><a href="#">Instagram</a></li><li><a href="#">WhatsApp</a></li></ul>
+      </div>
+    </div>
+    <div class="footer__bottom"><div class="container">© 2026 Albergue Peluchín. Todos los derechos reservados. <a href="#">Privacidad</a> · <a href="#">Términos</a></div></div>
+  </footer>
+
+  <a class="wa-float" href="#" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.5.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5 0-1 .2-3.4-.7-2.9-1.1-4.7-3.9-4.9-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.5.6c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
