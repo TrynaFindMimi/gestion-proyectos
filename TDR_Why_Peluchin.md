@@ -94,10 +94,10 @@ El albergue "Peluchín" lleva años salvando vidas, pero opera con herramientas 
 
 | Nombre | Aporte al "why" |
 |--------|-----------------|
-| **Mariana del Arroyo** | Gestión y comunicación: el puente entre el albergue y la solución |
-| **Nahomi Humerez** | Diseño centrado en las personas: una experiencia cálida que invita a ayudar |
-| **Santiago Acha** | Desarrollo técnico: la tecnología al servicio de la causa |
-| **Jorge Saenz** | Desarrollo y calidad: una plataforma confiable que no falla |
+| **Mariana del Arroyo** |  |
+| **Nahomi Humerez** | |
+| **Santiago Acha** | |
+| **Jorge Saenz** | |
 
 Un equipo que entiende que el fin último no es un producto, sino **más adopciones y menos animales en las calles**.
 
