@@ -27,6 +27,32 @@
 
 ---
 
+### ÍNDICE
+
+1. [Objetivo y alcance de la gestión de riesgos](#1-objetivo-y-alcance-de-la-gestión-de-riesgos)
+2. [Metodología de evaluación](#2-metodología-de-evaluación)
+   - 2.1. [Escala de probabilidad](#21-escala-de-probabilidad)
+   - 2.2. [Escala de impacto](#22-escala-de-impacto)
+   - 2.3. [Matriz de severidad (Probabilidad × Impacto)](#23-matriz-de-severidad-probabilidad-impacto)
+   - 2.4. [Niveles de severidad y respuesta](#24-niveles-de-severidad-y-respuesta)
+3. [Resumen ejecutivo — riesgos críticos y alto](#3-resumen-ejecutivo-riesgos-críticos-y-alto)
+4. [Registro de riesgos detallado](#4-registro-de-riesgos-detallado)
+   - 4.1. [Riesgos técnicos (T01–T12)](#41-riesgos-técnicos)
+   - 4.2. [Riesgos operativos (O01–O10)](#42-riesgos-operativos)
+   - 4.3. [Riesgos financieros y contractuales (F01–F07)](#43-riesgos-financieros-y-contractuales)
+5. [Priorización y ranking de riesgos](#5-priorización-y-ranking-de-riesgos)
+6. [Impacto acumulado en el cronograma y reserva de contingencia](#6-impacto-acumulado-en-el-cronograma-y-reserva-de-contingencia)
+7. [Estrategias de respuesta a los riesgos](#7-estrategias-de-respuesta-a-los-riesgos)
+8. [Proceso de monitoreo y control](#8-proceso-de-monitoreo-y-control)
+9. [Roles y responsabilidades en la gestión de riesgos](#9-roles-y-responsabilidades-en-la-gestión-de-riesgos)
+10. [Tolerancia al riesgo y criterios de aceptación](#10-tolerancia-al-riesgo-y-criterios-de-aceptación)
+11. [Oportunidades (riesgos positivos)](#11-oportunidades-riesgos-positivos)
+12. [Cierre](#12-cierre)
+13. [Anexo A — Mapa de riesgos por fase](#anexo-a-mapa-de-riesgos-por-fase)
+14. [Anexo B — Cuadro de correspondencia con el Plan del Proyecto](#anexo-b-cuadro-de-correspondencia-con-el-plan-del-proyecto)
+
+---
+
 ### 1. OBJETIVO Y ALCANCE DE LA GESTIÓN DE RIESGOS
 
 El presente documento identifica, evalúa y prioriza los riesgos que podrían afectar la ejecución del proyecto **"Sitio Web y Sistema de Gestión para el Albergue Peluchín"**, tomando como base los riesgos ya identificados en el Plan del Proyecto y Cronograma (`TDR_Plan_Proyecto_Cronograma_Peluchin.md`), ampliándolos con sus **planes de mitigación** (preventivos), **planes de contingencia** (reactivos) y el **impacto cuantificado sobre el cronograma** de entregables (E1–E11) y fases del proyecto.
