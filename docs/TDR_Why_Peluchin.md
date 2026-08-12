@@ -130,12 +130,3 @@ Un equipo que entiende que el fin último no es un producto, sino **más adopcio
 Este proyecto existe por una razón simple y poderosa: **los animales rescatados por Peluchín no merecen esperar en el anonimato**. Un sitio web no resuelve todo, pero es la puerta de entrada que transforma la buena voluntad de la comunidad en adopciones, donaciones y voluntariado real.
 
 **El "why" de Peluchín es la segunda oportunidad. Este proyecto es la herramienta para entregarla.**
-
-<br>
-
-| Por LA ONG | Por EL EQUIPO DESARROLLADOR |
-|------------|------------------------------|
-| **Albergue "Peluchín"** | **Mariana del Arroyo · Nahomi Humerez · Santiago Acha · Jorge Saenz** |
-| ________________________ | Firma: ________________ |
-| Nombre: ________________ | C.I.: ________________ |
-| Cargo: Representante Legal | |

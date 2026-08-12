@@ -716,26 +716,6 @@ La presente gestión de riesgos forma parte de la documentación de planificaci�
 
 El registro se mantendrá actualizado durante toda la vigencia del contrato (8 semanas de desarrollo + 8 semanas de garantía) y será revisado por el equipo en cada retrospectiva de sprint, comunicando al albergue cualquier variación significativa de severidad o la materialización de un riesgo que afecte el cronograma.
 
-En señal de conformidad con la presente gestión de riesgos:
-
-<br>
-
-| Por LA ONG | Por EL EQUIPO DESARROLLADOR |
-|------------|------------------------------|
-| **Albergue "Peluchín"** | |
-| | |
-| ________________________ | **Mariana del Arroyo** |
-| Nombre: ________________ | Firma: ________________ |
-| C.I.: ________________ | |
-| Cargo: Representante Legal | **Nahomi Humerez** |
-| | Firma: ________________ |
-| | |
-| | **Santiago Acha** |
-| | Firma: ________________ |
-| | |
-| | **Jorge Saenz** |
-| | Firma: ________________ |
-
 ---
 
 ### ANEXO A — Mapa de riesgos por fase

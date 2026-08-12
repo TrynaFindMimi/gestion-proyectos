@@ -35,7 +35,7 @@ flowchart TD
 
     ACC -->|Explorar catálogo| CAT[Ve la galería de animales]
     CAT --> FICHA[Ve ficha individual del animal]
-    FICHA --> POST[Postula a pre-adopción<br/>(3 pasos)]
+    FICHA --> POST["Postula a pre-adopción<br/>(3 pasos)"]
 
     ACC -->|Donar| DON[Reporta donación / QR Simple]
     ACC -->|Colaborar| VOL[Se registra como voluntario]
@@ -71,7 +71,7 @@ flowchart TD
 
     ACC -->|Dashboard| DASH[Revisa KPIs y resumen]
     ACC -->|Animales| ANI[CRUD de animales]
-    ACC -->|Solicitudes| SOL[Gestiona solicitudes de adopción<br/>(cambia estados y notas)]
+    ACC -->|Solicitudes| SOL["Gestiona solicitudes de adopción<br/>(cambia estados y notas)"]
     ACC -->|Donaciones| DON[Registra donaciones manuales]
     ACC -->|Voluntarios| VOL[Gestiona voluntarios]
     ACC -->|Contenido| CON[Blog / Eventos / Contenido estático]
@@ -116,24 +116,4 @@ Los bucles `while` complementan los diagramas del documento `TDR_Diagrama_UML_Pe
 - El **bucle del usuario** resume los casos de uso del actor **Visitante/Adoptante/Donante/Voluntario** (UC1–UC12) como un ciclo continuo de navegación.
 - El **bucle del administrador** resume los casos de uso del actor **Administrador** (UC13–UC23) como un ciclo continuo de gestión dentro del panel.
 
----
 
-En señal de conformidad con los presentes diagramas:
-
-<br>
-
-| Por LA ONG | Por EL EQUIPO DESARROLLADOR |
-|------------|------------------------------|
-| **Albergue "Peluchín"** | |
-| | |
-| ________________________ | **Mariana del Arroyo** |
-| Nombre: ________________ | Firma: ________________ |
-| C.I.: ________________ | |
-| Cargo: Representante Legal | **Nahomi Humerez** |
-| | Firma: ________________ |
-| | |
-| | **Santiago Acha** |
-| | Firma: ________________ |
-| | |
-| | **Jorge Saenz** |
-| | Firma: ________________ |

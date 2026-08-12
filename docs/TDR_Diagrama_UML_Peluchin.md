@@ -484,24 +484,4 @@ El presente modelo UML documenta los actores, datos, flujos y componentes del si
 | **VS Code** | Instalar la extensión "Markdown Preview Mermaid Support" y abrir la vista previa |
 | **Notion** | Usar el bloque `/code` con lenguaje `mermaid` o pegar la imagen exportada |
 
----
 
-En señal de conformidad con el presente modelo UML:
-
-<br>
-
-| Por LA ONG | Por EL EQUIPO DESARROLLADOR |
-|------------|------------------------------|
-| **Albergue "Peluchín"** | |
-| | |
-| ________________________ | **Mariana del Arroyo** |
-| Nombre: ________________ | Firma: ________________ |
-| C.I.: ________________ | |
-| Cargo: Representante Legal | **Nahomi Humerez** |
-| | Firma: ________________ |
-| | |
-| | **Santiago Acha** |
-| | Firma: ________________ |
-| | |
-| | **Jorge Saenz** |
-| | Firma: ________________ |

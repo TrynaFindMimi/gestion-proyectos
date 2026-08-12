@@ -259,30 +259,5 @@
 | Incremento del alcance no presupuestado | Media | Medio | Toda ampliación requiere adenda con nuevo presupuesto y cronograma |
 | Costo de plugins premium necesarios | Media | Bajo | Priorización de plugins gratuitos, solo se adquieren con aprobación de la ONG |
 
----
-
-### FIRMAS
-
-En señal de conformidad con el presente plan de proyecto y cronograma:
-
-<br>
-
-| Por LA ONG | Por EL EQUIPO DESARROLLADOR |
-|------------|------------------------------|
-| **Albergue "Peluchín"** | |
-| | |
-| ________________________ | **Mariana del Arroyo** |
-| Nombre: ________________ | Firma: ________________ |
-| C.I.: ________________ | |
-| Cargo: Representante Legal | **Nahomi Humerez** |
-| | Firma: ________________ |
-| | |
-| | **Santiago Acha** |
-| | Firma: ________________ |
-| | |
-| | **Jorge Saenz** |
-| | Firma: ________________ |
-
----
 
 
