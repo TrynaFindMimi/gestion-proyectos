@@ -154,7 +154,7 @@ flowchart LR
 
 ### 4. DIAGRAMA WAE — ARQUITECTURA DEL SISTEMA
 
-> Vista de arquitectura de la aplicación web completa: las `<<server page>>` de WordPress "construyen" (`<<build>>`) la `<<client page>>` que el navegador renderiza, y el resto del sistema (WordPress, plugins, base de datos y servicios externos) da soporte a esas páginas.
+> Vista de arquitectura de la aplicación web completa: las `<<server page>>` de WordPress "construyen" (`<<build>>`) la `<<client page>>` que el navegador renderiza, y el resto del sistema (WordPress, plugins, media y servicios externos) da soporte a esas páginas.
 
 ```mermaid
 flowchart LR
@@ -174,7 +174,6 @@ flowchart LR
     end
 
     subgraph DATOS["DATOS"]
-        DB[(Base de datos\nMySQL / MariaDB)]
         MED["Media\nFotos de animales y eventos"]
     end
 
@@ -192,7 +191,6 @@ flowchart LR
     PUB --> WP
     ADM --> WP
     WP --> PLUG
-    PLUG --> DB
     WP --> MED
     PLUG -->|<<form>> correos automáticos| SMTP
     PUB -->|<<link>> pago / donación| QR
@@ -213,7 +211,6 @@ flowchart LR
 | Panel de administración | `<<server page>>` | Páginas del servidor del back (escritura y control de la información) |
 | WordPress + Tema hijo | Componente servidor | Motor PHP que construye (`<<build>>`) las páginas del servidor |
 | Plugins | Componente servidor | Funcionalidad (CPT/ACF, formularios, SEO, seguridad, backups, SMTP) |
-| Base de datos MySQL | Componente servidor | Persistencia de contenido y datos de solicitudes/donaciones |
 | SMTP | `<<external service>>` | Envío de correos automáticos (confirmaciones y notificaciones) |
 | QR Simple / Banca | `<<external service>>` | Canal de donación (reporte y verificación) |
 | WhatsApp (wa.me) | `<<external service>>` | Contacto y compartir fichas |
