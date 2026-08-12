@@ -22,11 +22,11 @@ Cada diagrama WAE del documento está compuesto por **tres elementos**:
 2. **Procesos** (`<<process>>`): los flujos de negocio que agrupan páginas y formularios, y que dan sentido a su navegación.
 3. **Formularios** (`<<form>>`): los formularios que capturan y envían información dentro de cada proceso.
 
-Los diagramas definen **estereotipos** para representar estos elementos y las relaciones entre ellos:
+El documento está compuesto por los siguientes diagramas:
 
 1. **Mapa de navegación WAE del sitio público** (usuario): páginas, procesos y formularios.
 2. **Mapa de navegación WAE del panel de administración** (administrador): páginas, procesos y formularios.
-3. **Diagrama WAE de la arquitectura del sistema** (vista completa: páginas, procesos, formularios, datos y servicios externos).
+3. **Diagrama WAE de la arquitectura del sistema** (vista completa): páginas, procesos, formularios y servicios externos.
 
 **Notación WAE utilizada:**
 
@@ -269,7 +269,7 @@ flowchart LR
 
     subgraph PROC["PROCESOS (<<process>>)"]
         PR1["Renderizado\n(build PHP)"]
-        PR2["Validación y\npersistencia"]
+        PR2["Validación y\nregistro"]
         PR3["Notificaciones\npor correo"]
     end
 
@@ -283,8 +283,7 @@ flowchart LR
         PLUG["Plugins\nCPT UI + ACF · WPForms\nYoast SEO · Wordfence · SMTP"]
     end
 
-    subgraph DATOS["DATOS"]
-        DB["MySQL\nPersistencia"]
+    subgraph MEDIA["MEDIA / ARCHIVOS"]
         MED["Media\nFotos de animales y eventos"]
     end
 
@@ -306,15 +305,13 @@ flowchart LR
     PR1 -->|<<build>>| NAV
     PUB --> PR1
     ADM --> PR1
-    PR2 --> DB
+    PR2 --> WP
     PR2 --> PR3
     PR3 -->|correos automáticos| SMTP
     PUB --> WP
     ADM --> WP
     WP --> PLUG
     WP --> MED
-    DB --> MED
-    PLUG -->|<<form>> correos| SMTP
     PUB -->|<<link>> pago / donación| QR
     PUB -->|<<link>> chat / contacto| WA
     PLUG -.->|<<form>> solo con habilitación| RED
@@ -339,23 +336,22 @@ flowchart LR
 | Proceso (`<<process>>`) | Descripción |
 |-------------------------|-------------|
 | Renderizado (build PHP) | Proceso que construye (`<<build>>`) la `<<client page>>` a partir de la `<<server page>>` |
-| Validación y persistencia | Proceso que valida los `<<form>>` y persiste la información en la base de datos |
+| Validación y registro | Proceso que valida los `<<form>>` y registra la información en el sistema (WordPress) |
 | Notificaciones por correo | Proceso que envía correos automáticos (confirmaciones y notificaciones) vía SMTP |
 
 #### 4.3. Formularios de la arquitectura
 
 | Formulario (`<<form>>`) | Página que lo presenta | Proceso que lo procesa |
 |-------------------------|------------------------|------------------------|
-| Formularios públicos (pre-adopción, donación, voluntario, contacto) | Sitio público | Validación y persistencia |
-| Formularios del panel (CRUD, estados, reportes) | Panel de administración | Validación y persistencia |
-| Formularios de plugin (correos automáticos, pasarela condicional) | WordPress + Plugins | Notificaciones por correo |
+| Formularios públicos (pre-adopción, donación, voluntario, contacto) | Sitio público | Validación y registro |
+| Formularios del panel (CRUD, estados, reportes) | Panel de administración | Validación y registro |
 
 #### 4.4. Componentes de soporte del sistema
 
 | Componente | Estereotipo WAE | Rol en el sistema |
 |------------|-----------------|-------------------|
 | WordPress + Tema hijo | Componente servidor | Motor PHP que construye (`<<build>>`) las páginas del servidor |
-| Plugins | Componente servidor | Funcionalidad (CPT/ACF, formularios, SEO, seguridad, backups, SMTP) |
+| Plugins | Componente servidor | Funcionalidad (CPT/ACF, formularios, SEO, seguridad, correos SMTP) |
 | SMTP | `<<external service>>` | Envío de correos automáticos (confirmaciones y notificaciones) |
 | QR Simple / Banca | `<<external service>>` | Canal de donación (reporte y verificación) |
 | WhatsApp (wa.me) | `<<external service>>` | Contacto y compartir fichas |
@@ -373,12 +369,3 @@ flowchart LR
 | **Enlaces principales (`<<link>>`)** | Inicio → secciones; catálogo → ficha → pre-adopción | Dashboard → módulos de gestión |
 | **Formularios (`<<form>>`)** | Pre-adopción, donación, voluntariado, contacto | CRUD de animales, solicitudes, donaciones, blog, eventos, contenido |
 | **Terminación de la sesión** | El usuario cierra el navegador | El administrador cierra sesión o la sesión expira |
-
----
-
-### 6. RELACIÓN CON EL SITIO Y EL PANEL
-
-Los diagramas WAE modelan la navegación completa de la plataforma:
-
-- El **mapa del sitio público** materializa las **páginas**, los **procesos** y los **formularios** del front: cada ruta corresponde a una `<<server page>>`, cada proceso a un flujo de negocio del visitante y cada formulario a un punto de captura de información (pre-adopción, donación, voluntariado, contacto).
-- El **mapa del panel de administración** materializa las **páginas**, los **procesos** y los **formularios** del back: cada módulo corresponde a una `<<server page>>` del panel, cada proceso a un flujo de gestión y cada formulario a una operación de administración (CRUD de animales, solicitudes, donaciones, blog, eventos y contenido).
