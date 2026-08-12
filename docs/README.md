@@ -23,7 +23,7 @@
 | 5 | [TDR_Carta_Aceptacion_Peluchin.md](TDR_Carta_Aceptacion_Peluchin.md) | Carta de aceptación del proyecto |
 | 6 | [TDR_Gestion_Riesgos_Peluchin.md](TDR_Gestion_Riesgos_Peluchin.md) | Gestión de riesgos: registro detallado, mitigación, contingencia y monitoreo |
 | 7 | [TDR_Diagrama_UML_Peluchin.md](TDR_Diagrama_UML_Peluchin.md) | Modelo UML: casos de uso, clases, secuencia, actividad, estados y despliegue |
-| 8 | [TDR_Diagrama_WAE_Peluchin.md](TDR_Diagrama_WAE_Peluchin.md) | Diagramas "WAE" de interacción del usuario y del administrador |
+| 8 | [TDR_Diagrama_WAE_Peluchin.md](TDR_Diagrama_WAE_Peluchin.md) | Diagramas WAE (Web Application Extension): mapas de navegación del sitio público y del panel de administración |
 
 ---
 
