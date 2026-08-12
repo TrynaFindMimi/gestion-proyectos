@@ -1,4 +1,4 @@
-# DIAGRAMAS "WHILE" DE INTERACCIÓN
+# DIAGRAMAS "WAE" DE INTERACCIÓN
 
 ## SITIO WEB Y SISTEMA DE GESTIÓN — ALBERGUE "PELUCHÍN"
 
@@ -14,7 +14,7 @@
 
 ### 1. ALCANCE
 
-El presente documento modela mediante **diagramas de flujo tipo `while`** los bucles de interacción continua de los dos actores principales con la plataforma:
+El presente documento modela mediante **diagramas de flujo tipo `WAE`** los bucles de interacción continua de los dos actores principales con la plataforma:
 
 1. **Bucle de interacción del usuario (público)** con el sitio web.
 2. **Bucle de interacción del administrador** con el panel de administración.
@@ -23,13 +23,13 @@ Estos bucles representan el comportamiento repetitivo esperado mientras el actor
 
 ---
 
-### 2. DIAGRAMA WHILE — INTERACCIÓN DEL USUARIO CON EL SITIO PÚBLICO
+### 2. DIAGRAMA WAE — INTERACCIÓN DEL USUARIO CON EL SITIO PÚBLICO
 
 > **Condición del bucle:** *mientras el usuario siga navegando el sitio público.*
 
 ```mermaid
 flowchart TD
-    INICIO([Inicio: el usuario accede al sitio]) --> W{"while:<br/>¿El usuario sigue navegando?"}
+    INICIO([Inicio: el usuario accede al sitio]) --> W{"WAE:<br/>¿El usuario sigue navegando?"}
     W -->|Sí| NAV[Explora el sitio]
     NAV --> ACC{¿Qué acción realiza?}
 
@@ -60,13 +60,13 @@ flowchart TD
 
 ---
 
-### 3. DIAGRAMA WHILE — INTERACCIÓN DEL ADMINISTRADOR CON EL PANEL
+### 3. DIAGRAMA WAE — INTERACCIÓN DEL ADMINISTRADOR CON EL PANEL
 
 > **Condición del bucle:** *mientras la sesión de administración esté activa.*
 
 ```mermaid
 flowchart TD
-    INICIO([Inicio: el admin inicia sesión en /admin]) --> W{"while:<br/>¿La sesión está activa?"}
+    INICIO([Inicio: el admin inicia sesión en /admin]) --> W{"WAE:<br/>¿La sesión está activa?"}
     W -->|Sí| ACC{¿Qué tarea realiza?}
 
     ACC -->|Dashboard| DASH[Revisa KPIs y resumen]
@@ -101,7 +101,7 @@ flowchart TD
 
 | Aspecto | Usuario (sitio público) | Administrador (panel) |
 |---------|--------------------------|------------------------|
-| **Condición del `while`** | Usuario sigue navegando | Sesión de admin activa |
+| **Condición del `WAE`** | Usuario sigue navegando | Sesión de admin activa |
 | **Acceso** | Público, sin autenticación | Requiere inicio de sesión (`/admin`) |
 | **Acciones principales** | Ver, postular, donar, registrarse | Gestionar, modificar, aprobar, registrar |
 | **Naturaleza** | De lectura y captura de información | De escritura y control de la información |
@@ -111,7 +111,7 @@ flowchart TD
 
 ### 5. RELACIÓN CON EL MODELO UML
 
-Los bucles `while` complementan los diagramas del documento `TDR_Diagrama_UML_Peluchin.md`:
+Los bucles `WAE` complementan los diagramas del documento `TDR_Diagrama_UML_Peluchin.md`:
 
 - El **bucle del usuario** resume los casos de uso del actor **Visitante/Adoptante/Donante/Voluntario** (UC1–UC12) como un ciclo continuo de navegación.
 - El **bucle del administrador** resume los casos de uso del actor **Administrador** (UC13–UC23) como un ciclo continuo de gestión dentro del panel.
