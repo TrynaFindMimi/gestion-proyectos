@@ -29,6 +29,20 @@
 
 ### ÍNDICE
 
+**A. Problemas que pueden surgir en cada sprint**
+
+| Sprint | Entregables | Problemas que pueden surgir |
+|--------|-------------|-----------------------------|
+| **Sprint 1** (Semanas 1–2) | E1, E2, E3 | T01, T06, O01, O07, O08, O10 |
+| **Sprint 2** (Semanas 3–4) | E4 | T01, T07, O01, O04, O05, O09 |
+| **Sprint 3** (Semanas 5–6) | E5, E6 | T01, T06, T07, T12/F05, O01, O04, O05, O09 |
+| **Sprint 4** (Semanas 7–8) | E7, E8, E9, E10 | T03, T04, T05, T08, T10, O02, O09, F02, F03 |
+| **Garantía** (Semanas 9–16) | E11 | T02, T08, T10, T11, F01 |
+
+El detalle de cada riesgo (ID) se encuentra en la [sección 4 — Registro de riesgos detallado](#4-registro-de-riesgos-detallado) y el mapa por fases en el [Anexo A](#anexo-a-mapa-de-riesgos-por-fase).
+
+**B. Contenido general**
+
 1. [Objetivo y alcance de la gestión de riesgos](#1-objetivo-y-alcance-de-la-gestión-de-riesgos)
 2. [Metodología de evaluación](#2-metodología-de-evaluación)
    - 2.1. [Escala de probabilidad](#21-escala-de-probabilidad)
@@ -42,6 +56,7 @@
    - 4.3. [Riesgos financieros y contractuales (F01–F07)](#43-riesgos-financieros-y-contractuales)
 5. [Priorización y ranking de riesgos](#5-priorización-y-ranking-de-riesgos)
 6. [Impacto acumulado en el cronograma y reserva de contingencia](#6-impacto-acumulado-en-el-cronograma-y-reserva-de-contingencia)
+   - 6.3. [Ruta crítica y riesgos asociados por fase](#63-ruta-crítica-y-riesgos-asociados-por-fase)
 7. [Estrategias de respuesta a los riesgos](#7-estrategias-de-respuesta-a-los-riesgos)
 8. [Proceso de monitoreo y control](#8-proceso-de-monitoreo-y-control)
 9. [Roles y responsabilidades en la gestión de riesgos](#9-roles-y-responsabilidades-en-la-gestión-de-riesgos)
