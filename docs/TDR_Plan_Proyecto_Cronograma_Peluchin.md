@@ -198,8 +198,6 @@
 | Retrospectiva | Cada 2 semanas (fin de sprint) | Equipo de desarrollo | Google Meet / Zoom |
 | Comunicación rápida | Continua | Equipo de desarrollo + Albergue | WhatsApp (horario laboral) |
 
-> **Nota:** Las reuniones adicionales requieren notificación con mínimo **24 horas de antelación** y se realizarán únicamente en **horario laboral** (lunes a viernes, 9:00 a 18:00, hora de Bolivia). No se contestarán mensajes fuera del horario laboral.
-
 ---
 
 ### ENTREGABLES (E1–E11)

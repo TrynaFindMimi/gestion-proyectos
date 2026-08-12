@@ -151,8 +151,6 @@ Se sugiere adoptar una metodología ágil (Scrum o Kanban) con sprints de 2 sema
 
 ### 9. ENTREGABLES
 
-> **Nota:** Todos los entregables son incrementales. Cada entrega incluye una demo funcional para validación del albergue.
-
 | Código | Entregable | Fase | Semana | Criterio de aceptación |
 |--------|------------|------|--------|------------------------|
 | **E1** | Plan de trabajo detallado y cronograma confirmado | Planificación | 1 | Aprobación del plan por "Peluchín" |
