@@ -10,7 +10,7 @@
 
 **EQUIPO DESARROLLADOR:** Mariana del Arroyo · Nahomi Humerez · Santiago Acha · Jorge Saenz
 
-**VERSIÓN:** 1.0
+**VERSIÓN:** 2.0
 
 **FECHA:** [dd/mm/aaaa]
 
@@ -30,61 +30,72 @@
    - 2.2. [Usuarios y roles](#22-usuarios-y-roles)
    - 2.3. [Módulos funcionales](#23-módulos-funcionales)
    - 2.4. [Requerimientos no funcionales (resumen)](#24-requerimientos-no-funcionales-resumen)
-3. [Arquitectura del sistema](#3-arquitectura-del-sistema)
-   - 3.1. [Vista general (diagrama de arquitectura)](#31-vista-general-diagrama-de-arquitectura)
-   - 3.2. [Componentes y servicios externos](#32-componentes-y-servicios-externos)
-   - 3.3. [Mapa de navegación — sitio público](#33-mapa-de-navegación--sitio-público)
-   - 3.4. [Mapa de navegación — panel de administración](#34-mapa-de-navegación--panel-de-administración)
-4. [Stack tecnológico](#4-stack-tecnológico)
-   - 4.1. [Plataforma y lenguajes](#41-plataforma-y-lenguajes)
-   - 4.2. [Tema y constructor visual](#42-tema-y-constructor-visual)
-   - 4.3. [Plugins instalados](#43-plugins-instalados)
-   - 4.4. [Herramientas de desarrollo, despliegue y calidad](#44-herramientas-de-desarrollo-despliegue-y-calidad)
-5. [Modelo de datos](#5-modelo-de-datos)
-   - 5.1. [Entidades principales](#51-entidades-principales)
-   - 5.2. [Diagrama de clases UML](#52-diagrama-de-clases-uml)
-   - 5.3. [Tipos de contenido personalizados (CPT) y campos ACF](#53-tipos-de-contenido-personalizados-cpt-y-campos-acf)
-   - 5.4. [Estados de las entidades](#54-estados-de-las-entidades)
-6. [Descripción detallada de módulos y flujos](#6-descripción-detallada-de-módulos-y-flujos)
-   - 6.1. [Sitio público](#61-sitio-público)
-     - 6.1.1. [Landing y navegación](#611-landing-y-navegación)
-     - 6.1.2. [Catálogo y ficha de animales](#612-catálogo-y-ficha-de-animales)
-     - 6.1.3. [Formulario de pre-adopción](#613-formulario-de-pre-adopción)
-     - 6.1.4. [Donaciones y reporte de donación](#614-donaciones-y-reporte-de-donación)
-     - 6.1.5. [Registro de voluntarios](#615-registro-de-voluntarios)
-     - 6.1.6. [Blog, eventos, contacto, FAQ](#616-blog-eventos-contacto-faq)
-   - 6.2. [Panel de administración](#62-panel-de-administración)
-     - 6.2.1. [Dashboard de KPIs](#621-dashboard-de-kpis)
-     - 6.2.2. [CRUD de animales](#622-crud-de-animales)
-     - 6.2.3. [Gestión de solicitudes de adopción](#623-gestión-de-solicitudes-de-adopción)
-     - 6.2.4. [Registro de donaciones](#624-registro-de-donaciones)
-     - 6.2.5. [Gestión de voluntarios](#625-gestión-de-voluntarios)
-     - 6.2.6. [Blog, eventos y contenido estático](#626-blog-eventos-y-contenido-estático)
-     - 6.2.7. [Reportes exportables](#627-reportes-exportables)
-   - 6.3. [Notificaciones automáticas por correo](#63-notificaciones-automáticas-por-correo)
-7. [Seguridad](#7-seguridad)
-   - 7.1. [Autenticación y roles](#71-autenticación-y-roles)
-   - 7.2. [SSL/TLS](#72-ssltls)
-   - 7.3. [Protección OWASP Top 10](#73-protección-owasp-top-10)
-   - 7.4. [Backups y recuperación](#74-backups-y-recuperación)
-8. [Despliegue](#8-despliegue)
-   - 8.1. [Entornos (local, staging, producción)](#81-entornos-local-staging-producción)
-   - 8.2. [Requisitos de servidor](#82-requisitos-de-servidor)
-   - 8.3. [Procedimiento de despliegue y migración](#83-procedimiento-de-despliegue-y-migración)
-   - 8.4. [Configuración de DNS y SSL](#84-configuración-de-dns-y-ssl)
-9. [Pruebas y control de calidad](#9-pruebas-y-control-de-calidad)
-   - 9.1. [Pruebas funcionales](#91-pruebas-funcionales)
-   - 9.2. [Pruebas de rendimiento](#92-pruebas-de-rendimiento)
-   - 9.3. [Pruebas de seguridad](#93-pruebas-de-seguridad)
-   - 9.4. [Pruebas de responsividad](#94-pruebas-de-responsividad)
-10. [Mantenimiento y soporte](#10-mantenimiento-y-soporte)
-    - 10.1. [Actualizaciones](#101-actualizaciones)
-    - 10.2. [Procedimientos de operación](#102-procedimientos-de-operación)
-    - 10.3. [Monitoreo](#103-monitoreo)
-    - 10.4. [Solución de problemas comunes (FAQ técnica)](#104-solución-de-problemas-comunes-faq-técnica)
-11. [Riesgos técnicos y contingencias](#11-riesgos-técnicos-y-contingencias)
-12. [Glosario](#12-glosario)
-13. [Anexos](#13-anexos)
+3. [Metodología de desarrollo — Scrum + Kanban](#3-metodología-de-desarrollo--scrum--kanban)
+   - 3.1. [Enfoque híbrido (ScrumBan)](#31-enfoque-híbrido-scrumban)
+   - 3.2. [Roles y responsabilidades](#32-roles-y-responsabilidades)
+   - 3.3. [Ciclo de sprint (Scrum)](#33-ciclo-de-sprint-scrum)
+   - 3.4. [Ceremonias](#34-ceremonias)
+   - 3.5. [Artefactos](#35-artefactos)
+   - 3.6. [Tablero Kanban y flujo de trabajo](#36-tablero-kanban-y-flujo-de-trabajo)
+   - 3.7. [Límites de trabajo en curso (WIP)](#37-límites-de-trabajo-en-curso-wip)
+   - 3.8. [Definición de hecho (Definition of Done — DoD)](#38-definición-de-hecho-definition-of-done--dod)
+   - 3.9. [Mapeo con el cronograma del proyecto](#39-mapeo-con-el-cronograma-del-proyecto)
+   - 3.10. [Herramientas de gestión](#310-herramientas-de-gestión)
+4. [Arquitectura del sistema](#4-arquitectura-del-sistema)
+   - 4.1. [Vista general (diagrama de arquitectura)](#41-vista-general-diagrama-de-arquitectura)
+   - 4.2. [Componentes y servicios externos](#42-componentes-y-servicios-externos)
+   - 4.3. [Mapa de navegación — sitio público](#43-mapa-de-navegación--sitio-público)
+   - 4.4. [Mapa de navegación — panel de administración](#44-mapa-de-navegación--panel-de-administración)
+5. [Stack tecnológico](#5-stack-tecnológico)
+   - 5.1. [Plataforma y lenguajes](#51-plataforma-y-lenguajes)
+   - 5.2. [Tema y constructor visual](#52-tema-y-constructor-visual)
+   - 5.3. [Plugins instalados](#53-plugins-instalados)
+   - 5.4. [Herramientas de desarrollo, despliegue y calidad](#54-herramientas-de-desarrollo-despliegue-y-calidad)
+6. [Modelo de datos](#6-modelo-de-datos)
+   - 6.1. [Entidades principales](#61-entidades-principales)
+   - 6.2. [Diagrama de clases UML](#62-diagrama-de-clases-uml)
+   - 6.3. [Tipos de contenido personalizados (CPT) y campos ACF](#63-tipos-de-contenido-personalizados-cpt-y-campos-acf)
+   - 6.4. [Estados de las entidades](#64-estados-de-las-entidades)
+7. [Descripción detallada de módulos y flujos](#7-descripción-detallada-de-módulos-y-flujos)
+   - 7.1. [Sitio público](#71-sitio-público)
+     - 7.1.1. [Landing y navegación](#711-landing-y-navegación)
+     - 7.1.2. [Catálogo y ficha de animales](#712-catálogo-y-ficha-de-animales)
+     - 7.1.3. [Formulario de pre-adopción](#713-formulario-de-pre-adopción)
+     - 7.1.4. [Donaciones y reporte de donación](#714-donaciones-y-reporte-de-donación)
+     - 7.1.5. [Registro de voluntarios](#715-registro-de-voluntarios)
+     - 7.1.6. [Blog, eventos, contacto, FAQ](#716-blog-eventos-contacto-faq)
+   - 7.2. [Panel de administración](#72-panel-de-administración)
+     - 7.2.1. [Dashboard de KPIs](#721-dashboard-de-kpis)
+     - 7.2.2. [CRUD de animales](#722-crud-de-animales)
+     - 7.2.3. [Gestión de solicitudes de adopción](#723-gestión-de-solicitudes-de-adopción)
+     - 7.2.4. [Registro de donaciones](#724-registro-de-donaciones)
+     - 7.2.5. [Gestión de voluntarios](#725-gestión-de-voluntarios)
+     - 7.2.6. [Blog, eventos y contenido estático](#726-blog-eventos-y-contenido-estático)
+     - 7.2.7. [Reportes exportables](#727-reportes-exportables)
+   - 7.3. [Notificaciones automáticas por correo](#73-notificaciones-automáticas-por-correo)
+8. [Seguridad](#8-seguridad)
+   - 8.1. [Autenticación y roles](#81-autenticación-y-roles)
+   - 8.2. [SSL/TLS](#82-ssltls)
+   - 8.3. [Protección OWASP Top 10](#83-protección-owasp-top-10)
+   - 8.4. [Backups y recuperación](#84-backups-y-recuperación)
+9. [Despliegue](#9-despliegue)
+   - 9.1. [Entornos (local, staging, producción)](#91-entornos-local-staging-producción)
+   - 9.2. [Requisitos de servidor](#92-requisitos-de-servidor)
+   - 9.3. [Procedimiento de despliegue y migración](#93-procedimiento-de-despliegue-y-migración)
+   - 9.4. [Configuración de DNS y SSL](#94-configuración-de-dns-y-ssl)
+10. [Pruebas y control de calidad](#10-pruebas-y-control-de-calidad)
+    - 10.1. [Pruebas funcionales](#101-pruebas-funcionales)
+    - 10.2. [Pruebas de rendimiento](#102-pruebas-de-rendimiento)
+    - 10.3. [Pruebas de seguridad](#103-pruebas-de-seguridad)
+    - 10.4. [Pruebas de responsividad](#104-pruebas-de-responsividad)
+11. [Mantenimiento y soporte](#11-mantenimiento-y-soporte)
+    - 11.1. [Actualizaciones](#111-actualizaciones)
+    - 11.2. [Procedimientos de operación](#112-procedimientos-de-operación)
+    - 11.3. [Monitoreo](#113-monitoreo)
+    - 11.4. [Solución de problemas comunes (FAQ técnica)](#114-solución-de-problemas-comunes-faq-técnica)
+12. [Riesgos técnicos y contingencias](#12-riesgos-técnicos-y-contingencias)
+13. [Glosario](#13-glosario)
+14. [Anexos](#14-anexos)
 
 ---
 
@@ -92,11 +103,11 @@
 
 ### 1.1. Objeto del manual
 
-> **[Pendiente de redacción]** Documentar la arquitectura, componentes, flujos, seguridad y procedimientos de operación del sistema para el personal técnico de soporte y mantenimiento.
+El presente manual tiene como objeto documentar la arquitectura, los componentes, los flujos de trabajo, las medidas de seguridad y los procedimientos de operación, despliegue y mantenimiento del sitio web y sistema de gestión del albergue "Peluchín". Está orientado al personal técnico de soporte y mantenimiento, de modo que disponga de una referencia única y verificable para operar, diagnosticar y restaurar el sistema ante cualquier eventualidad.
 
 ### 1.2. Alcance
 
-> **[Pendiente de redacción]** Cubre el sitio público y el panel de administración (WordPress), incluyendo despliegue, backups, seguridad y mantenimiento. No cubre el uso cotidiano del panel (ver Manual de Usuario / Manual de Administrador).
+El manual cubre el sitio público y el panel de administración construidos sobre WordPress, incluyendo el modelo de datos, la configuración de plugins, el despliegue en los entornos local/staging/producción, los backups, la seguridad y el mantenimiento. No cubre el uso cotidiano del panel (ver Manual de Usuario / Manual de Administrador) ni las condiciones comerciales del contrato (ver `docs/TDR_Contrato_Peluchin.md`).
 
 ### 1.3. Público destinatario
 
@@ -109,14 +120,16 @@
 | # | Documento | Contenido de referencia |
 |---|-----------|--------------------------|
 | 1 | `docs/TDR_Peluchin.md` | Alcance, requerimientos funcionales y no funcionales, stack, entregables |
-| 2 | `docs/TDR_Why_Peluchin.md` | Justificación y contexto del proyecto |
-| 3 | `docs/TDR_Plan_Proyecto_Cronograma_Peluchin.md` | Plan de sprints, stack de plugins, herramientas, despliegue |
-| 4 | `docs/TDR_Contrato_Peluchin.md` | Alcance contractual, garantía, propiedad intelectual |
-| 5 | `docs/TDR_Carta_Aceptacion_Peluchin.md` | Aceptación del proyecto |
-| 6 | `docs/TDR_Gestion_Riesgos_Peluchin.md` | Riesgos técnicos y planes de mitigación/contingencia |
-| 7 | `docs/TDR_Diagrama_UML_Peluchin.md` | Modelo de datos, casos de uso, secuencias, estados y despliegue |
-| 8 | `docs/TDR_Diagrama_WAE_Peluchin.md` | Mapas de navegación y arquitectura web |
+| 2 | `docs/TDR_Plan_Proyecto_Cronograma_Peluchin.md` | Plan de sprints, metodología, stack de plugins, herramientas, despliegue |
+| 3 | `docs/TDR_Contrato_Peluchin.md` | Alcance contractual, garantía, propiedad intelectual |
+| 4 | `docs/TDR_Carta_Aceptacion_Peluchin.md` | Aceptación del proyecto |
+| 5 | `docs/TDR_Gestion_Riesgos_Peluchin.md` | Riesgos técnicos y planes de mitigación/contingencia |
+| 6 | `docs/TDR_Diagrama_WAE_Peluchin.md` | Mapas de navegación y arquitectura web |
+| 7 | `docs/bitacoras/` | Bitácoras de los Sprint 1–4 y retrospectivas |
+| 8 | `docs/Acta_Final_Entrega_Peluchin.md` | Acta de entrega y recepción del proyecto |
 | 9 | `docs/mockup/` | Mockups HTML del sitio público |
+
+> Nota: El diagrama UML del modelo de datos se incorporará como anexo cuando el documento `TDR_Diagrama_UML_Peluchin.md` esté disponible; mientras tanto, las secciones §6 de este manual recogen el modelo de datos vigente.
 
 ---
 
@@ -124,18 +137,19 @@
 
 ### 2.1. Propósito del sistema
 
-> **[Pendiente]** Redactar a partir de TDR §3 (Objetivos) y TDR_Why_Peluchin.md: visibilizar perritos en adopción, gestionar donaciones transparentes, registro de voluntarios y centralizar información.
+El sistema tiene como propósito visibilizar a los perritos en adopción del albergue "Peluchín", gestionar de forma transparente las donaciones (mediante QR Simple, transferencia y efectivo), registrar voluntarios con sus áreas de interés y disponibilidad, difundir información (blog, eventos, FAQ) y administrar de forma centralizada los animales, las solicitudes de adopción, las donaciones y los voluntarios desde un panel de administración. Fuente: TDR §3, TDR_Why_Peluchin.md.
 
 ### 2.2. Usuarios y roles
 
-| Rol | Descripción | Acceso |
-|-----|-------------|--------|
-| Visitante / Adoptante / Donante / Voluntario | Público general | Sitio público (sin autenticación) |
-| Administrador | Personal del albergue con control total | Panel `/admin` |
-| Editor | Contenido (blog, contenido estático) | Panel `/admin` (permisos limitados) |
-| Sistema | WordPress + plugins (correos, seguridad, backups) | Interno |
+| Rol | Descripción | Acceso | Permisos principales |
+|-----|-------------|--------|----------------------|
+| Visitante / Adoptante / Donante / Voluntario | Público general | Sitio público (sin autenticación) | Enviar formularios (pre-adopción, reporte de donación, voluntariado, contacto) |
+| Administrador | Personal del albergue con control total | Panel `/admin` | Todo: usuarios, configuración, CRUD de animales, solicitudes, donaciones, voluntarios, blog, eventos, contenido |
+| Editor | Contenido editorial (blog, páginas, eventos) | Panel `/admin` (permisos limitados) | CRUD de blog, eventos y contenido estático; sin gestión de donaciones, voluntarios ni configuración |
+| Voluntario | Colaborador con acceso limitado | Panel `/admin` (solo lectura en su área) | Consulta de su información y de los animales; sin modificación de datos |
+| Sistema | WordPress + plugins (correos, seguridad, backups) | Interno | Notificaciones automáticas, backups, monitoreo |
 
-> **[Pendiente]** Detallar permisos por rol según configuración de Members / User Role Editor (Plan §Sprint 3).
+> Configurado con Members / User Role Editor (Plan §Sprint 3). Fuente: TDR §5.1, Plan §Sprint 3.
 
 ### 2.3. Módulos funcionales
 
@@ -165,13 +179,147 @@
 
 ---
 
-## 3. ARQUITECTURA DEL SISTEMA
+## 3. METODOLOGÍA DE DESARROLLO — SCRUM + KANBAN
 
-### 3.1. Vista general (diagrama de arquitectura)
+### 3.1. Enfoque híbrido (ScrumBan)
 
-> **[Insertar]** Diagrama de componentes y despliegue del UML §8 (stack WordPress) y diagrama WAE §4. Renderizables en GitHub / mermaid.live.
+El proyecto se desarrolla con una metodología híbrida **ScrumBan**, que combina el marco **Scrum** (sprints de 2 semanas, ceremonias y artefactos) con el método **Kanban** (visualización del flujo de trabajo en un tablero y límites de trabajo en curso). Esta combinación se adoptó por las siguientes razones:
 
-### 3.2. Componentes y servicios externos
+- **Entregas incrementales y demostrables:** cada 2 semanas se presenta al albergue un incremento funcional (demo) que puede aprobar o solicitar ajustes.
+- **Transparencia del estado:** el tablero Kanban permite ver en tiempo real en qué columna está cada tarea (Backlog → Hecho).
+- **Flexibilidad:** las prioridades pueden ajustarse en la revisión del backlog sin comprometer el objetivo del sprint vigente.
+- **Eficiencia en equipos pequeños:** al limitar el trabajo en curso (WIP) se evita la multitarea y se acelera el flujo de entregables.
+
+El marco es **Scrum** para la *planificación* (sprints de 2 semanas) y **Kanban** para la *ejecución* (flujo continuo de tareas por el tablero). Fuente: Plan §Metodología, README §Resumen del proyecto.
+
+### 3.2. Roles y responsabilidades
+
+| Rol | Integrante | Responsabilidades |
+|-----|------------|-------------------|
+| **Product Owner** | Responsable del albergue "Peluchín" | Priorizar el Product Backlog, definir criterios de aceptación, aprobar las demos (máx. 5 días hábiles), proveer las dependencias (logo, fotos, contenido, hosting) |
+| **Scrum Master** | Mariana del Arroyo | Facilitar las ceremonias, eliminar impedimentos, resguardar la metodología y coordinar con el hosting y el albergue |
+| **Equipo de desarrollo** | Nahomi Humerez (diseño/UX y landing), Santiago Acha (configuración/backend y formularios), Jorge Saenz (QA/testing, manuales y capacitación) | Auto-organizarse para diseñar, construir, probar y documentar el incremento de cada sprint |
+| **Interesados** | Personal del albergue | Participar en las demos, pruebas de aceptación y aportar contenido |
+
+> Fuente: TDR_Plan §Reuniones programadas y bitácoras de los Sprint 1–4.
+
+### 3.3. Ciclo de sprint (Scrum)
+
+Cada sprint tiene una duración fija de **2 semanas (14 días)** y se desarrolla dentro de las 8 semanas de desarrollo. El flujo del ciclo es:
+
+1. **Planificación (día 1):** el equipo selecciona las historias del Product Backlog priorizadas por el Product Owner, define el objetivo del sprint y confirma el Sprint Backlog.
+2. **Ejecución (días 1–13):** las tareas avanzan por las columnas del tablero Kanban respetando los límites de WIP; se realiza el Daily Stand-up y se registran los avances en la bitácora del sprint.
+3. **Revisión / Demo (día 14):** se presenta el incremento funcional al albergue (entregables E1–E10); el Product Owner aprueba o solicita ajustes.
+4. **Retrospectiva (día 14):** el equipo analiza qué salió bien, qué puede mejorar y acuerda acciones para el siguiente sprint.
+
+### 3.4. Ceremonias
+
+| Ceremonia | Frecuencia | Participantes | Propósito |
+|-----------|------------|---------------|-----------|
+| **Sprint Planning** | Inicio de cada sprint (día 1) | Product Owner + Equipo + Scrum Master | Definir el objetivo del sprint y el Sprint Backlog |
+| **Daily Stand-up** | Diaria (15 min) | Equipo + Scrum Master | Sincronizar avances, plan del día e impedimentos |
+| **Sprint Review (Demo)** | Fin de sprint (día 14) | Product Owner + Equipo + Interesados | Presentar el incremento funcional y recoger feedback |
+| **Sprint Retrospective** | Fin de sprint (tras la demo) | Equipo + Scrum Master | Mejora continua del proceso |
+| **Backlog Refinement** | Semanal (30–60 min) | Product Owner + Equipo | Priorizar y detallar las historias del backlog |
+| **Comunicación rápida** | Continua (horario laboral) | Equipo + Albergue | Consultas y avances por WhatsApp |
+
+> Fuente: TDR_Plan §Reuniones programadas.
+
+### 3.5. Artefactos
+
+| Artefacto | Descripción |
+|-----------|-------------|
+| **Product Backlog** | Lista priorizada de funcionalidades e historias derivadas de los requerimientos del TDR |
+| **Sprint Backlog** | Tareas comprometidas para el sprint en curso, extraídas del backlog |
+| **Incremento** | Resultado funcional y demostrable de cada sprint (E1–E10) |
+| **Definition of Done (DoD)** | Criterios que una tarea debe cumplir para considerarse terminada (ver §3.8) |
+| **Gráfico burndown** | Evolución del trabajo pendiente durante el sprint |
+| **Bitácora del sprint** | Registro de actividades, incidencias, resultados de la demo y retrospectiva |
+
+### 3.6. Tablero Kanban y flujo de trabajo
+
+El tablero organiza el trabajo en las siguientes columnas:
+
+```mermaid
+flowchart LR
+    Backlog["Backlog<br/>(Product Backlog)"] --> ToDo["Por hacer<br/>(Sprint Backlog)"]
+    ToDo --> InProgress["En progreso"]
+    InProgress --> Review["En revisión / QA"]
+    Review --> Done["Hecho"]
+    InProgress -.->|Impedimento| Blocked["Bloqueado"]
+```
+
+| Columna | Política de entrada | Política de salida |
+|---------|---------------------|--------------------|
+| **Backlog** | Historias priorizadas por el Product Owner | Seleccionadas en el Sprint Planning |
+| **Por hacer** | Tareas comprometidas en el Sprint Backlog | La tarea tiene dueño y está lista para iniciarse |
+| **En progreso** | Se respeta el límite de WIP | Funcionalidad implementada y configurada |
+| **En revisión / QA** | La funcionalidad pasa a pruebas | Pruebas superadas sin errores críticos |
+| **Hecho** | Cumple la DoD (§3.8) | Verificada y, si corresponde, aprobada en la demo |
+| **Bloqueado** | Existe un impedimento externo (dependencia del albergue) | Se gestiona el desbloqueo con el Scrum Master |
+
+### 3.7. Límites de trabajo en curso (WIP)
+
+- Con un equipo pequeño, se establece un **WIP máximo por columna** (p. ej. **2** en "En progreso" y **1** en "En revisión/QA") para evitar la multitarea y reducir el tiempo de ciclo.
+- **Política de flujo:** una tarjeta solo se mueve a la siguiente columna si cumple la política de salida de la columna anterior.
+- **Trabajo bloqueado:** las tarjetas con impedimentos se mueven a la columna "Bloqueado" y se gestionan en el Daily Stand-up.
+
+### 3.8. Definición de hecho (Definition of Done — DoD)
+
+Una tarea se considera **terminada** cuando cumple todos los criterios siguientes:
+
+1. Cumple los **criterios de aceptación** definidos en la historia o requerimiento.
+2. La configuración o código está **versionada en Git** (GitHub/GitLab).
+3. Está **probada** en el entorno correspondiente (local → staging → producción).
+4. Los **formularios y notificaciones por correo** asociados fueron verificados.
+5. No presenta **errores críticos**, o los bugs conocidos están documentados y aceptados por el Product Owner.
+6. La **documentación y la bitácora del sprint** están actualizadas.
+7. Cuando corresponde a un entregable (E1–E10), fue **aprobada en la demo**.
+
+### 3.9. Mapeo con el cronograma del proyecto
+
+| Sprint | Semanas | Objetivo | Entregables | Resultado de la demo |
+|--------|---------|----------|-------------|----------------------|
+| **Sprint 1** | 1–2 | Instalación, tema y estructura | E1, E2, E3 | Sitio base + galería de animales |
+| **Sprint 2** | 3–4 | Formularios, donaciones y contenido | E4 | Sitio público completo |
+| **Sprint 3** | 5–6 | Panel de administración y funcionalidades avanzadas | E5, E6 | Panel completo + blog + eventos |
+| **Sprint 4** | 7–8 | QA, despliegue, documentación y capacitación | E7, E8, E9, E10 | Sitio en producción + documentación |
+| **Garantía** | 9–16 | Monitoreo, soporte y actualizaciones | E11 | Fin del contrato |
+
+> Fuente: TDR_Plan §SPRINT 1–4 y §PERÍODO DE GARANTÍA.
+
+### 3.10. Herramientas de gestión
+
+| Herramienta | Uso metodológico |
+|-------------|------------------|
+| Trello / Jira / Notion | Tablero Kanban, backlog y seguimiento de tareas |
+| Git + GitHub / GitLab | Control de versiones del tema y configuración |
+| Figma | Wireframes, mockups y prototipos |
+| Google Meet / Zoom | Reuniones, demos y capacitación |
+| WhatsApp | Comunicación rápida (horario laboral) |
+| Bitácoras (`docs/bitacoras/`) | Registro de cada sprint, demo y retrospectiva |
+
+---
+
+## 4. ARQUITECTURA DEL SISTEMA
+
+### 4.1. Vista general (diagrama de arquitectura)
+
+```mermaid
+flowchart TB
+    U["Usuario final<br/>(navegador, HTTPS)"] --> LB["Servidor web<br/>Apache / Nginx"]
+    LB --> WP["WordPress + Tema hijo<br/>(PHP)"]
+    WP --> DB[("MySQL / MariaDB")]
+    WP --> CACHE["Caché<br/>WP Super Cache / LiteSpeed"]
+    WP --> SMTP["SMTP<br/>(correos automáticos)"]
+    WP --> PLUG["Plugins<br/>CPT UI · ACF · WPForms · Yoast · Wordfence · UpdraftPlus"]
+    PLUG --> QR["QR Simple / Red Enlace<br/>(donaciones, condicional)"]
+    PLUG --> WA["WhatsApp API (wa.me)"]
+```
+
+> Fuente: UML §8 (stack WordPress) y diagrama WAE §4. Renderizable en GitHub / mermaid.live.
+
+### 4.2. Componentes y servicios externos
 
 | Componente | Rol | Estado |
 |------------|-----|--------|
@@ -184,7 +332,7 @@
 | WhatsApp API (`wa.me`) | Contacto / compartir | Producción |
 | Red Enlace | Pasarela de pago | Condicional (solo con habilitación de la ONG) |
 
-### 3.3. Mapa de navegación — sitio público
+### 4.3. Mapa de navegación — sitio público
 
 | Página | Ruta | Formularios |
 |--------|------|-------------|
@@ -200,9 +348,9 @@
 | Contacto | `/contacto` | WhatsApp / formulario |
 | FAQ | `/faq` | — |
 
-> **[Insertar]** Diagrama WAE §2. Fuente: `docs/TDR_Diagrama_WAE_Peluchin.md`.
+> Fuente: `docs/TDR_Diagrama_WAE_Peluchin.md` §2.
 
-### 3.4. Mapa de navegación — panel de administración
+### 4.4. Mapa de navegación — panel de administración
 
 | Página | Ruta | Formularios |
 |--------|------|-------------|
@@ -216,31 +364,31 @@
 | Eventos | `/admin/eventos` | CRUD + asistentes |
 | Contenido estático | `/admin/contenido` | Edición de secciones |
 
-> **[Insertar]** Diagrama WAE §3. Fuente: `docs/TDR_Diagrama_WAE_Peluchin.md`.
+> Fuente: `docs/TDR_Diagrama_WAE_Peluchin.md` §3.
 
 ---
 
-## 4. STACK TECNOLÓGICO
+## 5. STACK TECNOLÓGICO
 
-### 4.1. Plataforma y lenguajes
+### 5.1. Plataforma y lenguajes
 
 | Componente | Tecnología | Versión instalada |
 |------------|------------|-------------------|
 | CMS | WordPress | [última estable] |
-| Lenguaje | PHP | [8.x] |
+| Lenguaje | PHP | 8+ |
 | Base de datos | MySQL / MariaDB | [versión] |
 | Servidor web | Apache / Nginx | [versión] |
 
-### 4.2. Tema y constructor visual
+### 5.2. Tema y constructor visual
 
 | Herramienta | Uso |
 |-------------|-----|
-| [Tema base: GeneratePress / Astra / Kadence] | Tema principal |
-| [Tema hijo Peluchín] | Personalización y marca |
+| Tema base: Astra | Tema principal (según bitácora Sprint 1) |
+| Tema hijo Peluchín | Personalización y marca del albergue |
 | Gutenberg / Elementor | Construcción visual |
 | CSS personalizado | Ajustes de diseño |
 
-### 4.3. Plugins instalados
+### 5.3. Plugins instalados
 
 | Plugin | Funcionalidad | Versión | Estado |
 |--------|---------------|---------|--------|
@@ -257,9 +405,9 @@
 | WP Super Cache / LiteSpeed | Caché | — | Activo |
 | Smush / EWWW | Optimización de imágenes | — | Activo |
 
-> **[Pendiente]** Completar versiones y plugins finales. Fuente: `docs/TDR_Plan_Proyecto_Cronograma_Peluchin.md`.
+> [Pendiente] Completar versiones y plugins finales en producción. Fuente: `docs/TDR_Plan_Proyecto_Cronograma_Peluchin.md`.
 
-### 4.4. Herramientas de desarrollo, despliegue y calidad
+### 5.4. Herramientas de desarrollo, despliegue y calidad
 
 | Herramienta | Uso |
 |-------------|-----|
@@ -273,9 +421,9 @@
 
 ---
 
-## 5. MODELO DE DATOS
+## 6. MODELO DE DATOS
 
-### 5.1. Entidades principales
+### 6.1. Entidades principales
 
 | Entidad | Descripción | Claves de referencia |
 |---------|-------------|----------------------|
@@ -290,11 +438,31 @@
 | Evento | Eventos y galería | UML §3 |
 | ContenidoEstatico | Quiénes somos, misión, FAQ, donaciones | UML §3 |
 
-### 5.2. Diagrama de clases UML
+### 6.2. Diagrama de clases UML
 
-> **[Insertar]** Diagrama de clases del UML §3 (renderizable con mermaid). Fuente: `docs/TDR_Diagrama_UML_Peluchin.md`.
+```mermaid
+classDiagram
+    class Usuario
+    class Animal
+    class Foto
+    class Solicitante
+    class SolicitudAdopcion
+    class Donacion
+    class Voluntario
+    class ArticuloBlog
+    class Evento
+    class ContenidoEstatico
 
-### 5.3. Tipos de contenido personalizados (CPT) y campos ACF
+    Animal "1" --> "*" Foto : tiene
+    Solicitante "1" --> "*" SolicitudAdopcion : realiza
+    SolicitudAdopcion "*" --> "1" Animal : solicita
+    Usuario "1" --> "*" SolicitudAdopcion : gestiona
+    Usuario "1" --> "*" Donacion : registra
+```
+
+> Fuente: `docs/TDR_Diagrama_UML_Peluchin.md` §3 (renderizable con mermaid).
+
+### 6.3. Tipos de contenido personalizados (CPT) y campos ACF
 
 | CPT | Taxonomías | Campos ACF principales |
 |-----|------------|------------------------|
@@ -303,9 +471,9 @@
 | Eventos | — | fecha_hora, ubicacion, imagen, fotos_galeria, asistentes |
 | Blog | categorías | titulo, imagen_destacada, contenido, estado |
 
-> **[Pendiente]** Documentar la configuración final de CPT UI + ACF del entorno de producción.
+> [Pendiente] Documentar la configuración final de CPT UI + ACF del entorno de producción.
 
-### 5.4. Estados de las entidades
+### 6.4. Estados de las entidades
 
 | Entidad | Estados |
 |---------|---------|
@@ -316,82 +484,104 @@
 | Evento | próximo · pasado |
 | Usuario | roles: admin · editor · voluntario |
 
-> **[Insertar]** Diagrama de estados de la solicitud de adopción (UML §7).
+Diagrama de estados de la solicitud de adopción (UML §7):
+
+```mermaid
+stateDiagram-v2
+    [*] --> Pendiente
+    Pendiente --> EnRevision
+    EnRevision --> Aprobado
+    EnRevision --> Rechazado
+    Aprobado --> Adoptado : adopción concretada
+    Rechazado --> Pendiente : nueva revisión
+```
 
 ---
 
-## 6. DESCRIPCIÓN DETALLADA DE MÓDULOS Y FLUJOS
+## 7. DESCRIPCIÓN DETALLADA DE MÓDULOS Y FLUJOS
 
-### 6.1. Sitio público
+### 7.1. Sitio público
 
-#### 6.1.1. Landing y navegación
+#### 7.1.1. Landing y navegación
 
-> **[Pendiente]** Describir estructura del home: hero, CTA, contador, animales destacados, menú principal, header/footer, botón flotante de WhatsApp.
+- Hero con mensaje de bienvenida y llamados a la acción (CTA): **"Quiero Adoptar"**, **"Quiero Donar"**, **"Ser Voluntario"**.
+- Contador de perritos rescatados y sección de animales destacados.
+- Menú de navegación principal, header con logo del albergue y footer con redes sociales.
+- Botón flotante de WhatsApp visible en todo el sitio.
 
-#### 6.1.2. Catálogo y ficha de animales
+#### 7.1.2. Catálogo y ficha de animales
 
-> **[Pendiente]** Describir filtros por taxonomía (especie, tamaño, edad, estado), galería de fotos y CTA según estado (Quiero adoptar / Avísame / Adoptado). Referencia: UML §6 (actividad).
+- Galería con **filtros por taxonomía**: especie, tamaño, edad y estado.
+- Ficha individual con galería de fotos (slider) y datos: nombre, sexo, raza, peso, estado de salud, personalidad, historia y fecha de rescate.
+- CTA según el estado del animal:
+  - `en_adopcion` → botón **"Quiero Adoptar"** (abre el formulario de pre-adopción).
+  - `en_tratamiento` → botón **"Avísame"** (notificación al usuario).
+  - `adoptado` → botón deshabilitado con indicador **"Adoptado"**.
 
-#### 6.1.3. Formulario de pre-adopción
+> Referencia: UML §6 (diagrama de actividad).
 
-- Paso 1: datos personales del solicitante.
-- Paso 2: vivienda y experiencia con mascotas.
-- Paso 3: referencias y envío.
-- Validaciones, número de seguimiento, correos automáticos.
+#### 7.1.3. Formulario de pre-adopción
 
-> **[Insertar]** Diagrama de secuencia del flujo de pre-adopción (UML §4) y de actividad (UML §6).
+Formulario multi-paso con notificaciones automáticas:
 
-#### 6.1.4. Donaciones y reporte de donación
+- **Paso 1:** datos personales del solicitante (nombre, CI, teléfono, correo).
+- **Paso 2:** vivienda y experiencia con mascotas (tipo de vivienda, patio/jardín, otras mascotas, experiencia previa).
+- **Paso 3:** referencias, aceptación del reglamento y envío.
 
-- QR Simple visible y datos bancarios con botón copiar.
-- Formulario de reporte (monto, fecha, comprobante).
-- Confirmación y correo de agradecimiento.
+Al enviarse: validaciones por paso, generación de **número de seguimiento**, correo de confirmación al solicitante y notificación de "nueva solicitud pendiente" al administrador. Referencia: UML §4 (secuencia), §6 (actividad).
 
-> **[Insertar]** Diagrama de secuencia del flujo de donación (UML §5).
+#### 7.1.4. Donaciones y reporte de donación
 
-#### 6.1.5. Registro de voluntarios
+- Código **QR Simple** y datos bancarios con botón **"Copiar"**.
+- Formulario de reporte de donación (monto, fecha, comprobante adjunto).
+- Confirmación en pantalla y correo de agradecimiento al donante; notificación al administrador. Referencia: UML §5 (secuencia).
 
-> **[Pendiente]** Describir campos: datos personales, áreas de interés (paseo, limpieza, veterinaria, difusión, eventos, transporte, captación) y disponibilidad horaria.
+#### 7.1.5. Registro de voluntarios
 
-#### 6.1.6. Blog, eventos, contacto, FAQ
+Formulario con datos personales, **áreas de interés** (paseo, limpieza, veterinaria, difusión, eventos, transporte, captación) y **disponibilidad horaria**. Al enviarse: correo de confirmación al voluntario y notificación de "nuevo voluntario" al administrador.
 
-> **[Pendiente]** Describir publicaciones del blog, registro/confirmación de asistencia a eventos, WhatsApp + Google Maps en contacto, acordeón de FAQ.
+#### 7.1.6. Blog, eventos, contacto, FAQ
 
-### 6.2. Panel de administración
+- **Blog:** publicaciones con categorías y editor nativo.
+- **Eventos:** registro/confirmación de asistencia con fecha, ubicación y galería.
+- **Contacto:** botón de WhatsApp (`wa.me`) y mapa de Google Maps.
+- **FAQ:** secciones plegables (acordeón) con preguntas frecuentes.
 
-#### 6.2.1. Dashboard de KPIs
+### 7.2. Panel de administración
 
-> **[Pendiente]** Describir widgets: perritos en adopción, solicitudes pendientes, donaciones del mes (Bs.), voluntarios activos.
+#### 7.2.1. Dashboard de KPIs
 
-#### 6.2.2. CRUD de animales
+Widgets con indicadores del albergue: **perritos en adopción**, **solicitudes pendientes**, **donaciones del mes (Bs.)** y **voluntarios activos**.
 
-> **[Pendiente]** Describir creación/edición/eliminación de fichas, carga de fotos múltiples y cambio de estado.
+#### 7.2.2. CRUD de animales
 
-#### 6.2.3. Gestión de solicitudes de adopción
+Creación, edición y eliminación de fichas de animales; carga de **múltiples fotos**; cambio de estado (`en_adopcion` → `adoptado` / `en_tratamiento`).
 
-- Flujo de estados: pendiente → en_revision → aprobado / rechazado.
-- Notas internas por solicitud.
-- Correos automáticos al aprobar/rechazar.
+#### 7.2.3. Gestión de solicitudes de adopción
 
-> **[Insertar]** Diagrama de estados de la solicitud (UML §7).
+- Flujo de estados: `pendiente` → `en_revision` → `aprobado` / `rechazado` (ver §6.4).
+- **Notas internas** por solicitud y número de seguimiento.
+- **Correos automáticos** al aprobar o rechazar (instrucciones de adopción / mensaje amable).
 
-#### 6.2.4. Registro de donaciones
+#### 7.2.4. Registro de donaciones
 
-> **[Pendiente]** Describir registro manual (efectivo, transferencia) con monto, fecha y donante; exportación.
+Registro manual (efectivo, transferencia, QR) con monto, fecha y donante; **exportación** a Excel.
 
-#### 6.2.5. Gestión de voluntarios
+#### 7.2.5. Gestión de voluntarios
 
-> **[Pendiente]** Describir listado, filtros por área de interés y edición.
+Listado con **filtros por área de interés**, edición de datos y exportación.
 
-#### 6.2.6. Blog, eventos y contenido estático
+#### 7.2.6. Blog, eventos y contenido estático
 
-> **[Pendiente]** Describir CRUD de noticias, gestión de eventos y edición de secciones (Quiénes Somos, misión, FAQ, donaciones).
+- CRUD de noticias del blog.
+- Gestión de eventos (fecha, ubicación, galería, asistentes).
+- Edición de secciones estáticas (Quiénes Somos, misión, FAQ, donaciones) mediante **ACF Options Pages**.
 
-#### 6.2.7. Reportes exportables
+#### 7.2.7. Reportes exportables
 
-> **[Pendiente]** Describir exportación a Excel de perritos, adopciones y donaciones por mes.
+Exportación a Excel de perritos, adopciones y donaciones por mes.
 
-### 6.3. Notificaciones automáticas por correo
+### 7.3. Notificaciones automáticas por correo
 
 | Flujo | Correo al solicitante/donante/voluntario | Notificación al admin |
 |-------|------------------------------------------|-----------------------|
@@ -401,21 +591,24 @@
 | Aprobación de adopción | Instrucciones de adopción | — |
 | Rechazo | Mensaje amable | — |
 
-> **[Pendiente]** Detallar plantillas, remitente (SMTP) y configuración de WP Mail SMTP. Referencia: TDR §4.1 (Notificaciones), UML §4–§5.
+> [Pendiente] Detallar plantillas, remitente (SMTP) y configuración de WP Mail SMTP. Referencia: TDR §4.1 (Notificaciones), UML §4–§5.
 
 ---
 
-## 7. SEGURIDAD
+## 8. SEGURIDAD
 
-### 7.1. Autenticación y roles
+### 8.1. Autenticación y roles
 
-> **[Pendiente]** Describir login `/admin/login`, roles (Members / User Role Editor), doble factor, límite de intentos, principio de menor privilegio. Referencia: TDR §5.1, Riesgos T02/T11.
+- Inicio de sesión en `/admin/login` con roles definidos en §2.2 (Members / User Role Editor).
+- **Límite de intentos** de inicio de sesión (Wordfence) y **autenticación de doble factor (2FA)** recomendada.
+- Principio de **menor privilegio**: cada rol solo accede a lo necesario. Referencia: TDR §5.1, Riesgos T02/T11.
 
-### 7.2. SSL/TLS
+### 8.2. SSL/TLS
 
-> **[Pendiente]** Describir certificado SSL instalado, redirección HTTP→HTTPS, configuración de Really Simple SSL. Referencia: RNF03, E8.
+- Certificado SSL activo (**Let's Encrypt**) en producción (según bitácora Sprint 4).
+- Redirección **HTTP → HTTPS** y renovación automática gestionadas con Really Simple SSL. Referencia: RNF03, E8.
 
-### 7.3. Protección OWASP Top 10
+### 8.3. Protección OWASP Top 10
 
 | Área | Medida | Plugin / Configuración |
 |------|--------|------------------------|
@@ -425,9 +618,9 @@
 | Brute force | Límite de intentos de login | Wordfence |
 | Datos sensibles | Encriptación, HTTPS | Really Simple SSL |
 
-> **[Pendiente]** Completar con el hardening aplicado (prefijo de BD, etc.). Referencia: TDR §4.1 (Seguridad), RNF03.
+> [Pendiente] Completar con el hardening aplicado (prefijo de BD, etc.). Referencia: TDR §4.1 (Seguridad), RNF03.
 
-### 7.4. Backups y recuperación
+### 8.4. Backups y recuperación
 
 | Aspecto | Configuración |
 |---------|---------------|
@@ -442,9 +635,9 @@
 
 ---
 
-## 8. DESPLIEGUE
+## 9. DESPLIEGUE
 
-### 8.1. Entornos (local, staging, producción)
+### 9.1. Entornos (local, staging, producción)
 
 | Entorno | URL | Uso |
 |---------|-----|-----|
@@ -452,7 +645,7 @@
 | Staging | [URL staging] | Pruebas y QA |
 | Producción | [URL dominio] | Sitio público |
 
-### 8.2. Requisitos de servidor
+### 9.2. Requisitos de servidor
 
 | Requisito | Valor |
 |-----------|-------|
@@ -464,25 +657,27 @@
 
 > Referencia: Riesgos T04, T05.
 
-### 8.3. Procedimiento de despliegue y migración
+### 9.3. Procedimiento de despliegue y migración
 
-1. Backup completo en staging.
+1. Backup completo en el entorno de origen.
 2. Migración con All-in-One WP Migration / Migrate Guru.
 3. Corrección de rutas y URLs (search-replace si aplica).
 4. Verificación de enlaces, medios y formularios.
 5. Pruebas post-despliegue (smoke test).
 
-> **[Insertar]** Diagrama de despliegue UML §8. Referencia: Plan §Sprint 4, Riesgos T04.
+> Referencia: Plan §Sprint 4, Riesgos T04. Guía replicable según la retrospectiva del Sprint 4.
 
-### 8.4. Configuración de DNS y SSL
+### 9.4. Configuración de DNS y SSL
 
-> **[Pendiente]** Describir registro de dominio, apuntado DNS (A/CNAME), instalación de certificado SSL y verificación de HTTPS.
+1. Registrar el dominio y apuntar los registros **DNS (A/CNAME)** al hosting.
+2. Instalar el certificado SSL (Let's Encrypt) y activar la redirección HTTPS.
+3. Verificar el candado de seguridad en el navegador y la renovación automática.
 
 ---
 
-## 9. PRUEBAS Y CONTROL DE CALIDAD
+## 10. PRUEBAS Y CONTROL DE CALIDAD
 
-### 9.1. Pruebas funcionales
+### 10.1. Pruebas funcionales
 
 | Caso de prueba | Resultado esperado | Estado |
 |----------------|--------------------|--------|
@@ -491,26 +686,30 @@
 | Registro de voluntario | Voluntario visible en admin | [Pendiente] |
 | CRUD de animales | Crear/editar/eliminar/cambiar estado | [Pendiente] |
 | Cambio de estado de solicitud | Flujo completo con notificaciones | [Pendiente] |
+| Filtros de galería por taxonomía | Resultados correctos por especie/tamaño/edad/estado | [Pendiente] |
+| Botón flotante de WhatsApp | Enlace `wa.me` correcto en móvil y escritorio | [Pendiente] |
 
-> **[Pendiente]** Ampliar la matriz de pruebas. Referencia: E7, UML §4–§6.
+> [Pendiente] Ampliar la matriz de pruebas. Referencia: E7, UML §4–§6.
 
-### 9.2. Pruebas de rendimiento
+### 10.2. Pruebas de rendimiento
 
-> **[Pendiente]** Registrar resultados de PageSpeed/Lighthouse/GTmetrix. Meta: < 3 s en 4G (RNF01). Referencia: Riesgo T03.
+- Herramientas: PageSpeed, Lighthouse, GTmetrix.
+- Meta: carga < 3 s en 4G (**RNF01**) y puntaje Lighthouse ≥ 90 en móvil (según bitácora Sprint 4).
+- Acciones: optimización de imágenes (Smush/EWWW) y activación de caché (WP Super Cache). Referencia: Riesgo T03.
 
-### 9.3. Pruebas de seguridad
+### 10.3. Pruebas de seguridad
 
-> **[Pendiente]** Registrar resultados de WPScan y escaneos de Wordfence. Referencia: Riesgos T02, T11.
+- Escaneos con **WPScan** y **Wordfence**; revisión de hardening y de backups restaurables. Referencia: Riesgos T02, T11.
 
-### 9.4. Pruebas de responsividad
+### 10.4. Pruebas de responsividad
 
-> **[Pendiente]** Registrar pruebas en dispositivos móviles y navegadores. Referencia: RNF04.
+- Dispositivos móviles y navegadores (Chrome, Firefox, Safari, Edge) con Responsively / BrowserStack. Referencia: RNF04.
 
 ---
 
-## 10. MANTENIMIENTO Y SOPORTE
+## 11. MANTENIMIENTO Y SOPORTE
 
-### 10.1. Actualizaciones
+### 11.1. Actualizaciones
 
 | Componente | Frecuencia | Procedimiento |
 |------------|------------|---------------|
@@ -520,15 +719,20 @@
 
 > Referencia: Plan §Garantía, Riesgos T01, T06.
 
-### 10.2. Procedimientos de operación
+### 11.2. Procedimientos de operación
 
-> **[Pendiente]** Redactar procedimientos: puesta en modo mantenimiento, restauración de backup, cambio de credenciales, gestión de cuentas de usuario.
+- **Modo mantenimiento:** activar desde plugin o `.maintenance` para intervenciones.
+- **Restauración de backup:** descargar el backup de UpdraftPlus y restaurar en el entorno afectado.
+- **Cambio de credenciales:** rotar contraseñas del panel, hosting y SMTP ante cualquier sospecha.
+- **Gestión de cuentas:** alta/baja de usuarios del panel según roles (§2.2).
 
-### 10.3. Monitoreo
+### 11.3. Monitoreo
 
-> **[Pendiente]** Describir monitoreo de uptime (UptimeRobot), entregabilidad de correos y alertas de Wordfence. Referencia: Riesgo T08.
+- **Uptime:** monitoreo de disponibilidad (UptimeRobot o similar) — meta 99% (RNF02).
+- **Correos:** verificación de entregabilidad del SMTP (Riesgo T07).
+- **Seguridad:** revisión de alertas de Wordfence y escaneos periódicos. Referencia: Riesgo T08.
 
-### 10.4. Solución de problemas comunes (FAQ técnica)
+### 11.4. Solución de problemas comunes (FAQ técnica)
 
 | Problema | Causa probable | Solución |
 |----------|----------------|----------|
@@ -536,10 +740,11 @@
 | Sitio lento | Caché/plugins/imágenes | Purgar caché, optimizar (Riesgo T03) |
 | Pantalla en blanco | Plugin/tema conflictivo | Desactivar vía FTP/phpMyAdmin (Riesgo T01) |
 | Enlaces rotos tras migración | URLs antiguas | Search-replace en BD (Riesgo T04) |
+| Error de conexión a BD | Credenciales/caída de hosting | Verificar `wp-config.php` y hosting (Riesgo T08) |
 
 ---
 
-## 11. RIESGOS TÉCNICOS Y CONTINGENCIAS
+## 12. RIESGOS TÉCNICOS Y CONTINGENCIAS
 
 | ID | Riesgo | Mitigación | Contingencia |
 |----|--------|------------|--------------|
@@ -558,7 +763,7 @@
 
 ---
 
-## 12. GLOSARIO
+## 13. GLOSARIO
 
 | Término | Definición |
 |---------|------------|
@@ -573,20 +778,34 @@
 | Red Enlace | Pasarela de pago boliviana (condicional) |
 | OWASP Top 10 | Lista de riesgos de seguridad web más comunes |
 | Uptime | Disponibilidad del servicio |
+| Scrum | Marco ágil de gestión basado en sprints, ceremonias y artefactos |
+| Kanban | Método de gestión visual del flujo de trabajo mediante un tablero |
+| ScrumBan | Metodología híbrida que combina Scrum y Kanban |
+| Sprint | Iteración de trabajo con duración fija (2 semanas en este proyecto) |
+| Product Backlog | Lista priorizada de funcionalidades del producto |
+| Sprint Backlog | Tareas comprometidas para el sprint en curso |
+| WIP | Work In Progress: límite de trabajo en curso por columna |
+| Daily Stand-up | Reunión diaria breve de sincronización del equipo |
+| Sprint Review (Demo) | Reunión de fin de sprint para presentar el incremento |
+| Retrospectiva | Reunión de mejora continua del proceso |
+| Definition of Done (DoD) | Criterios que una tarea debe cumplir para considerarse terminada |
+| Burndown | Gráfico del avance del trabajo durante el sprint |
+| Product Owner | Responsable de priorizar el backlog y aceptar entregas |
 
 ---
 
-## 13. ANEXOS
+## 14. ANEXOS
 
-- **Anexo A:** Diagramas de arquitectura y despliegue (UML §8, WAE §4).
+- **Anexo A:** Diagrama de arquitectura y despliegue (UML §8, WAE §4).
 - **Anexo B:** Mapas de navegación (WAE §2, §3).
 - **Anexo C:** Diagrama de clases y modelo de datos (UML §3).
 - **Anexo D:** Diagramas de secuencia y estados (UML §4–§7).
-- **Anexo E:** Registro de riesgos técnicos completo (Gestión de Riesgos §4.1).
-- **Anexo F:** Checklist de pruebas post-despliegue.
+- **Anexo E:** Tablero Kanban y plantillas de ceremonias Scrum.
+- **Anexo F:** Registro de riesgos técnicos completo (Gestión de Riesgos §4.1).
+- **Anexo G:** Checklist de pruebas post-despliegue.
 
 ---
 
 ### CIERRE
 
-> **[Pendiente]** Nota final indicando que este manual se actualizará ante cambios de alcance aprobados por adenda, según lo establecido en el contrato y en el cierre del documento UML.
+Este manual es un documento vivo: se actualizará ante cambios de alcance aprobados por adenda, según lo establecido en el contrato (`docs/TDR_Contrato_Peluchin.md`) y en el cierre del documento UML. Cualquier modificación de la configuración, del modelo de datos o de los procedimientos de operación debe quedar registrada en la bitácora del sprint correspondiente.
