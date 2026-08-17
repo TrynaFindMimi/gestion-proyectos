@@ -47,7 +47,7 @@ El Albergue "Peluchín" es una organización sin fines de lucro ubicada en la zo
 
 #### 2.2. Objeto
 
-**EL EQUIPO DESARROLLADOR** se compromete a diseñar, configurar, personalizar y desplegar un sitio web institucional basado en **Hostinger Web Builder** como plataforma (constructor visual no-code con alojamiento gestionado de Hostinger) para el Albergue "Peluchín", conforme a los Términos de Referencia (TDR_Peluchin.md) anexos al presente contrato y que forman parte integrante del mismo. El proyecto se implementará mediante la configuración y personalización del constructor visual de Hostinger (plantillas, bloques y formularios integrados). El proyecto incluye:
+**EL EQUIPO DESARROLLADOR** se compromete a diseñar, configurar, personalizar y desplegar un sitio web institucional basado en **WordPress** como plataforma (CMS con alojamiento gestionado) para el Albergue "Peluchín", conforme a los Términos de Referencia (TDR_Peluchin.md) anexos al presente contrato y que forman parte integrante del mismo. El proyecto se implementará mediante la configuración y personalización de WordPress (temas, bloques y plugins). El proyecto incluye:
 
 1. Sitio web público cálido y responsivo con landing page, sección "Quiénes somos", galería de perros y gatos en adopción, formulario de pre-adopción, sección de donaciones, registro de voluntarios, galería de eventos, blog/noticias y página de contacto.
 2. Galería de perros y gatos con fichas individuales (fotos, edad, tamaño, personalidad, estado de salud, estado de adopción), separados por especie (perro/gato).
@@ -76,7 +76,7 @@ El Albergue "Peluchín" es una organización sin fines de lucro ubicada en la zo
 | Notificaciones | Correos automáticos de confirmación (pre-adopción, donación, voluntariado) |
 | SEO básico | Meta tags, sitemap.xml, URL amigables, Schema.org |
 | Seguridad | SSL/TLS, sanitización de inputs, protección CSRF/XSS, encriptación de datos sensibles |
-| Despliegue | Publicación del sitio desde el editor de Hostinger Web Builder en el plan contratado por el albergue. Si LA ONG no cuenta con un plan, se entregarán proformas con opciones de hosting. |
+| Despliegue | Publicación del sitio desde el editor de WordPress en el plan contratado por el albergue. Si LA ONG no cuenta con un plan, se entregarán proformas con opciones de hosting. |
 | Documentación | Manual de Sistemas, Manual de Usuario |
 | Capacitación | 2 sesiones al personal del albergue |
 
@@ -277,7 +277,7 @@ Validaciones: campos requeridos marcados con asterisco (*), mensajes de error in
 
 ##### C. PANEL DE ADMINISTRACIÓN (`/admin`)
 
-Acceso protegido por login (usuario y contraseña). Panel de administración del editor de Hostinger Web Builder personalizado.
+Acceso protegido por login (usuario y contraseña). Panel de administración del editor de WordPress personalizado.
 
 ---
 
@@ -408,7 +408,7 @@ Acceso protegido por login (usuario y contraseña). Panel de administración del
 - Integración con sistemas contables o ERP.
 - Desarrollo de aplicaciones móviles nativas (solo web responsiva).
 - Redacción y elaboración del contenido de las páginas legales (Reglamento de Adopción, Política de Privacidad, Términos y Condiciones, acuerdos de seguimiento post-adopción y cualquier otro documento legal o normativo). **EL EQUIPO DESARROLLADOR únicamente transcribirá y publicará** en el sitio web el contenido que LA ONG proporcione. LA ONG es la única responsable de redactar, revisar y aprobar dichos contenidos. EL EQUIPO DESARROLLADOR no asume responsabilidad alguna por el contenido legal de estos documentos.
-- Hosting, servidores, dominio y certificados SSL: **corren por cuenta del albergue**. EL EQUIPO DESARROLLADOR realiza la configuración y personalización del sitio en el editor de Hostinger Web Builder (plan del albergue) y publicará el sitio en el dominio que LA ONG proporcione. Si LA ONG no cuenta con un plan/hosting propio, el equipo entregará **proformas con opciones de hosting** para que LA ONG elija según su presupuesto. El equipo **no proveerá, contratará ni pagará ninguno de estos servicios**. Asimismo, **EL EQUIPO DESARROLLADOR no se compromete ni se responsabiliza por la compra del dominio si el costo del mismo llegase a ser superior al presupuesto del proyecto**. La habilitación de funciones premium del constructor que impliquen un costo adicional requerirá aprobación previa de LA ONG.
+- Hosting, servidores, dominio y certificados SSL: **corren por cuenta del albergue**. EL EQUIPO DESARROLLADOR realiza la configuración y personalización del sitio en el editor de WordPress (plan del albergue) y publicará el sitio en el dominio que LA ONG proporcione. Si LA ONG no cuenta con un plan/hosting propio, el equipo entregará **proformas con opciones de hosting** para que LA ONG elija según su presupuesto. El equipo **no proveerá, contratará ni pagará ninguno de estos servicios**. Asimismo, **EL EQUIPO DESARROLLADOR no se compromete ni se responsabiliza por la compra del dominio si el costo del mismo llegase a ser superior al presupuesto del proyecto**. La habilitación de funciones premium de WordPress que impliquen un costo adicional requerirá aprobación previa de LA ONG.
 - Pasarela de pago con tarjeta de crédito (Red Enlace): **está fuera del alcance del presente contrato**, salvo que LA ONG complete el papeleo de habilitación ante Red Enlace — única pasarela autorizada en Bolivia — y lo comunique formalmente al EQUIPO DESARROLLADOR, en cuyo caso se evaluará como adenda al contrato existente si aún está vigente, o como nuevo contrato si ya ha vencido. **En caso de que LA ONG no obtenga la habilitación de la pasarela de pagos ante Red Enlace, se deja expresa constancia de que el proyecto se mantendrá dentro de los límites presupuestarios originales y el dominio no será adquirido si su costo excede dicho presupuesto.**
 
 #### 3.3. Integración con pasarela de pago Red Enlace (CONDICIONAL)
@@ -453,7 +453,7 @@ Cada sprint tiene una duración de 2 semanas, al final de los cuales se realizar
 
 1. Cumplir con los entregables, plazos y criterios de aceptación establecidos en el presente contrato y en los TDR anexos.
 2. Mantener comunicación fluida y transparente con LA ONG mediante reuniones de seguimiento al final de cada sprint (cada 2 semanas), revisiones con retrospectiva, y grupo de WhatsApp para coordinación rápida. **En caso de requerirse reuniones adicionales,** LA ONG deberá notificar al EQUIPO DESARROLLADOR con un mínimo de **24 horas de antelación**, y dichas reuniones se llevarán a cabo únicamente **dentro del horario laboral** (lunes a viernes, 9:00 a 18:00, hora de Bolivia). **No se contestarán mensajes fuera del horario laboral establecido.**
-3. Configurar y personalizar la plataforma Hostinger Web Builder (plantillas, bloques, formularios y contenido) para cumplir con los requerimientos del proyecto.
+3. Configurar y personalizar la plataforma WordPress (plantillas, bloques, formularios y contenido) para cumplir con los requerimientos del proyecto.
 4. Alojar los archivos de configuración y personalizaciones en un repositorio privado de Git.
 5. Entregar una demo funcional del incremento configurado al finalizar cada sprint.
 6. Garantizar la confidencialidad de toda la información del albergue, datos de adoptantes, donantes, voluntarios y cualquier información sensible.
@@ -465,7 +465,7 @@ Cada sprint tiene una duración de 2 semanas, al final de los cuales se realizar
 1. Proporcionar la información, materiales gráficos (logotipo, identidad visual, **fotos de los animales**), textos, **contactos de redes sociales (Facebook, Instagram, WhatsApp) para su vinculación en el sitio web**, y cualquier recurso necesario para el desarrollo en tiempo y forma. Asimismo, **LA ONG se compromete a subir y entregar los archivos con la información completa de los 20 animales para la pre-carga inicial de prueba** (nombre, edad, tamaño, sexo, especie, estado de salud, personalidad, historia y fotos), en el formato que EL EQUIPO DESARROLLADOR indique.
 2. Designar un responsable de proyecto que actúe como interlocutor principal con EL EQUIPO DESARROLLADOR.
 3. Revisar y aprobar o rechazar (con justificación escrita) cada entregable en un plazo máximo de 5 días hábiles desde su presentación.
-4. **Proporcionar el plan/hosting** de Hostinger Web Builder (u otro proveedor compatible) donde se desplegará el sitio. EL EQUIPO DESARROLLADOR se encargará de la configuración y publicación en dicho plan. En caso de que LA ONG **no cuente con un plan propio**, EL EQUIPO DESARROLLADOR entregará **proformas con opciones de hosting** (Hostinger Web Builder y alternativas) con sus respectivos costos. LA ONG es la única responsable de contratar, pagar y renovar el hosting, dominio y certificado SSL.
+4. **Proporcionar el plan/hosting** de WordPress (u otro proveedor compatible) donde se desplegará el sitio. EL EQUIPO DESARROLLADOR se encargará de la configuración y publicación en dicho plan. En caso de que LA ONG **no cuente con un plan propio**, EL EQUIPO DESARROLLADOR entregará **proformas con opciones de hosting** (WordPress y alternativas) con sus respectivos costos. LA ONG es la única responsable de contratar, pagar y renovar el hosting, dominio y certificado SSL.
 5. Cumplir con los pagos en los plazos y montos establecidos en la Cláusula Sexta del presente contrato.
 
 ---
@@ -480,7 +480,7 @@ Cada sprint tiene una duración de 2 semanas, al final de los cuales se realizar
 | IVA (Impuesto al Valor Agregado), alícuota vigente en Bolivia (13%) | Bs. 1,560 |
 | **PRECIO TOTAL (IVA incluido)** | **Bs. 13,560** |
 
-El precio total incluye exclusivamente los servicios de diseño, configuración y personalización de la plataforma Hostinger Web Builder (plantillas, bloques, formularios y contenido), documentación, capacitación y garantía de 2 meses descritos en el presente contrato. **El precio NO incluye servicios de hosting, servidores, dominio, certificados SSL ni funciones premium del constructor**, los cuales corren por cuenta de LA ONG. EL EQUIPO DESARROLLADOR realizará la configuración en el plan del albergue y publicará el sitio en el dominio que LA ONG proporcione. En caso de que LA ONG no cuente con plan propio, EL EQUIPO DESARROLLADOR entregará proformas con opciones de hosting.
+El precio total incluye exclusivamente los servicios de diseño, configuración y personalización de la plataforma WordPress (plantillas, bloques, formularios y contenido), documentación, capacitación y garantía de 2 meses descritos en el presente contrato. **El precio NO incluye servicios de hosting, servidores, dominio, certificados SSL ni funciones premium de WordPress**, los cuales corren por cuenta de LA ONG. EL EQUIPO DESARROLLADOR realizará la configuración en el plan del albergue y publicará el sitio en el dominio que LA ONG proporcione. En caso de que LA ONG no cuente con plan propio, EL EQUIPO DESARROLLADOR entregará proformas con opciones de hosting.
 
 #### 6.2. Impuestos aplicables
 

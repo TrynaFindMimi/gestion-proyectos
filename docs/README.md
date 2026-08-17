@@ -40,7 +40,7 @@
 | [Proforma_Hosting_WordPress_GoDaddy.md](proformas/Proforma_Hosting_WordPress_GoDaddy.md) | Proforma INF-003: hosting WordPress gestionado (GoDaddy) |
 | [Proforma_Hosting_Servidores_Consultora.md](proformas/Proforma_Hosting_Servidores_Consultora.md) | Proforma INF-004: hosting en servidores de la consultora (plan gestionado) |
 | [Proforma_Hosting_Bluehost.md](proformas/Proforma_Hosting_Bluehost.md) | Proforma INF-006: hosting compartido WordPress (Bluehost) |
-| [Proforma_Hosting_Hostinger.md](proformas/Proforma_Hosting_Hostinger.md) | Proforma INF-007: hosting + constructor web (Hostinger Web Builder) |
+| [Proforma_Hosting_WordPress.md](proformas/Proforma_Hosting_WordPress.md) | Proforma INF-007: hosting + CMS (WordPress) |
 
 ---
 
@@ -99,7 +99,7 @@ flowchart LR
 
 | Concepto | Detalle |
 |----------|---------|
-| **Plataforma** | Hostinger Web Builder (constructor visual no-code) |
+| **Plataforma** | WordPress (CMS) |
 | **Duración total** | 16 semanas (8 de desarrollo + 8 de garantía) |
 | **Metodología** | Scrum + Kanban (sprints de 2 semanas con tablero Kanban) |
 | **Precio base** | Bs. 12,000 (más IVA) |

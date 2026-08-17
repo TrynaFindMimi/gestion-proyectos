@@ -123,20 +123,20 @@ Los requerimientos funcionales del sitio público (páginas, formularios y flujo
 
 | Componente | Opción sugerida | Alternativas aceptables |
 |------------|-----------------|------------------------|
-| Plataforma / CMS | **Hostinger Web Builder** (constructor visual no-code sobre hosting gestionado de Hostinger) | — |
-| Lenguaje | HTML/CSS generados por el constructor (sin programación; se permite bloques de código personalizado HTML/CSS) | — |
-| Base de datos | No aplica (sin base de datos propia; formularios y contenido gestionados por la plataforma de Hostinger) | — |
-| Editor / constructor visual | Editor drag & drop de Hostinger Web Builder con plantillas y bloques | — |
-| Formularios | Form Builder integrado de Hostinger (notificaciones por correo y almacenamiento de envíos) | — |
-| Blog | Módulo de blog integrado del constructor | — |
+| Plataforma / CMS | **WordPress** (CMS sobre hosting gestionado) | — |
+| Lenguaje | HTML/CSS generados por el CMS (sin programación; se permite bloques de código personalizado HTML/CSS) | — |
+| Base de datos | No aplica (sin base de datos propia; formularios y contenido gestionados por la plataforma de WordPress) | — |
+| Editor | Editor de bloques de WordPress (Gutenberg) con temas y plugins | — |
+| Formularios | Plugin de formularios (p. ej., WPForms) con notificaciones por correo y almacenamiento de envíos | — |
+| Blog | Módulo de blog integrado de WordPress | — |
 | SEO | Herramientas SEO integradas (meta tags, sitemap, URLs amigables) | — |
-| Envío de correos | Correos del dominio de Hostinger (mailbox) / SMTP del plan | — |
-| Almacenamiento de imágenes | Biblioteca de medios del constructor (medios del sitio) | — |
-| Seguridad | SSL gratuito, DDoS, escaneo de malware y backups gestionados por Hostinger | — |
+| Envío de correos | Correos del dominio de WordPress (mailbox) / SMTP del plan | — |
+| Almacenamiento de imágenes | Biblioteca de medios de WordPress (medios del sitio) | — |
+| Seguridad | SSL gratuito, DDoS, escaneo de malware y backups gestionados por WordPress | — |
 | Backups | Backups automáticos del plan (semanal en Premium; mejorable) | — |
-| Despliegue | Publicación directa desde el editor de Hostinger Web Builder (dominio propio o gratuito) | — |
+| Despliegue | Publicación directa desde el editor de WordPress (dominio propio o gratuito) | — |
 | Control de versiones | Git (GitHub) para respaldo de la configuración exportada y documentación | — |
-| Entorno de trabajo | Editor en línea de Hostinger + entorno de pruebas (staging) del plan | — |
+| Entorno de trabajo | Editor en línea de WordPress + entorno de pruebas (staging) del plan | — |
 
 ---
 

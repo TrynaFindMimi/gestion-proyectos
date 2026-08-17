@@ -140,7 +140,7 @@ Durante el período de garantía, las incidencias se gestionarán de la siguient
 
 ### 12. ACTUALIZACIONES DE SEGURIDAD DURANTE LA GARANTÍA
 
-Durante el período de garantía, EL EQUIPO DESARROLLADOR realizará las **actualizaciones de seguridad y la revisión de la configuración de la plataforma Hostinger Web Builder** (seguridad gestionada, backups y bloques instalados), de acuerdo con el siguiente procedimiento:
+Durante el período de garantía, EL EQUIPO DESARROLLADOR realizará las **actualizaciones de seguridad y la revisión de la configuración de la plataforma WordPress** (seguridad gestionada, backups y bloques instalados), de acuerdo con el siguiente procedimiento:
 
 1. Verificación de compatibilidad en el entorno de **staging** antes de aplicar en producción.
 2. **Backup completo previo** a cada actualización o cambio mayor.

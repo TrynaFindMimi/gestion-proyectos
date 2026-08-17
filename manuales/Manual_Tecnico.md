@@ -59,7 +59,7 @@
    - 4.4. [Mapa de navegación — panel de administración](#44-mapa-de-navegación--panel-de-administración)
 5. [Stack tecnológico](#5-stack-tecnológico)
    - 5.1. [Plataforma y lenguajes](#51-plataforma-y-lenguajes)
-   - 5.2. [Tema y constructor visual](#52-tema-y-constructor-visual)
+   - 5.2. [Tema y editor de bloques](#52-tema-y-editor-de-bloques)
    - 5.3. [Plugins instalados](#53-plugins-instalados)
    - 5.4. [Herramientas de despliegue y monitoreo](#54-herramientas-de-despliegue-y-monitoreo)
 6. [Modelo de datos](#6-modelo-de-datos)
@@ -483,7 +483,7 @@ flowchart TB
 | Servidor web | Apache / Nginx | Versión del hosting |
 
 
-### 5.2. Tema y constructor visual
+### 5.2. Tema y editor de bloques
 
 | Herramienta | Uso |
 |-------------|-----|
@@ -885,7 +885,7 @@ Una vez vencido el período de garantía (E11), todo requerimiento de soporte, m
 - **Anexo E:** Plantilla de restablecimiento de contraseñas (capítulo 3).
 - **Anexo F:** Hoja de rotación de credenciales (§3.1) — uso mensual/trimestral. El historial de rotación operativo se registra en la bóveda (`manuales/Boveda_Usuarios.md` §3).
 - **Anexo G:** Checklist de mantenimiento mensual (§11.1).
-- **Anexo H:** Proformas de infraestructura y dominio (`docs/proformas/`) — dominio `.bo` (INF-001) y `.com` (INF-002), y hosting (GoDaddy INF-003, consultora INF-004, Bluehost INF-006, Hostinger INF-007).
+- **Anexo H:** Proformas de infraestructura y dominio (`docs/proformas/`) — dominio `.bo` (INF-001) y `.com` (INF-002), y hosting (GoDaddy INF-003, consultora INF-004, Bluehost INF-006, WordPress INF-007).
 
 ---
 

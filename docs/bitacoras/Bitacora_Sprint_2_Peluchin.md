@@ -31,7 +31,7 @@
 |---|--------|------------------|
 | 1 | Mariana del Arroyo | Coordinación, notificaciones por correo y configuración SMTP |
 | 2 | Nahomi Humerez | Maquetación de páginas (donaciones, voluntarios, contacto, Quiénes Somos, FAQ) |
-| 3 | Santiago Acha | Configuración de formularios y notificaciones (Form Builder), páginas legales |
+| 3 | Santiago Acha | Configuración de formularios y notificaciones (plugin de formularios), páginas legales |
 | 4 | Jorge Saenz | QA de formularios y flujos, pruebas de envío de correos |
 
 **Responsable de la entrega (por el albergue):** ________________________
@@ -52,17 +52,17 @@
 
 | Día | Actividad | Herramienta / Bloque | Responsable | Estado |
 |-----|-----------|----------------------|-------------|--------|
-| 15–17 | Formulario de pre-adopción multi-paso con notificaciones por correo | Form Builder de Hostinger | Santiago Acha | Completada |
-| 17–18 | Configuración de notificaciones automáticas para adopciones | Form Builder + correo del dominio | Mariana del Arroyo | Completada |
+| 15–17 | Formulario de pre-adopción multi-paso con notificaciones por correo | formularios de WordPress | Santiago Acha | Completada |
+| 17–18 | Configuración de notificaciones automáticas para adopciones | plugin de formularios + correo del dominio | Mariana del Arroyo | Completada |
 | 17–18 | Página de donaciones: QR Simple, datos bancarios con botón copiar | Editor + bloque HTML | Nahomi Humerez | Completada |
-| 18–19 | Formulario de reporte de donación con adjunto de comprobante | Form Builder | Santiago Acha | Completada |
-| 19–21 | Página de registro de voluntarios con áreas de interés y horarios | Form Builder | Santiago Acha | Completada |
+| 18–19 | Formulario de reporte de donación con adjunto de comprobante | plugin de formularios | Santiago Acha | Completada |
+| 19–21 | Página de registro de voluntarios con áreas de interés y horarios | plugin de formularios | Santiago Acha | Completada |
 | 22–23 | Página de contacto con botón de WhatsApp y mapa de Google Maps | Editor + bloque HTML (`wa.me`) | Nahomi Humerez | Completada |
-| 22–24 | Página Quiénes Somos, FAQ (acordeón), Misión y Visión | Editor / bloques del constructor | Nahomi Humerez | Completada |
+| 22–24 | Página Quiénes Somos, FAQ (acordeón), Misión y Visión | Editor / bloques de WordPress | Nahomi Humerez | Completada |
 | 24–25 | Páginas legales (transcripción del contenido de la ONG) | Editor | Santiago Acha | Completada |
 | 25–26 | Configuración de SEO básico (meta tags, sitemap, URL amigables) | Herramientas SEO integradas | Jorge Saenz | Completada |
 | 26–27 | Integración de redes sociales en footer y página de contacto | Bloques de redes / código | Nahomi Humerez | Completada |
-| 26–28 | Pruebas de envío de correos y de todos los formularios | Form Builder + correo | Jorge Saenz | Completada |
+| 26–28 | Pruebas de envío de correos y de todos los formularios | plugin de formularios + correo | Jorge Saenz | Completada |
 | 28 | **DEMO: Sitio público completo (E4)** | Google Meet | Todo el equipo | Completada |
 
 ---

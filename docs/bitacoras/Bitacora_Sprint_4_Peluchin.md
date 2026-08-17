@@ -57,13 +57,13 @@
 | 45–46 | Pruebas de rendimiento (PageSpeed, GTmetrix, Lighthouse) | Optimizaciones del plan (CDN, compresión de imágenes) | Jorge Saenz | Completada |
 | 46–47 | Pruebas de responsividad en dispositivos móviles y navegadores | Responsively | Nahomi Humerez | Completada |
 | 47–49 | Corrección de bugs y ajustes | — | Todo el equipo | Completada |
-| 49–50 | Optimización de imágenes y activación de CDN / caché del plan | Panel de Hostinger Web Builder | Jorge Saenz | Completada |
+| 49–50 | Optimización de imágenes y activación de CDN / caché del plan | Panel de WordPress | Jorge Saenz | Completada |
 | 50–52 | Configuración de analíticas (Google Analytics / Site Kit) | Analytics integrada / código | Jorge Saenz | Completada |
 | 52–53 | Optimización SEO (meta tags, sitemap, Google Search Console) | Herramientas SEO integradas | Mariana del Arroyo | Completada |
-| 52–53 | Configuración de SSL/TLS, dominio y DNS en producción | Panel de Hostinger | Mariana del Arroyo | Completada |
-| 53–54 | Publicación del sitio de staging a producción en Hostinger Web Builder | Panel de Hostinger Web Builder | Mariana del Arroyo | Completada |
+| 52–53 | Configuración de SSL/TLS, dominio y DNS en producción | Panel de WordPress | Mariana del Arroyo | Completada |
+| 53–54 | Publicación del sitio de staging a producción en WordPress | Panel de WordPress | Mariana del Arroyo | Completada |
 | 54–55 | Pruebas post-despliegue (smoke test) | — | Jorge Saenz | Completada |
-| 54–55 | Elaboración del Manual de Usuario (guía visual de Hostinger Web Builder para el albergue) | — | Jorge Saenz | Completada |
+| 54–55 | Elaboración del Manual de Usuario (guía visual de WordPress para el albergue) | — | Jorge Saenz | Completada |
 | 55 | Capacitación al personal del albergue (sesión 1 de 2) | Google Meet / Zoom | Todo el equipo | Completada |
 | 55–56 | Capacitación al personal del albergue (sesión 2 de 2) | Google Meet / Zoom | Todo el equipo | Completada |
 | 56 | Entrega formal del sitio, backups y documentación | — | Mariana del Arroyo | Completada |
@@ -73,7 +73,7 @@
 
 ### 5. INCIDENCIAS Y OBSERVACIONES
 
-1. El plan Web Builder fue contratado por el albergue el día 48 (dentro del plazo de la Semana 7); se entregó asistencia técnica para la contratación y se recibieron las credenciales de acceso.
+1. El plan WordPress fue contratado por el albergue el día 48 (dentro del plazo de la Semana 7); se entregó asistencia técnica para la contratación y se recibieron las credenciales de acceso.
 2. El dominio se vinculó correctamente y el certificado SSL quedó activo en producción el día 53.
 3. En las pruebas de rendimiento el sitio alcanzó un puntaje Lighthouse ≥ 90/100 en dispositivos móviles; se optimizaron las imágenes y se activó el CDN del plan.
 4. Se detectaron y corrigieron 6 bugs menores (mensajes de validación, alineación en móvil, enlace del botón de WhatsApp) antes de la demo final.

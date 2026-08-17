@@ -21,7 +21,7 @@
 | **Período** | Semanas 5–6 (Días 29 al 42) |
 | **Fecha de inicio** | [dd/mm/aaaa] |
 | **Fecha de cierre (demo)** | [dd/mm/aaaa] |
-| **Objetivo del sprint** | Personalizar el editor y el panel de Hostinger Web Builder, definir accesos/roles, implementar el dashboard de KPIs, el flujo de estados de adopción, la gestión de donaciones y voluntarios, el blog, los eventos, los backups, la seguridad y el contenido editable |
+| **Objetivo del sprint** | Personalizar el editor y el panel de WordPress, definir accesos/roles, implementar el dashboard de KPIs, el flujo de estados de adopción, la gestión de donaciones y voluntarios, el blog, los eventos, los backups, la seguridad y el contenido editable |
 
 ---
 
@@ -51,17 +51,17 @@
 
 | Día | Actividad | Herramienta / Bloque | Responsable | Estado |
 |-----|-----------|----------------------|-------------|--------|
-| 29–30 | Personalización del editor/panel de Hostinger (marca, menús, estructura) | Editor de Hostinger Web Builder | Nahomi Humerez | Completada |
-| 30–31 | Accesos/roles: administrador, editor, voluntario (permisos de edición) | Accesos del plan de Hostinger | Nahomi Humerez | Completada |
+| 29–30 | Personalización del editor/panel de WordPress (marca, menús, estructura) | Editor de WordPress | Nahomi Humerez | Completada |
+| 30–31 | Accesos/roles: administrador, editor, voluntario (permisos de edición) | Accesos del hosting WordPress | Nahomi Humerez | Completada |
 | 31–33 | Dashboard con KPIs del albergue (animales, solicitudes, donaciones) | Envíos de formularios + reportes | Mariana del Arroyo | Completada |
 | 33–35 | Flujo de estados de adopción (pendiente → en revisión → aprobado/rechazado) | Bandeja de envíos + notificaciones | Mariana del Arroyo | Completada |
 | 35–37 | Gestión de donaciones (registro manual, exportación Excel) | Envíos de formularios + exportación | Santiago Acha | Completada |
 | 37–38 | Gestión de voluntarios (listado, filtros, exportación) | Envíos de formularios | Santiago Acha | Completada |
 | 38–39 | Blog con sistema de categorías | Módulo de blog integrado | Jorge Saenz | Completada |
-| 39–41 | Página "Eventos" con fechas, ubicación, galería y formulario de registro | Editor + Form Builder | Jorge Saenz | Completada |
-| 40–41 | Configuración de backups automáticos | Backups del plan de Hostinger | Jorge Saenz | Completada |
-| 41 | Revisión de seguridad (SSL, malware, DDoS) | Seguridad gestionada de Hostinger | Jorge Saenz | Completada |
-| 41–42 | Contenido editable por secciones (Quiénes Somos, FAQ, Donaciones) | Editor del constructor | Nahomi Humerez | Completada |
+| 39–41 | Página "Eventos" con fechas, ubicación, galería y formulario de registro | Editor + plugin de formularios | Jorge Saenz | Completada |
+| 40–41 | Configuración de backups automáticos | Backups del hosting WordPress | Jorge Saenz | Completada |
+| 41 | Revisión de seguridad (SSL, malware, DDoS) | Seguridad gestionada de WordPress | Jorge Saenz | Completada |
+| 41–42 | Contenido editable por secciones (Quiénes Somos, FAQ, Donaciones) | Editor de WordPress | Nahomi Humerez | Completada |
 | 42 | Botón flotante de WhatsApp en todo el sitio | Bloque HTML / código | Mariana del Arroyo | Completada |
 | 42 | **DEMO: Panel admin completo + blog + eventos (E5, E6)** | Google Meet | Todo el equipo | Completada |
 
@@ -71,14 +71,14 @@
 
 1. Se detectó que el acceso "voluntario" requería permisos adicionales para ver los envíos de donaciones; se ajustó la configuración de accesos del plan y se documentó en el Manual de Usuario.
 2. El contenido de las páginas legales (Reglamento de Adopción, Privacidad, Términos) fue transcrito tal como lo entregó el albergue el día 36; el albergue se comprometió a su revisión legal final en el Sprint 4.
-3. La revisión de seguridad de Hostinger no reportó hallazgos relevantes; se confirmaron SSL, protección DDoS y escaneo de malware activos.
+3. La revisión de seguridad de WordPress no reportó hallazgos relevantes; se confirmaron SSL, protección DDoS y escaneo de malware activos.
 4. Los backups automáticos quedaron configurados en el plan y se verificó una restauración de prueba satisfactoria.
 
 ---
 
 ### 6. RESULTADOS DE LA DEMO (DÍA 42)
 
-- Editor/panel de Hostinger Web Builder personalizado con el logo del albergue, menús y estructura simplificados.
+- Editor/panel de WordPress personalizado con el logo del albergue, menús y estructura simplificados.
 - Accesos/roles definidos: administrador, editor y voluntario con permisos limitados.
 - Dashboard con KPIs (animales en adopción, solicitudes pendientes, donaciones del mes, voluntarios activos).
 - CRUD completo de animales y gestión de solicitudes con flujo de estados y notas internas.

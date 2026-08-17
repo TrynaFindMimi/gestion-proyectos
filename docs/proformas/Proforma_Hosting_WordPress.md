@@ -1,6 +1,6 @@
 # PROFORMA N.º INF-007
 
-## HOSTING + CONSTRUCTOR WEB — HOSTINGER WEB BUILDER
+## HOSTING + CMS WORDPRESS
 
 ---
 
@@ -18,7 +18,7 @@
 
 ### 1. OBJETO
 
-Cotización del **plan Hostinger Web Builder (alojamiento + constructor web)** para el sitio web del albergue. El plan recomendado corresponde a **US$10,99/mes** (tarifa de renovación regular del plan Premium). Los precios del primer año son promocionales; tras el término inicial se factura a tarifa regular.
+Cotización del **plan de hosting WordPress (alojamiento + CMS)** para el sitio web del albergue. El plan recomendado corresponde a **US$10,99/mes** (tarifa de renovación regular del plan Premium). Los precios del primer año son promocionales; tras el término inicial se factura a tarifa regular.
 
 ---
 
@@ -26,7 +26,7 @@ Cotización del **plan Hostinger Web Builder (alojamiento + constructor web)** p
 
 | Plan | Sitios | Almacenamiento | Características clave | USD/mes (promo) | USD/mes (renovación) |
 |------|--------|----------------|-----------------------|-----------------|----------------------|
-| **Premium** ⭐ | 1 | 2 GB | Constructor drag & drop, SSL, dominio gratis 1.er año, herramientas SEO y de blog | **2,99** | **10,99** |
+| **Premium** ⭐ | 1 | 2 GB | WordPress preinstalado, SSL, dominio gratis 1.er año, herramientas SEO y de blog | **2,99** | **10,99** |
 | **Business** | 50 | 50 GB | + tienda (ecommerce), logo y funciones IA | 3,99 | 16,99 |
 
 ---
@@ -35,7 +35,7 @@ Cotización del **plan Hostinger Web Builder (alojamiento + constructor web)** p
 
 | N.º | Descripción | Unidad | Precio unitario | Subtotal |
 |-----|-------------|--------|-----------------|----------|
-| 1 | Plan Hostinger Web Builder Premium (1.er año, facturación anual) | 12 meses | US$ 2,99/mes | US$ 35,88 |
+| 1 | Plan de hosting WordPress Premium (1.er año, facturación anual) | 12 meses | US$ 2,99/mes | US$ 35,88 |
 | 2 | Configuración inicial y migración del sitio por la consultora | 1 vez | US$ 50,00 | US$ 50,00 |
 | | | | **Subtotal (USD)** | **US$ 85,88** |
 | | | | **Subtotal (Bs ≈ 11,00)** | ≈ **Bs 944,68** |
@@ -46,7 +46,7 @@ Cotización del **plan Hostinger Web Builder (alojamiento + constructor web)** p
 
 | Concepto | USD/mes | USD/año | Bs/año (≈) |
 |----------|---------|---------|------------|
-| Renovación plan Hostinger Web Builder Premium | 10,99 | ≈ 131,88 | ≈ 1.450,68 |
+| Renovación plan de hosting WordPress Premium | 10,99 | ≈ 131,88 | ≈ 1.450,68 |
 | Renovación dominio (fuera de la proforma de hosting) | — | Véase INF-001/INF-002 | — |
 | Mantenimiento mensual por la consultora (opcional) | Véase INF-005 | — | — |
 
@@ -54,10 +54,10 @@ Cotización del **plan Hostinger Web Builder (alojamiento + constructor web)** p
 
 ### 4. CARACTERÍSTICAS INCLUIDAS (PLAN PREMIUM)
 
-- **Constructor web** (editor drag & drop) con colecciones, formularios, blog, galerías y bloques integrados; **no requiere WordPress ni plugins**.
-- **Alojamiento del sitio incluido** en el plan (el sitio se publica y se aloja en Hostinger).
+- **WordPress preinstalado** con temas, plugins (formularios, galerías, SEO) y bloques personalizables mediante el editor de bloques.
+- **Alojamiento del sitio incluido** en el plan (el sitio se publica y se aloja en un hosting compatible con WordPress).
 - **SSL** incluido (certificado para el dominio).
-- Dominio gratis el primer año (al contratar con Hostinger).
+- Dominio gratis el primer año (al contratar el hosting).
 - Correo electrónico del dominio incluido el primer año.
 - **CDN** integrado y DNS configurados.
 - **Herramientas SEO integradas** (sitemap, meta tags) y opción de conectar Google Analytics.
@@ -73,7 +73,7 @@ Cotización del **plan Hostinger Web Builder (alojamiento + constructor web)** p
 | **Titularidad de la cuenta** | Albergue "Peluchín" (cuenta de pago del albergue) |
 | **Forma de pago** | Tarjeta de crédito/débito internacional o PayPal |
 | **Anticipo** | 100 % (facturación del término contratado) |
-| **Incluye** | Plan Web Builder + configuración y migración por la consultora |
+| **Incluye** | Plan de hosting WordPress + configuración y migración por la consultora |
 | **No incluye** | Dominio (INF-001/INF-002), mantenimiento continuo (INF-005) |
 
 ---
@@ -81,7 +81,7 @@ Cotización del **plan Hostinger Web Builder (alojamiento + constructor web)** p
 ### 6. CONDICIONES GENERALES
 
 - Precios en dólares estadounidenses (US$), facturables en bolivianos (Bs) al tipo de cambio referencial (≈ 11,00).
-- Los precios promocionales de Hostinger aplican a términos de 12, 24 o 48 meses facturados por adelantado; la renovación se factura a tarifa regular.
+- Los precios promocionales del hosting WordPress aplican a términos de 12, 24 o 48 meses facturados por adelantado; la renovación se factura a tarifa regular.
 - Elegir un término más largo (24–48 meses) reduce el costo mensual promocional, pero inmoviliza el pago por adelantado.
 - El plan Premium soporta 1 sitio; el plan Business habilita tienda en línea y mayor almacenamiento, sin costos de transacción en las ventas.
 

@@ -18,7 +18,7 @@
 
 ### 1. OBJETO
 
-Cotización del **alojamiento del sitio web en los servidores de la consultora** (servicio gestionado de hosting), como alternativa a los planes internacionales (GoDaddy INF-003, Bluehost INF-006, Hostinger Web Builder INF-007). Incluye infraestructura propia, mantenimiento, respaldos, seguridad y soporte técnico del equipo que desarrolló el sistema.
+Cotización del **alojamiento del sitio web en los servidores de la consultora** (servicio gestionado de hosting), como alternativa a los planes internacionales (GoDaddy INF-003, Bluehost INF-006, WordPress INF-007). Incluye infraestructura propia, mantenimiento, respaldos, seguridad y soporte técnico del equipo que desarrolló el sistema.
 
 **Condición del plan:** este servicio de hosting gestionado se presta mediante un **contrato de servicio adicional** (tercer contrato, independiente del contrato de desarrollo). El plan incluye **2 GB de almacenamiento**, **2 GB de transferencia (ancho de banda) por mes** y **funcionalidades adicionales del plan gestionado**, dimensionados para el sitio actual del albergue; ampliaciones de espacio o de ancho de banda se cotizan aparte.
 
@@ -65,11 +65,11 @@ Cotización del **alojamiento del sitio web en los servidores de la consultora**
 
 ### 4. COMPARATIVA CON HOSTING DE TERCEROS
 
-| Criterio | Servidores de la consultora (INF-004) | Bluehost (INF-006) | Hostinger Web Builder (INF-007) |
+| Criterio | Servidores de la consultora (INF-004) | Bluehost (INF-006) | WordPress (INF-007) |
 |----------|----------------------------------------|--------------------|----------------------------------|
-| Soporte técnico | Equipo que desarrolló el sistema | Soporte genérico de Bluehost | Soporte genérico de Hostinger |
+| Soporte técnico | Equipo que desarrolló el sistema | Soporte genérico de Bluehost | Soporte genérico de WordPress |
 | Conocimiento del proyecto | Alto (misma consultora) | Nulo | Nulo |
-| Constructor web incluido | No (sitio de la consultora) | No (hosting tradicional) | **Sí** (Web Builder) |
+| Constructor web incluido | No (sitio de la consultora) | No (hosting tradicional) | **Sí** (WordPress) |
 | Moneda de pago | Bolivianos (Bs), depósito/transferencia | Dólares, tarjeta internacional | Dólares, tarjeta internacional |
 | Migración | Incluida | Cobrada aparte | Cobrada aparte |
 | Contrato adicional | Tercer contrato de servicio | No requerido | No requerido |
