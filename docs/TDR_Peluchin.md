@@ -82,16 +82,6 @@ Desarrollar un sitio web institucional con panel de administración para el albe
 | **Documentación** | Manual de Sistemas, manual de usuario |
 | **Capacitación** | 2 sesiones de capacitación al personal del albergue |
 
-#### 4.2. No incluye
-
-- Diseño de logotipo ni identidad visual (el albergue ya cuenta con ella; se proporcionarán los archivos).
-- Campañas de marketing digital o manejo de redes sociales.
-- Carga masiva inicial de perritos (se capacitará al personal; se pre-cargarán hasta 20 fichas como parte del proyecto).
-- Integración con sistemas contables o ERP.
-- Desarrollo de aplicaciones móviles nativas (solo web responsiva).
-- Hosting, dominio ni certificados SSL (corren por cuenta del albergue; se brinda asesoría para su contratación).
-- Pasarela de pago con tarjeta de crédito (puede cotizarse como fase adicional si se requiere en el futuro).
-
 ---
 
 ### 5. REQUERIMIENTOS FUNCIONALES
