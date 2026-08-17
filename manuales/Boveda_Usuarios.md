@@ -179,5 +179,3 @@ Los procedimientos completos de rotación y recuperación de contraseñas se det
 | — | — | — | — | — |
 | — | — | — | — | — |
 | — | — | — | — | — |
-
-> **Nota:** Cada vez que se realice una rotación, actualice **el mismo día** este historial y la matriz de la §2, además del Manual Técnico.
