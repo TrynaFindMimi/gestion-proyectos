@@ -658,4 +658,5 @@ El documento **"TDR_Peluchin.md"** en su versión vigente al momento de la firma
 ### ANEXO II: CRONOGRAMA DE PLANIFICACIÓN
 
 El documento **"TDR_Plan_Proyecto_Cronograma_Peluchin.md"** en su versión vigente al momento de la firma del presente contrato forma parte integrante del mismo como Anexo II.
+.
 

@@ -206,7 +206,7 @@ Las contraseñas del sistema se registran en la **Bóveda de Usuarios y Contrase
 
 ### 3.2. Matriz de credenciales del sistema
 
-La tabla resume cada punto de acceso del sistema, su responsable y su contraseña actual.
+La tabla resume cada punto de acceso del sistema y su responsable de administración. Las contraseñas **no se registran en este manual**: se consultan exclusivamente en la bóveda (§3.8).
 
 | Componente | Cuenta(s) | Responsable de administración | Rotación recomendada |
 |-----------|-----------|-------------------------------|----------------------|
@@ -225,9 +225,9 @@ La tabla resume cada punto de acceso del sistema, su responsable y su contraseñ
 
 | Cuenta | Rol (permisos) | Usuario (usuario de acceso) | Contraseña | Uso |
 |--------|----------------|-----------------------------|-----------|-----|
-| Administrador principal | Administrador | `admin_peluchin` | `Peluch1n#Admin2026` | Control total del panel (operador diario) |
-| Administrador de respaldo | Administrador | `admin_respaldo` | `Peluch1n#Respaldo2026` | Sustitución, recuperación y auditoría |
-| Editor de contenido | Editor | `editor_peluchin` | `Peluch1n#Editor2026` | Publicación de blog, eventos y contenido |
+| Administrador principal | Administrador | `admin_peluchin` | Ver bóveda (§3.8) | Control total del panel (operador diario) |
+| Administrador de respaldo | Administrador | `admin_respaldo` | Ver bóveda (§3.8) | Sustitución, recuperación y auditoría |
+| Editor de contenido | Editor | `editor_peluchin` | Ver bóveda (§3.8) | Publicación de blog, eventos y contenido |
 | Voluntario (uno por persona) | Voluntario (solo lectura) | `voluntario_[nombre]` | Se entrega al alta (creada por el admin) | Consulta de su información y de animales |
 
 Reglas:
@@ -245,7 +245,7 @@ Reglas:
 | Panel de control | cPanel / Plesk |
 | URL de acceso | `https://[cpanel-del-proveedor]` |
 | Usuario | `peluchin_hosting` |
-| Contraseña | `Peluch1n#Hosting2026` |
+| Contraseña | Ver bóveda (§3.8) |
 
 Sea estricto: **no comparta** las credenciales del hosting con voluntarios ni editores. Solo administradores y soporte técnico.
 
@@ -255,7 +255,7 @@ Sea estricto: **no comparta** las credenciales del hosting con voluntarios ni ed
 |------|---------------------|
 | Protocolo | SFTP recomendado (puerto 22 / 2222 según proveedor) |
 | Usuario | `peluchin_sftp` |
-| Contraseña | `Peluch1n#FTP2026` |
+| Contraseña | Ver bóveda (§3.8) |
 | Puerto | Según proveedor |
 | Acceso | Únicamente para mantenimiento técnico (cargas de tema hijo, corrección de fallos) |
 
@@ -266,7 +266,7 @@ Sea estricto: **no comparta** las credenciales del hosting con voluntarios ni ed
 | Motor | MySQL / MariaDB |
 | Base de datos | `peluchin_db` (ver `wp-config.php`) |
 | Usuario de aplicación | `peluchin_app` |
-| Contraseña | `Peluch1n#DB2026` |
+| Contraseña | Ver bóveda (§3.8) |
 | Usuario root / administrador | Solo disponible desde el panel del hosting |
 
 #### 3.2.5. SMTP — correos automáticos
@@ -276,14 +276,14 @@ Sea estricto: **no comparta** las credenciales del hosting con voluntarios ni ed
 | Servicio | Proveedor SMTP contratado (p. ej. Resend / SendGrid / SMTP del hosting) |
 | Host / Puerto | Ver configuración de WP Mail SMTP (p. ej. `smtp.[proveedor].com` / 587 o 465) |
 | Remitente | `notificaciones@alberguepeluchin.org.bo` |
-| Usuario / clave API | `peluchin_smtp` / `Peluch1n#SMTP2026` |
+| Usuario / clave API | `peluchin_smtp` / Ver bóveda (§3.8) |
 
 #### 3.2.6. Dominio, DNS y correo del dominio
 
 | Dato | Valor de referencia |
 |------|---------------------|
 | Dominio | `alberguepeluchin.org.bo` |
-| Registrador | Proveedor del dominio (acceso `admin_dominio` / `Peluch1n#DNS2026`) |
+| Registrador | Proveedor del dominio (usuario `admin_dominio`, contraseña en bóveda §3.8) |
 | Registros DNS | A / CNAME apuntando al hosting; verificación en el panel del registrador |
 | Correo del dominio | Cuentas `@alberguepeluchin.org.bo` (p. ej. `info@`, `notificaciones@`) gestionadas en el proveedor del hosting o de correo |
 
@@ -293,8 +293,8 @@ Sea estricto: **no comparta** las credenciales del hosting con voluntarios ni ed
 |------|---------------------|
 | Destino remoto | Google Drive / Dropbox (cuenta exclusiva para respaldos del sitio) |
 | Cuenta | `peluchin_backups@gmail.com` |
-| Contraseña | `Peluch1n#Backup2026` |
-| Clave de cifrado | `Peluch1n#Cifrado2026` |
+| Contraseña | Ver bóveda (§3.8) |
+| Clave de cifrado | Ver bóveda (§3.8) |
 | Retención | 30 copias diarias (rotación automática) |
 
 #### 3.2.8. Pasarelas y servicios externos
@@ -337,8 +337,8 @@ Si el administrador no puede ingresar y olvidó la contraseña:
 
 1. Desde la pantalla de ingreso (`/admin`) pulse **"Olvidé mi contraseña"** e ingrese el correo de la cuenta admin. Recibirá un enlace de restablecimiento en el correo del dominio.
 2. **Si el correo no llega:** verifique SMTP (§3.2.5). Como respaldo, el **administrador de respaldo** (`admin_respaldo`) puede restablecerla desde `Usuarios`.
-3. **Si se pierden ambas cuentas admin:** usar **WP CLI** (`wp user update <id> --user_pass=NuevaClave`) desde SSH/terminal o el restaurar temporalmente mediante FTP un pequeño php de restablecimiento; en todo caso, realice primero una copia de la BD y registre el cambio en este manual.
-4. Actualizar este manual con la nueva contraseña.
+3. **Si se pierden ambas cuentas admin:** usar **WP CLI** (`wp user update <id> --user_pass=NuevaClave`) desde SSH/terminal o el restaurar temporalmente mediante FTP un pequeño php de restablecimiento; en todo caso, realice primero una copia de la BD y registre el cambio en la bóveda.
+4. Registrar la nueva contraseña únicamente en la bóveda (§3.8).
 
 #### 3.4.3. Recuperación de la contraseña de un voluntario
 
@@ -347,7 +347,7 @@ Los voluntarios no administran el sistema; la recuperación es competencia del a
 1. `Usuarios → Todos los usuarios` → cuenta del voluntario.
 2. "Enviar restablecimiento de contraseña" o definir una temporal y forzar cambio en el primer ingreso.
 3. Entregar la nueva credencial **por un canal seguro** (no por redes sociales públicas).
-4. Actualizar este manual.
+4. Registrar la nueva contraseña únicamente en la bóveda (§3.8).
 
 #### 3.4.4. Rotación de credenciales de hosting, BD y SMTP
 
@@ -357,14 +357,14 @@ Estas rotaciones se realizan únicamente por el soporte técnico (o por el respo
 2. **Base de datos:** cambiar la contraseña del usuario de la BD y editar las constantes `DB_PASSWORD` (y en su caso `DB_USER`) en `wp-config.php` vía FTP. Probar el sitio después (página + panel + un formulario).
 3. **SMTP:** regenerar la clave API o contraseña del proveedor SMTP y actualizar la configuración en WP Mail SMTP (pestaña SMTP). Realizar "Enviar correo de prueba" y verificar.
 4. **Backups remotos:** rotar la contraseña de la cuenta de destino y actualizar UpdraftPlus (Ajustes → Remoto).
-5. En todos los casos: **actualizar este manual el mismo día** y registrar en la bitácora técnica.
+5. En todos los casos: **actualizar la bóveda el mismo día** y registrar en la bitácora técnica.
 
 
 ### 3.5. Autenticación de doble factor (2FA)
 
 | Perfil | 2FA |
 |--------|-----|
-| Administrador principal y de respaldo | **Requerido** (Wordfence o plugin 2FA, p. ej. Google Authenticator). Localizadores de recuperación guardados en este manual |
+| Administrador principal y de respaldo | **Requerido** (Wordfence o plugin 2FA, p. ej. Google Authenticator). Localizadores de recuperación guardados en la bóveda (§3.8) |
 | Editor | **Recomendado** |
 | Voluntario | Opcional según decisión del administrador |
 
@@ -382,9 +382,9 @@ Estas rotaciones se realizan únicamente por el soporte técnico (o por el respo
 
 | Operación | Procedimiento |
 |-----------|---------------|
-| Alta de editor | `Usuarios → Añadir nuevo` (rol Editor), correo real, entregar credencial, registrar en este manual |
+| Alta de editor | `Usuarios → Añadir nuevo` (rol Editor), correo real, entregar credencial, registrar en la bóveda (§3.8) |
 | Alta de voluntario | `Usuarios → Añadir nuevo` (rol Voluntario), correo del albergue o del voluntario según criterio del admin |
-| Baja de voluntario | El administrador **elimina la cuenta** (`Usuarios → Eliminar`) o la **desactiva**; rotar cualquier contraseña compartida y actualizar este manual |
+| Baja de voluntario | El administrador **elimina la cuenta** (`Usuarios → Eliminar`) o la **desactiva**; rotar cualquier contraseña compartida y actualizar la bóveda (§3.8) |
 | Baja de editor / admin | Eliminar cuenta; en caso de renuncia, rotar también las credenciales de hosting, SMTP y dominio si esa persona las conocía |
 
 ### 3.8. Bóveda de usuarios y contraseñas
@@ -895,3 +895,4 @@ Una vez vencido el período de garantía (E11), todo requerimiento de soporte, m
 Este manual refleja el estado **final del sistema en producción** (entregables E1–E10 aprobados). Se actualizará únicamente ante cambios de alcance aprobados por adenda o ante modificaciones de configuración, modelo de datos o procedimientos de operación, que deberán quedar registrados en la bitácora técnica correspondiente.
 
 **Custodia y confidencialidad:** este documento contiene información sensible sobre la operación del sistema. Debe resguardarse por el responsable del albergue y entregarse únicamente al personal autorizado, en cumplimiento de la cláusula de confidencialidad del contrato (mínimo 2 años tras el cierre).
+.

@@ -425,3 +425,4 @@ flowchart LR
 | **Enlaces principales (`<<link>>`)** | Inicio → todas las secciones (incluidas Donaciones y Voluntarios); catálogo → ficha → pre-adopción | Login → Dashboard → módulos de gestión → vuelta al Dashboard |
 | **Formularios (`<<form>>`)** | Pre-adopción, donación, voluntariado, contacto — cada uno contenido en su página y con `<<submit>>` hacia esa misma página | CRUD de animales, solicitudes, donaciones, voluntarios, blog/eventos/contenido — mismo patrón contención + `<<submit>>` |
 | **Terminación de la sesión** | El usuario cierra el navegador | El administrador cierra sesión o la sesión expira |
+.

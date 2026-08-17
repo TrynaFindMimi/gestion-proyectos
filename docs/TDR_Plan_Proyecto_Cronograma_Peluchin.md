@@ -250,7 +250,7 @@ El proyecto se gestiona con una metodología híbrida que combina **Scrum** (par
 | Gestión de cambios de alcance | Las nuevas tareas entran al Backlog; si son ampliaciones de alcance requieren adenda al contrato |
 | Dependencias del albergue | Se registran como tareas bloqueadas en el tablero (§Dependencias) |
 
-> Los **riesgos** del proyecto se gestionan de forma transversal en `docs/TDR_Gestion_Riesgos_Peluchin.md`.
+.
 
 
 

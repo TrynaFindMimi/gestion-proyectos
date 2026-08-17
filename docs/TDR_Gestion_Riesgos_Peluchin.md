@@ -799,4 +799,4 @@ El registro se mantendrá actualizado durante toda la vigencia del contrato (8 s
 | El costo del dominio supera el presupuesto | F02 |
 | Incremento del alcance no presupuestado | F04 |
 | Costo de funciones premium del constructor necesarias | F05 / T12 |
-
+.

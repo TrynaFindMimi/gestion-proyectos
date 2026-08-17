@@ -66,3 +66,4 @@ flowchart LR
 | **Metodología** | Scrum + Kanban (sprints de 2 semanas con tablero Kanban) |
 | **Precio base** | Bs. 12,000 (más IVA) |
 | **Entregables** | E1–E11 (ver Plan del Proyecto) |
+.

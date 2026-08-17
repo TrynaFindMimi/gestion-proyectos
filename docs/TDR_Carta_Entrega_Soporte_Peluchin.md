@@ -243,3 +243,4 @@ En señal de conformidad con todos los términos y condiciones de la presente ca
 2. TDR_Contrato_Peluchin.md — Contrato de prestación de servicios.
 3. TDR_Plan_Proyecto_Cronograma_Peluchin.md — Plan del proyecto y cronograma.
 4. Manual de Sistemas y Manual de Usuario.
+.

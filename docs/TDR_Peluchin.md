@@ -244,5 +244,6 @@ El equipo desarrollador se compromete a mantener estricta confidencialidad sobre
 | **Teléfono / WhatsApp** | [+591 X XXXXXXXX] |
 | **Dirección** | Llojeta, La Paz, Bolivia |
 | **Redes sociales** | Facebook: /AlberguePeluchin — Instagram: @alberguepeluchin |
+.
 
 
