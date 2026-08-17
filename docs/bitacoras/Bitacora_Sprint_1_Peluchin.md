@@ -111,4 +111,3 @@
 ---
 
 **Lugar y fecha:** La Paz, Bolivia — [dd/mm/aaaa]
-.
