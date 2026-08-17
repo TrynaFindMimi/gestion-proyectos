@@ -128,11 +128,10 @@ Cubre el sitio público y el panel de administración construidos sobre WordPres
 | 3 | `docs/TDR_Contrato_Peluchin.md` | Condiciones contractuales y garantía |
 | 4 | `docs/TDR_Carta_Aceptacion_Peluchin.md` | Aceptación del proyecto |
 | 5 | `docs/TDR_Gestion_Riesgos_Peluchin.md` | Riesgos técnicos y contingencias |
-| 6 | `docs/TDR_Diagrama_WAE_Peluchin.md` | Mapas de navegación y arquitectura web |
+| 6 | `docs/TDR_WAE_Peluchin.pdf` | Mapas de navegación y arquitectura web |
 | 7 | `docs/bitacoras/` | Bitácoras de los Sprint 1–4 |
-| 8 | `docs/Acta_Final_Entrega_Peluchin.md` | Acta de entrega y recepción |
-| 9 | `manuales/Manual_Usuario.md` | Uso del panel para el personal del albergue |
-| 10 | `manuales/Boveda_Usuarios.md` | Bóveda confidencial de usuarios y contraseñas (§3.8) |
+| 8 | `manuales/Manual_Usuario.pdf` | Uso del sitio y del panel para el personal del albergue |
+| 9 | `manuales/Boveda_Usuarios.md` | Bóveda confidencial de usuarios y contraseñas (§3.8) |
 
 ### 1.5. Datos de producción
 
