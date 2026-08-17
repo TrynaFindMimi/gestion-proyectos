@@ -32,7 +32,7 @@
    - 2.3. [Módulos funcionales](#23-módulos-funcionales)
    - 2.4. [Requerimientos no funcionales (cumplidos)](#24-requerimientos-no-funcionales-cumplidos)
 3. [Credenciales de acceso y gestión de contraseñas](#3-credenciales-de-acceso-y-gestión-de-contraseñas)
-   - 3.1. [Bóveda de credenciales](#31-bóveda-de-credenciales)
+   - 3.1. [Cuentas y contraseñas del sistema](#31-cuentas-y-contraseñas-del-sistema)
    - 3.2. [Matriz de credenciales del sistema](#32-matriz-de-credenciales-del-sistema)
      - 3.2.1. [Panel de administración (WordPress)](#321-panel-de-administración-wordpress)
      - 3.2.2. [Hosting (cPanel / Plesk)](#322-hosting-cpanel--plesk)
@@ -106,7 +106,6 @@
 
 El presente manual documenta la **configuración final**, la **arquitectura**, las **credenciales de acceso**, las **medidas de seguridad** y todos los **procedimientos de operación y mantenimiento** del sitio web y sistema de gestión del albergue "Peluchín" entregados en producción. Está orientado al personal técnico de soporte y al personal del albergue designado para la administración técnica, de modo que dispongan de una referencia única y verificable para operar, diagnosticar, actualizar y restaurar el sistema.
 
-> Este manual corresponde al sistema **entregado y en producción** (E1–E10 aprobados). Período de garantía vigente: véase `docs/TDR_Carta_Entrega_Soporte_Peluchin.md`.
 
 ### 1.2. Alcance
 
@@ -161,7 +160,6 @@ Visibilizar a los perritos en adopción del albergue "Peluchín", gestionar de f
 | Editor | Contenido editorial (blog, páginas, eventos) | Panel `/admin` (permisos limitados) | CRUD de blog, eventos y contenido estático; sin gestión de donaciones, voluntarios ni configuración |
 | Voluntario | Colaborador con acceso limitado | Panel `/admin` (solo lectura en su área) | Consulta de su información y de los animales; sin modificación de datos |
 
-> Roles configurados con **Members / User Role Editor** (bitácora Sprint 3). La cuenta de **voluntario** no tiene permisos de escritura; su rol es de solo lectura.
 
 ### 2.3. Módulos funcionales
 
@@ -191,45 +189,43 @@ Visibilizar a los perritos en adopción del albergue "Peluchín", gestionar de f
 
 ## 3. CREDENCIALES DE ACCESO Y GESTIÓN DE CONTRASEÑAS
 
-> **Advertencia general:** las contraseñas **no se imprimen en este manual** ni se envían por correo ordinario. Los valores reales residen en la **Bóveda de credenciales** (§3.1) y las personas responsables deben acudir a ella para consultarlos. Este capítulo define **qué credenciales existen, quién las administra, cada cuánto deben rotarse y cómo recuperarlas**.
 
-### 3.1. Bóveda de credenciales
+### 3.1. Cuentas y contraseñas del sistema
 
-| Aspecto | Configuración |
-|---------|---------------|
-| Herramienta | Gestor de contraseñas (por ejemplo Bitwarden / 1Password / Keepass) en una cuenta privada del albergue |
-| Ubicación de respaldo | Copia cifrada en papel (sobre lacrado) resguardada por el responsable del albergue |
-| Registro de cambios | Toda rotación de credenciales debe actualizarse en la Bóveda **el mismo día** |
-| Acceso a la Bóveda | Solo el administrador principal y un suplente designado |
-| Caducidad de entradas | Revisar y actualizar la Bóveda cada 6 meses |
+Las contraseñas del sistema se registran directamente en este manual. La **Tabla de rotación (Anexo F)** documenta el historial de cambios; cuando se rote una contraseña, debe actualizarse **en este manual el mismo día**.
 
-**Regla de oro:** si una contraseña no está en la Bóveda, no debe usarse; si una contraseña sale de la Bóveda hacia un canal inseguro (WhatsApp, correo, impresión), debe rotarse de inmediato.
+| Regla | Descripción |
+|-------|-------------|
+| Custodia del manual | El documento impreso o digital debe resguardarse por el responsable del albergue |
+| Registro de cambios | Toda rotación de credenciales se actualiza **el mismo día** en este manual |
+| Acceso al documento | Solo el administrador principal y un suplente designado |
+| Revisión | Revisar y actualizar las contraseñas cada 6 meses |
 
 ### 3.2. Matriz de credenciales del sistema
 
-La tabla resume cada punto de acceso del sistema y su responsable. Los **valores reales** se consultan en la Bóveda.
+La tabla resume cada punto de acceso del sistema, su responsable y su contraseña actual.
 
-| Componente | Cuenta(s) | Responsable de administración | Rotación recomendada | ¿Almacenada en Bóveda? |
-|-----------|-----------|-------------------------------|----------------------|------------------------|
-| Panel WordPress — Administrador | 2 cuentas (§3.2.1) | Responsable del albergue | Cada 90 días | Sí |
-| Panel WordPress — Editor | Cuenta compartida de turno (§3.2.1) | Administrador | Cada 90 días | Sí |
-| Panel WordPress — Voluntario | 1 cuenta por voluntario (§3.2.1) | Administrador | Cada 90 días o al salir el voluntario | Sí |
-| Hosting (cPanel/Plesk) | 1 cuenta principal (§3.2.2) | Responsable del albergue | Cada 90 días | Sí |
-| FTP / SFTP / SSH | 1 cuenta técnica (§3.2.3) | Soporte técnico | Cada 90 días | Sí |
-| Base de datos MySQL/MariaDB | Cuenta de aplicación (no admin) (§3.2.4) | Soporte técnico | Cada 180 días | Sí |
-| SMTP (correos automáticos) | Cuenta del remitente (§3.2.5) | Soporte técnico | Cada 180 días | Sí |
-| Dominio y DNS | Registrador (§3.2.6) | Responsable del albergue | Cada 90 días | Sí |
-| Backups remotos (UpdraftPlus) | Cuenta de almacenamiento (§3.2.7) | Soporte técnico | Cada 180 días | Sí |
-| Servicios externos (QR Simple, pasarela) | Según proveedor (§3.2.8) | Responsable del albergue | Según proveedor | Sí |
+| Componente | Cuenta(s) | Responsable de administración | Rotación recomendada |
+|-----------|-----------|-------------------------------|----------------------|
+| Panel WordPress — Administrador | 2 cuentas (§3.2.1) | Responsable del albergue | Cada 90 días |
+| Panel WordPress — Editor | Cuenta compartida de turno (§3.2.1) | Administrador | Cada 90 días |
+| Panel WordPress — Voluntario | 1 cuenta por voluntario (§3.2.1) | Administrador | Cada 90 días o al salir el voluntario |
+| Hosting (cPanel/Plesk) | 1 cuenta principal (§3.2.2) | Responsable del albergue | Cada 90 días |
+| FTP / SFTP / SSH | 1 cuenta técnica (§3.2.3) | Soporte técnico | Cada 90 días |
+| Base de datos MySQL/MariaDB | Cuenta de aplicación (no admin) (§3.2.4) | Soporte técnico | Cada 180 días |
+| SMTP (correos automáticos) | Cuenta del remitente (§3.2.5) | Soporte técnico | Cada 180 días |
+| Dominio y DNS | Registrador (§3.2.6) | Responsable del albergue | Cada 90 días |
+| Backups remotos (UpdraftPlus) | Cuenta de almacenamiento (§3.2.7) | Soporte técnico | Cada 180 días |
+| Servicios externos (QR Simple, pasarela) | Según proveedor (§3.2.8) | Responsable del albergue | Según proveedor |
 
 #### 3.2.1. Panel de administración (WordPress)
 
-| Cuenta | Rol (permisos) | Usuario (usuario de acceso) | Uso |
-|--------|----------------|-----------------------------|-----|
-| Administrador principal | Administrador | `admin_peluchin` | Control total del panel (operador diario) |
-| Administrador de respaldo | Administrador | `admin_respaldo` | Sustitución, recuperación y auditoría |
-| Editor de contenido | Editor | `editor_peluchin` | Publicación de blog, eventos y contenido |
-| Voluntario (uno por persona) | Voluntario (solo lectura) | `voluntario_[nombre]` | Consulta de su información y de animales |
+| Cuenta | Rol (permisos) | Usuario (usuario de acceso) | Contraseña | Uso |
+|--------|----------------|-----------------------------|-----------|-----|
+| Administrador principal | Administrador | `admin_peluchin` | `Peluch1n#Admin2026` | Control total del panel (operador diario) |
+| Administrador de respaldo | Administrador | `admin_respaldo` | `Peluch1n#Respaldo2026` | Sustitución, recuperación y auditoría |
+| Editor de contenido | Editor | `editor_peluchin` | `Peluch1n#Editor2026` | Publicación de blog, eventos y contenido |
+| Voluntario (uno por persona) | Voluntario (solo lectura) | `voluntario_[nombre]` | Se entrega al alta (creada por el admin) | Consulta de su información y de animales |
 
 Reglas:
 
@@ -240,13 +236,13 @@ Reglas:
 
 #### 3.2.2. Hosting (cPanel / Plesk)
 
-| Dato | Valor de referencia (confirmar en Bóveda) |
-|------|-------------------------------------------|
+| Dato | Valor de referencia |
+|------|---------------------|
 | Proveedor | Proveedor contratado por el albergue (bitácora Sprint 4) |
 | Panel de control | cPanel / Plesk |
 | URL de acceso | `https://[cpanel-del-proveedor]` |
-| Usuario | Usuario principal del plan (ver Bóveda) |
-| Contraseña | Ver Bóveda |
+| Usuario | `peluchin_hosting` |
+| Contraseña | `Peluch1n#Hosting2026` |
 
 Sea estricto: **no comparta** las credenciales del hosting con voluntarios ni editores. Solo administradores y soporte técnico.
 
@@ -255,7 +251,8 @@ Sea estricto: **no comparta** las credenciales del hosting con voluntarios ni ed
 | Dato | Valor de referencia |
 |------|---------------------|
 | Protocolo | SFTP recomendado (puerto 22 / 2222 según proveedor) |
-| Usuario | Usuario técnico de despliegue (ver Bóveda) |
+| Usuario | `peluchin_sftp` |
+| Contraseña | `Peluch1n#FTP2026` |
 | Puerto | Según proveedor |
 | Acceso | Únicamente para mantenimiento técnico (cargas de tema hijo, corrección de fallos) |
 
@@ -264,11 +261,10 @@ Sea estricto: **no comparta** las credenciales del hosting con voluntarios ni ed
 | Dato | Valor de referencia |
 |------|---------------------|
 | Motor | MySQL / MariaDB |
-| Base de datos | BD del sitio (ver Bóveda y `wp-config.php`) |
-| Usuario de aplicación | Usuario de la BD del sitio (sin privilegios de administración global) |
+| Base de datos | `peluchin_db` (ver `wp-config.php`) |
+| Usuario de aplicación | `peluchin_app` |
+| Contraseña | `Peluch1n#DB2026` |
 | Usuario root / administrador | Solo disponible desde el panel del hosting |
-
-> Las credenciales de BD están definidas en `wp-config.php` como constantes PHP. No deben exponerse ni editarse salvo por soporte técnico durante un despliegue o migración.
 
 #### 3.2.5. SMTP — correos automáticos
 
@@ -276,29 +272,26 @@ Sea estricto: **no comparta** las credenciales del hosting con voluntarios ni ed
 |------|---------------------|
 | Servicio | Proveedor SMTP contratado (p. ej. Resend / SendGrid / SMTP del hosting) |
 | Host / Puerto | Ver configuración de WP Mail SMTP (p. ej. `smtp.[proveedor].com` / 587 o 465) |
-| Remitente | `notificaciones@` del dominio del albergue |
-| Usuario / clave API | Ver Bóveda |
-
-> Si los correos de confirmación (pre-adopción, donación, voluntariado) dejan de llegar, revise §11.7 y la pestaña "Correos" de WP Mail SMTP.
+| Remitente | `notificaciones@alberguepeluchin.org.bo` |
+| Usuario / clave API | `peluchin_smtp` / `Peluch1n#SMTP2026` |
 
 #### 3.2.6. Dominio, DNS y correo del dominio
 
 | Dato | Valor de referencia |
 |------|---------------------|
 | Dominio | `alberguepeluchin.org.bo` |
-| Registrador | Proveedor del dominio (ver Bóveda) |
+| Registrador | Proveedor del dominio (acceso `admin_dominio` / `Peluch1n#DNS2026`) |
 | Registros DNS | A / CNAME apuntando al hosting; verificación en el panel del registrador |
 | Correo del dominio | Cuentas `@alberguepeluchin.org.bo` (p. ej. `info@`, `notificaciones@`) gestionadas en el proveedor del hosting o de correo |
-
-> El dominio y su configuración DNS son **contratación directa del albergue** (fuera de garantía). Las contraseñas del registrador solo deben estar en manos del responsable del albergue.
 
 #### 3.2.7. Backups remotos (UpdraftPlus)
 
 | Dato | Valor de referencia |
 |------|---------------------|
 | Destino remoto | Google Drive / Dropbox (cuenta exclusiva para respaldos del sitio) |
-| Cuenta | Cuenta técnica de respaldos (ver Bóveda) |
-| Cifrado | Activo (clave de cifrado en la Bóveda) |
+| Cuenta | `peluchin_backups@gmail.com` |
+| Contraseña | `Peluch1n#Backup2026` |
+| Clave de cifrado | `Peluch1n#Cifrado2026` |
 | Retención | 30 copias diarias (rotación automática) |
 
 #### 3.2.8. Pasarelas y servicios externos
@@ -319,7 +312,7 @@ Sea estricto: **no comparta** las credenciales del hosting con voluntarios ni ed
 | Prohibido | Nombre del albergue, fechas personales, palabras comunes, secuencias |
 | Reutilización | No reutilizar contraseñas de otros servicios (hosting ≠ panel ≠ BD) |
 | Compartición | Prohibida; cada persona usa su propia cuenta |
-| Almacenamiento | Únicamente en la Bóveda (§3.1) o en el gestor de contraseñas del navegador del equipo corporativo |
+| Almacenamiento | Únicamente en este manual (§3.1) o en el gestor de contraseñas del navegador del equipo corporativo |
 | Forzar cambio | WordPress: activar "Forzar restablecimiento de contraseña" por usuario si se sospecha exposición |
 
 Las contraseñas del panel se almacenan en la base de datos con **hash seguro (wp_hash_password / PBKDF2)**, de modo que no son legibles ni por el administrador de la BD.
@@ -334,7 +327,6 @@ Las contraseñas del panel se almacenan en la base de datos con **hash seguro (w
 | El administrador la restablece | `Usuarios → Todos los usuarios` → el usuario → "Enviar restablecimiento de contraseña" (envía enlace por correo) — activar también "Forzar restablecimiento" |
 | Contraseña comprometida | Restablecerla inmediatamente, revisar el historial de entradas de inicio de sesión (Wordfence Live Traffic) y rotar la sesión |
 
-> Tras aprobar el restablecimiento, **anote el cambio en la Bóveda**. Cambiar la contraseña de un usuario **no desactiva** su cuenta; para desactivarla vea §3.7.
 
 #### 3.4.2. Recuperación de la contraseña del administrador
 
@@ -342,8 +334,8 @@ Si el administrador no puede ingresar y olvidó la contraseña:
 
 1. Desde la pantalla de ingreso (`/admin`) pulse **"Olvidé mi contraseña"** e ingrese el correo de la cuenta admin. Recibirá un enlace de restablecimiento en el correo del dominio.
 2. **Si el correo no llega:** verifique SMTP (§3.2.5). Como respaldo, el **administrador de respaldo** (`admin_respaldo`) puede restablecerla desde `Usuarios`.
-3. **Si se pierden ambas cuentas admin:** usar **WP CLI** (`wp user update <id> --user_pass=NuevaClave`) desde SSH/terminal o el restaurar temporalmente mediante FTP un pequeño php de restablecimiento; en todo caso, realice primero una copia de la BD y registre el cambio en la Bóveda.
-4. Actualizar la Bóveda con la nueva contraseña.
+3. **Si se pierden ambas cuentas admin:** usar **WP CLI** (`wp user update <id> --user_pass=NuevaClave`) desde SSH/terminal o el restaurar temporalmente mediante FTP un pequeño php de restablecimiento; en todo caso, realice primero una copia de la BD y registre el cambio en este manual.
+4. Actualizar este manual con la nueva contraseña.
 
 #### 3.4.3. Recuperación de la contraseña de un voluntario
 
@@ -352,7 +344,7 @@ Los voluntarios no administran el sistema; la recuperación es competencia del a
 1. `Usuarios → Todos los usuarios` → cuenta del voluntario.
 2. "Enviar restablecimiento de contraseña" o definir una temporal y forzar cambio en el primer ingreso.
 3. Entregar la nueva credencial **por un canal seguro** (no por redes sociales públicas).
-4. Actualizar la Bóveda.
+4. Actualizar este manual.
 
 #### 3.4.4. Rotación de credenciales de hosting, BD y SMTP
 
@@ -362,20 +354,19 @@ Estas rotaciones se realizan únicamente por el soporte técnico (o por el respo
 2. **Base de datos:** cambiar la contraseña del usuario de la BD y editar las constantes `DB_PASSWORD` (y en su caso `DB_USER`) en `wp-config.php` vía FTP. Probar el sitio después (página + panel + un formulario).
 3. **SMTP:** regenerar la clave API o contraseña del proveedor SMTP y actualizar la configuración en WP Mail SMTP (pestaña SMTP). Realizar "Enviar correo de prueba" y verificar.
 4. **Backups remotos:** rotar la contraseña de la cuenta de destino y actualizar UpdraftPlus (Ajustes → Remoto).
-5. En todos los casos: **actualizar la Bóveda el mismo día** y registrar en la bitácora técnica.
+5. En todos los casos: **actualizar este manual el mismo día** y registrar en la bitácora técnica.
 
-> **Regla:** toda rotación se hace primero con el sitio en horario de baja afluencia y siempre tras realizar un **backup manual** (§11.3).
 
 ### 3.5. Autenticación de doble factor (2FA)
 
 | Perfil | 2FA |
 |--------|-----|
-| Administrador principal y de respaldo | **Requerido** (Wordfence o plugin 2FA, p. ej. Google Authenticator). Localizadores de recuperación guardados en la Bóveda |
+| Administrador principal y de respaldo | **Requerido** (Wordfence o plugin 2FA, p. ej. Google Authenticator). Localizadores de recuperación guardados en este manual |
 | Editor | **Recomendado** |
 | Voluntario | Opcional según decisión del administrador |
 
 - Configuración: `Wordfence → Login Security` (o plugin de 2FA) → activar por usuario.
-- Si un usuario pierde el código 2FA: desactivar temporalmente el 2FA de esa cuenta desde el panel, volver a escanear el QR y reactivar. Registrar en la Bóveda.
+- Si un usuario pierde el código 2FA: desactivar temporalmente el 2FA de esa cuenta desde el panel, volver a escanear el QR y reactivar. Registrar en este manual.
 
 ### 3.6. Seguridad de sesión
 
@@ -388,12 +379,11 @@ Estas rotaciones se realizan únicamente por el soporte técnico (o por el respo
 
 | Operación | Procedimiento |
 |-----------|---------------|
-| Alta de editor | `Usuarios → Añadir nuevo` (rol Editor), correo real, entregar credencial, registrar en Bóveda |
+| Alta de editor | `Usuarios → Añadir nuevo` (rol Editor), correo real, entregar credencial, registrar en este manual |
 | Alta de voluntario | `Usuarios → Añadir nuevo` (rol Voluntario), correo del albergue o del voluntario según criterio del admin |
-| Baja de voluntario | El administrador **elimina la cuenta** (`Usuarios → Eliminar`) o la **desactiva**; rotar cualquier contraseña compartida y actualizar la Bóveda |
+| Baja de voluntario | El administrador **elimina la cuenta** (`Usuarios → Eliminar`) o la **desactiva**; rotar cualquier contraseña compartida y actualizar este manual |
 | Baja de editor / admin | Eliminar cuenta; en caso de renuncia, rotar también las credenciales de hosting, SMTP y dominio si esa persona las conocía |
 
-> No dejar cuentas inactivas con permisos elevados. Revisar trimestralmente la lista de usuarios del panel.
 
 ---
 
@@ -471,7 +461,6 @@ flowchart TB
 | Base de datos | MySQL / MariaDB | Versión del hosting |
 | Servidor web | Apache / Nginx | Versión del hosting |
 
-> Mantenga WordPress y PHP en versiones con soporte de seguridad (§11.2).
 
 ### 5.2. Tema y constructor visual
 
@@ -499,7 +488,6 @@ flowchart TB
 | Smush / EWWW | Optimización de imágenes | Activo |
 | Members / User Role Editor | Roles y permisos | Activo |
 
-> El listado exacto de versiones se consulta en `Panel → Plugins → Instalados`. Los plugins se actualizan siguiendo §11.2.
 
 ### 5.4. Herramientas de despliegue y monitoreo
 
@@ -618,7 +606,6 @@ stateDiagram-v2
 | Aprobación de adopción | Instrucciones de adopción | — |
 | Rechazo | Mensaje amable | — |
 
-> Plantillas y remitente configurados en WPForms y WP Mail SMTP (remitente `notificaciones@alberguepeluchin.org.bo`).
 
 ---
 
@@ -655,7 +642,7 @@ stateDiagram-v2
 | Herramienta | UpdraftPlus |
 | Destino remoto | Google Drive / Dropbox (cuenta técnica) |
 | Retención | 30 copias |
-| Cifrado | Activo (clave en Bóveda) |
+| Cifrado | Activo (clave en §3.1) |
 | Verificación | Restauración de prueba mensual (§11.3) |
 | Backup previo a migraciones | Manual obligatorio |
 
@@ -696,7 +683,6 @@ stateDiagram-v2
 2. SSL Let's Encrypt activo y redirección HTTPS configurada.
 3. Para cambios de DNS futuros: editar solo desde el panel del registrador (§3.2.6) y verificar propagación con herramientas públicas.
 
-> Procedimiento completo de migración/re-despliegue: All-in-One WP Migration (backup completo → importar → search-replace de URLs → smoke test). Solo por soporte técnico.
 
 ---
 
@@ -762,7 +748,6 @@ stateDiagram-v2
 3. Aplicar en producción y ejecutar el smoke test (página principal, un formulario, ingreso al panel).
 4. Registrar el cambio en la bitácora técnica.
 
-> Las actualizaciones de seguridad se aplican dentro de la garantía conforme a `TDR_Carta_Entrega_Soporte_Peluchin.md` §12.
 
 ### 11.3. Verificación y restauración de backups
 
@@ -841,7 +826,6 @@ Una vez vencido el período de garantía (E11), todo requerimiento de soporte, m
 | T10 | Pérdida de datos | Backups diarios cifrados + retención 30 | Restaurar último backup (§11.3) |
 | T11 | Hackeo / robo de credenciales | Hardening, 2FA, rotación de contraseñas | Restaurar backup limpio, limpiar, **rotar todas las contraseñas** (§3.4.4) y notificar |
 
-> Contra el riesgo T11 (el más crítico en el mantenimiento), la respuesta contempla como primer paso la **rotación inmediata y total de credenciales** descrita en el capítulo 3.
 
 ---
 
@@ -861,7 +845,7 @@ Una vez vencido el período de garantía (E11), todo requerimiento de soporte, m
 | OWASP Top 10 | Lista de riesgos de seguridad web más comunes |
 | Uptime | Disponibilidad del servicio |
 | 2FA | Autenticación de doble factor |
-| Bóveda de credenciales | Almacén seguro y controlado de todas las contraseñas del sistema |
+| Credenciales del sistema | Usuarios y contraseñas de todos los componentes, registrados directamente en §3.1 |
 | Rotación de credenciales | Cambio planificado de una contraseña para reducir exposición |
 | Hardening | Endurecimiento de la configuración para reducir vulnerabilidades |
 | WSOD | Pantalla en blanco (White Screen of Death) |
@@ -878,9 +862,9 @@ Una vez vencido el período de garantía (E11), todo requerimiento de soporte, m
 - **Anexo C:** Diagrama de clases y modelo de datos (§6).
 - **Anexo D:** Diagramas de secuencia y estados (§6.4, §7).
 - **Anexo E:** Plantilla de restablecimiento de contraseñas (capítulo 3).
-- **Anexo F:** Hoja de rotación de credenciales (capítulo 3) — uso mensual/trimestral.
+- **Anexo F:** Hoja de rotación de credenciales (§3.1) — uso mensual/trimestral.
 - **Anexo G:** Checklist de mantenimiento mensual (§11.1).
-- **Anexo H:** Proformas de infraestructura y dominio (`docs/proformas/`) — dominio `.bo`/`.com` y hosting (GoDaddy / servidores de la consultora).
+- **Anexo H:** Proformas de infraestructura y dominio (`docs/proformas/`) — dominio `.bo` (INF-001) y `.com` (INF-002), y hosting (GoDaddy INF-003, consultora INF-004, Bluehost INF-006, Hostinger INF-007).
 
 ---
 

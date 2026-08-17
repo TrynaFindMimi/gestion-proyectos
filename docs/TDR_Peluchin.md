@@ -8,10 +8,10 @@
 
 | # | Nombre |
 |---|--------|
-| 1 |Mariana del Arroyo |
-| 2 |Nahomi Humerez|
-| 3 |Santiago Acha |
-| 4 |Jorge Saenz |
+| 1 | Mariana del Arroyo |
+| 2 | Nahomi Humerez |
+| 3 | Santiago Acha |
+| 4 | Jorge Saenz |
 
 ---
 
@@ -95,6 +95,8 @@ Desarrollar un sitio web institucional con panel de administración para el albe
 ---
 
 ### 5. REQUERIMIENTOS FUNCIONALES
+
+Los requerimientos funcionales del sitio público (páginas, formularios y flujos de navegación) están descritos en la Sección 4 (Alcance del proyecto). Esta sección se centra en los requerimientos específicos del panel de administración, por lo que la numeración comienza en F13.
 
 #### 5.1. Panel de Administración
 

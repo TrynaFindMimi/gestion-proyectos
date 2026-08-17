@@ -85,6 +85,8 @@ El detalle de cada riesgo (ID) se encuentra en la [sección 4 — Registro de ri
      - F07 — [Fluctuación económica / inflación](#f07-fluctuación-económica-inflación-sobre-el-precio-fijo)
 5. [Priorización y ranking de riesgos](#5-priorización-y-ranking-de-riesgos)
 6. [Impacto acumulado en el cronograma y reserva de contingencia](#6-impacto-acumulado-en-el-cronograma-y-reserva-de-contingencia)
+   - 6.1. [Escenarios de impacto](#61-escenarios-de-impacto)
+   - 6.2. [Reserva de contingencia recomendada](#62-reserva-de-contingencia-recomendada)
    - 6.3. [Ruta crítica y riesgos asociados por fase](#63-ruta-crítica-y-riesgos-asociados-por-fase)
 7. [Estrategias de respuesta a los riesgos](#7-estrategias-de-respuesta-a-los-riesgos)
 8. [Proceso de monitoreo y control](#8-proceso-de-monitoreo-y-control)

@@ -54,9 +54,8 @@ Alternativa de menor costo contemplada y cotizada: **`alberguepeluchin.org.bo`**
 | **Subtotal (Bs)** | **1.130,00** | **430,00** |
 | IVA (13 %) | 146,90 | 55,90 |
 | **TOTAL con IVA (Bs)** | **1.276,90** | **485,90** |
-| **TOTAL con IVA (USD aprox.)** | ≈ 183 | ≈ 70 |
+| **TOTAL con IVA (USD aprox.)** | ≈ 116 | ≈ 44 |
 
-> **Nota de renovación:** tras el primer año, la renovación anual ante NIC Bolivia es la misma tarifa oficial (Bs 980,00 para `.bo`; Bs 280,00 para `.org.bo`). El dominio es renovado por el albergue o por la consultora según el servicio elegido.
 
 ---
 

@@ -206,15 +206,15 @@
 |----|------------|--------|--------|
 | E1 | Plan de trabajo detallado y cronograma confirmado | Sprint 1 | 2 |
 | E2 | Wireframes y mockups del sitio público | Sprint 1 | 2 |
-| E3 | MVP: sitio público con landing, galería de animales y formulario de pre-adopción | Sprint 2 | 4 |
-| E4 | Páginas de donaciones, voluntarios y contacto | Sprint 3 | 6 |
-| E5 | Panel de administración WordPress personalizado | Sprint 4 | 8 |
-| E6 | Blog, galería de eventos, FAQ y contenidos editables | Sprint 5 | 9 |
-| E7 | Plataforma completa en staging, pruebas funcionales superadas | Sprint 6 | 10 |
-| E8 | Despliegue en producción con SSL | Sprint 7 | 11 |
-| E9 | Documentación: Manual de Sistemas y Manual de Usuario | Sprint 7 | 11 |
-| E10 | Capacitación al personal del albergue (2 sesiones) | Sprint 8 | 12 |
-| E11 | Garantía de 2 meses (corrección de bugs y actualizaciones de seguridad) | Garantía | 13–20 |
+| E3 | MVP: sitio público con landing, galería de animales y formulario de pre-adopción | Sprint 1 | 2 |
+| E4 | Páginas de donaciones, voluntarios y contacto | Sprint 2 | 4 |
+| E5 | Panel de administración WordPress personalizado | Sprint 3 | 6 |
+| E6 | Blog, galería de eventos, FAQ y contenidos editables | Sprint 3 | 6 |
+| E7 | Plataforma completa en staging, pruebas funcionales superadas | Sprint 4 | 8 |
+| E8 | Despliegue en producción con SSL | Sprint 4 | 8 |
+| E9 | Documentación: Manual de Sistemas y Manual de Usuario | Sprint 4 | 8 |
+| E10 | Capacitación al personal del albergue (2 sesiones) | Sprint 4 | 8 |
+| E11 | Garantía de 2 meses (corrección de bugs y actualizaciones de seguridad) | Garantía | 9–16 |
 
 ---
 

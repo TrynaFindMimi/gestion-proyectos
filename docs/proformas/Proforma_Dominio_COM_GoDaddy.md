@@ -30,9 +30,9 @@ Cotización del registro anual del nombre de dominio **`alberguepeluchin.com`** 
 | 2 | Protección de privacidad de dominio (Domain Privacy) | 1 año | Incluida | — |
 | 3 | Gestión de registro y configuración de DNS por la consultora | 1 vez | 20,00 | 20,00 |
 | | | | **Subtotal (USD)** | **34,99** |
-| | | | **Subtotal (Bs ≈ 6,96)** | ≈ **243,53** |
-| | | | IVA (13 %) (Bs) | 31,66 |
-| | | | **TOTAL con IVA (Bs)** | **≈ 275,19** |
+| | | | **Subtotal (Bs ≈ 11,00)** | ≈ **384,89** |
+| | | | IVA (13 %) (Bs) | 50,04 |
+| | | | **TOTAL con IVA (Bs)** | **≈ 434,93** |
 
 ---
 
@@ -40,11 +40,10 @@ Cotización del registro anual del nombre de dominio **`alberguepeluchin.com`** 
 
 | Concepto | USD/año | Bs/año (≈) |
 |----------|---------|------------|
-| Renovación de dominio `.com` en GoDaddy (tarifa regular) | ≈ 25,99 | ≈ 181,00 |
+| Renovación de dominio `.com` en GoDaddy (tarifa regular) | ≈ 25,99 | ≈ 285,89 |
 | Protección de privacidad | Incluida | — |
-| **Total renovación anual** | **≈ 25,99** | **≈ 181,00** |
+| **Total renovación anual** | **≈ 25,99** | **≈ 285,89** |
 
-> **Nota importante:** GoDaddy aplica precios promocionales al primer año; las renovaciones se cobran a tarifa regular. Los montos son referenciales y dependen de la cotización exacta del sitio web de GoDaddy al momento de la compra.
 
 ---
 
@@ -67,8 +66,8 @@ Se recomienda evaluar la conveniencia entre:
 
 | Criterio | `alberguepeluchin.bo` (INF-001) | `alberguepeluchin.com` (INF-002) |
 |----------|----------------------------------|-----------------------------------|
-| Costo 1.er año (Bs, con IVA) | ≈ 1.276,90 | ≈ 275,19 |
-| Costo renovación anual (Bs) | 980,00 | ≈ 181,00 |
+| Costo 1.er año (Bs, con IVA) | ≈ 1.276,90 | ≈ 434,93 |
+| Costo renovación anual (Bs) | 980,00 | ≈ 285,89 |
 | Identidad local boliviana | Alta | Genérica |
 | SEO local en Bolivia | Favorable | Neutral |
 | Pagos | Depósito/transferencia (NIC Bolivia) | Tarjeta internacional (GoDaddy) |

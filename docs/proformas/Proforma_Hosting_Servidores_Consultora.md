@@ -1,6 +1,6 @@
 # PROFORMA N.º INF-004
 
-## HOSTING EN SERVIDORES DE LA CONSULTORA — SERVICIO GESTIONADO
+## HOSTING EN SERVIDORES DE LA CONSULTORA — PLAN GESTIONADO
 
 ---
 
@@ -18,7 +18,9 @@
 
 ### 1. OBJETO
 
-Cotización del **alojamiento del sitio web en los servidores de la consultora** (servicio gestionado de hosting WordPress), como alternativa al hosting de terceros (GoDaddy, INF-003). Incluye infraestructura propia, mantenimiento, respaldos, seguridad y soporte técnico del equipo que desarrolló el sistema.
+Cotización del **alojamiento del sitio web en los servidores de la consultora** (servicio gestionado de hosting), como alternativa a los hosting internacionales (GoDaddy INF-003, Bluehost INF-006, Hostinger INF-007). Incluye infraestructura propia, mantenimiento, respaldos, seguridad y soporte técnico del equipo que desarrolló el sistema.
+
+**Condición del plan:** este servicio de hosting gestionado se presta mediante un **contrato de servicio adicional** (tercer contrato, independiente del contrato de desarrollo). El plan incluye **2 GB de almacenamiento**, **2 GB de transferencia (ancho de banda) por mes** y **funcionalidades adicionales del plan gestionado**, dimensionados para el sitio actual del albergue; ampliaciones de espacio o de ancho de banda se cotizan aparte.
 
 ---
 
@@ -26,74 +28,78 @@ Cotización del **alojamiento del sitio web en los servidores de la consultora**
 
 | Componente | Detalle |
 |------------|---------|
+| **Almacenamiento** | **2 GB** (espacio del sitio actual) |
+| **Transferencia / ancho de banda** | **2 GB por mes** de transferencia del sitio |
+| **Otras funcionalidades** | Correo del dominio, base de datos, caché y panel de control incluidos en el plan gestionado |
 | **Infraestructura** | Servidor dedicado/VPS de la consultora con WordPress (PHP 8+ y MySQL/MariaDB) |
 | **Panel de control** | cPanel/Plesk gestionado por la consultora (el albergue accede al panel del sitio) |
 | **Certificado SSL** | Let's Encrypt con renovación automática |
-| **Backups** | Copias diarias automáticas con retención de 30 días (almacenamiento propio) |
+| **Backups** | Copias diarias automáticas con retención (almacenamiento propio) |
 | **Monitoreo** | Uptime y alertas 24/7 (meta 99 %) |
 | **Actualizaciones** | WordPress core y plugins (prueba en staging antes de producción) |
 | **Seguridad** | Wordfence gestionado, hardening, escaneo de malware |
 | **Soporte técnico** | Soporte del equipo desarrollador (WhatsApp y correo) |
+| **Contrato** | **Tercer contrato** de servicio con la consultora (adicional al contrato de desarrollo) |
 | **Migración** | Incluida: migración del sitio actual a los servidores de la consultora |
 
 ---
 
-### 3. PLANES DE HOSTING EN SERVIDORES DE LA CONSULTORA
-
-| Plan | Descripción | Mensual (Bs) | Anual (Bs, 2 meses de regalo) |
-|------|-------------|--------------|-------------------------------|
-| **Básico** | Hosting WordPress gestionado: servidor, SSL, backups diarios, monitoreo, actualizaciones | 150,00 | 1.500,00 |
-| **Estándar** ⭐ | Básico + soporte técnico prioritario (WhatsApp/correo) + respaldo adicional semanal | **250,00** | **2.500,00** |
-| **Premium** | Estándar + SLA con respuesta garantizada + mantenimiento mensual programado + revisión de seguridad | 400,00 | 4.000,00 |
-
-> El plan **Estándar** es el recomendado: cubre hosting gestionado y soporte del equipo que conoce el sistema (incluye la atención de Santiago Acha, ver Manual Técnico §11.6).
-
----
-
-### 4. DETALLE DE ÍTEMS — PLAN RECOMENDADO (ESTÁNDAR)
+### 3. DETALLE DE ÍTEMS
 
 | N.º | Descripción | Unidad | Precio unitario | Subtotal |
 |-----|-------------|--------|-----------------|----------|
-| 1 | Hosting WordPress gestionado en servidores de la consultora (plan Estándar) | 12 meses | Bs 250,00/mes | Bs 2.500,00 (2 meses de regalo) |
-| 2 | Configuración inicial y migración del sitio a los servidores de la consultora | 1 vez | Bs 300,00 | Bs 300,00 |
-| | | | **Subtotal (Bs)** | **Bs 2.800,00** |
-| | | | IVA (13 %) | 364,00 |
-| | | | **TOTAL 1.er año con IVA (Bs)** | **Bs 3.164,00** |
+| 1 | Hosting WordPress gestionado en servidores de la consultora (plan único: 2 GB de almacenamiento, 2 GB/mes de ancho de banda y funcionalidades del plan) | 12 meses | Bs 800,00/año | Bs 800,00 |
+| 2 | Configuración inicial y migración del sitio a los servidores de la consultora | 1 vez | US$ 30,00 (≈ Bs 330,00) | ≈ Bs 330,00 |
+| | | | **Subtotal (Bs)** | **≈ Bs 1.130,00** |
+| | | | **Subtotal (USD ≈ 11,00)** | ≈ **US$ 102,73** |
+| | | | IVA (13 %) (Bs) | 146,90 |
+| | | | **TOTAL 1.er año con IVA (Bs)** | **≈ Bs 1.276,90** |
 
 **Años siguientes (renovación del hosting):**
 
-| Concepto | Bs/año |
-|----------|--------|
-| Renovación hosting gestionado Estándar | 2.500,00 |
+| Concepto | Bs/año | USD/año (≈) |
+|----------|--------|-------------|
+| Renovación hosting gestionado de la consultora | 800,00 | ≈ 72,73 |
 
 ---
 
-### 5. COMPARATIVA CON HOSTING DE TERCEROS
+### 4. COMPARATIVA CON HOSTING DE TERCEROS
 
-| Criterio | Servidores de la consultora (INF-004) | GoDaddy (INF-003) |
-|----------|----------------------------------------|-------------------|
-| Soporte técnico | Equipo que desarrolló el sistema | Soporte genérico de GoDaddy |
-| Conocimiento del proyecto | Alto (misma consultora) | Nulo |
-| Moneda de pago | Bolivianos (Bs), depósito/transferencia | Dólares, tarjeta internacional |
-| Migración | Incluida | Cobrada aparte |
-| Actualizaciones gestionadas | Incluidas | Incluidas (automáticas) |
-| Costo 1.er año (Bs, con IVA) | 3.164,00 | ≈ 1.430,58 |
-| Costo renovación anual (Bs) | 2.500,00 | ≈ 1.670,00 |
-
-> La opción de la consultora es algo más costosa, pero incluye soporte especializado del equipo que conoce el sistema, atención en bolivianos y un único proveedor responsable de hosting, seguridad y mantenimiento.
+| Criterio | Servidores de la consultora (INF-004) | Bluehost (INF-006) | Hostinger (INF-007) |
+|----------|----------------------------------------|--------------------|---------------------|
+| Soporte técnico | Equipo que desarrolló el sistema | Soporte genérico de Bluehost | Soporte genérico de Hostinger |
+| Conocimiento del proyecto | Alto (misma consultora) | Nulo | Nulo |
+| Moneda de pago | Bolivianos (Bs), depósito/transferencia | Dólares, tarjeta internacional | Dólares, tarjeta internacional |
+| Migración | Incluida | Cobrada aparte | Cobrada aparte |
+| Contrato adicional | Tercer contrato de servicio | No requerido | No requerido |
+| Almacenamiento | 2 GB | 10 GB NVMe | 20–200 GB |
+| Ancho de banda | 2 GB/mes | Variable según plan | Variable según plan |
+| Costo 1.er año (Bs, con IVA) | ≈ 1.276,90 | ≈ 1.664,13 | ≈ 1.067,49 |
+| Costo renovación anual (Bs) | ≈ 800,00 | ≈ 2.638,68 | ≈ 1.452,00 |
 
 ---
 
-### 6. CONDICIONES COMERCIALES
+### 5. CONDICIONES COMERCIALES
 
 | Condición | Detalle |
 |-----------|---------|
-| **Titularidad** | Contrato de servicio entre el albergue y la consultora (sin venta de servidores) |
+| **Contrato** | Se suscribe un **tercer contrato** de servicio de hosting entre el albergue y la consultora, independiente del contrato de desarrollo |
+| **Almacenamiento** | 2 GB incluidos; ampliaciones se cotizan aparte |
+| **Ancho de banda** | 2 GB por mes de transferencia incluidos; ampliaciones se cotizan aparte |
+| **Titularidad** | El servicio corre sobre infraestructura de la consultora (sin venta de servidores) |
 | **Forma de pago** | Depósito o transferencia bancaria |
 | **Anticipo** | 50 % al inicio; saldo al mes 2 |
-| **Incluye** | Hosting, SSL, backups, monitoreo, actualizaciones y soporte (según plan) |
+| **Incluye** | Hosting, 2 GB de almacenamiento, 2 GB/mes de ancho de banda, SSL, backups, monitoreo, actualizaciones y soporte del equipo desarrollador |
 | **No incluye** | Dominio (INF-001/INF-002), desarrollo de nuevas funcionalidades (contrato aparte) |
 | **Cancelación** | Previo aviso de 30 días; entrega de backup completo al cliente al cierre |
+
+---
+
+### 6. CONDICIONES GENERALES
+
+- Precios en bolivianos (Bs); el equivalente en dólares (US$) se indica a título referencial (tipo de cambio ≈ 11,00).
+- El almacenamiento de 2 GB y los 2 GB/mes de ancho de banda cubren el sitio actual; ante crecimiento de contenido o de tráfico se recomienda cotizar una ampliación antes de contratar.
+- La consultora es el único responsable técnico de hosting, seguridad y mantenimiento durante la vigencia del contrato.
 
 ---
 

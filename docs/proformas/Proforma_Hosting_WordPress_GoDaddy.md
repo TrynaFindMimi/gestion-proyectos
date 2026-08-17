@@ -26,11 +26,10 @@ Cotización del plan de **Hosting WordPress Gestionado** en **GoDaddy** (Managed
 
 | Plan | Sitios | Almacenamiento | Características clave | USD/mes (1.er año) | USD/año | Bs/año (≈) |
 |------|--------|----------------|-----------------------|--------------------|---------|------------|
-| **Basic** | 1 | 20 GB NVMe | SSL gratis, WordPress preinstalado | 6,99 | 83,88 | ≈ 583,80 |
-| **Deluxe** ⭐ | 1 (hasta 99) | 20 GB NVMe | + Staging, CDN Cloudflare (2x), SEO Optimizer, backups, SSL | **10,99** | **131,88** | **≈ 917,88** |
-| **Ultimate** | 1–3 | 30 GB NVMe | + WooCommerce, object cache, APM, Git, prioridad | 14,99 | 179,88 | ≈ 1.252,00 |
+| **Basic** | 1 | 20 GB NVMe | SSL gratis, WordPress preinstalado | 6,99 | 83,88 | ≈ 922,68 |
+| **Deluxe** ⭐ | 1 (hasta 99) | 20 GB NVMe | + Staging, CDN Cloudflare (2x), SEO Optimizer, backups, SSL | **10,99** | **131,88** | **≈ 1.450,68** |
+| **Ultimate** | 1–3 | 30 GB NVMe | + WooCommerce, object cache, APM, Git, prioridad | 14,99 | 179,88 | ≈ 1.978,68 |
 
-> Precios promocionales del primer año (incluyen 45–60 % de descuento). **Las renovaciones se facturan a tarifa regular** (Deluxe renueva ≈ US$19,99/mes ≈ US$239,88/año ≈ Bs 1.670,00).
 
 ---
 
@@ -41,15 +40,15 @@ Cotización del plan de **Hosting WordPress Gestionado** en **GoDaddy** (Managed
 | 1 | Hosting WordPress Deluxe (1.er año, facturación anual) | 12 meses | US$ 10,99/mes | US$ 131,88 |
 | 2 | Configuración inicial y migración del sitio por la consultora | 1 vez | US$ 50,00 | US$ 50,00 |
 | | | | **Subtotal (USD)** | **US$ 181,88** |
-| | | | **Subtotal (Bs ≈ 6,96)** | ≈ **Bs 1.266,00** |
-| | | | IVA (13 %) (Bs) | 164,58 |
-| | | | **TOTAL 1.er año con IVA (Bs)** | **≈ Bs 1.430,58** |
+| | | | **Subtotal (Bs ≈ 11,00)** | ≈ **Bs 2.000,68** |
+| | | | IVA (13 %) (Bs) | 260,09 |
+| | | | **TOTAL 1.er año con IVA (Bs)** | **≈ Bs 2.260,77** |
 
 **Años siguientes (renovación a tarifa regular):**
 
 | Concepto | USD/año | Bs/año (≈) |
 |----------|---------|------------|
-| Renovación hosting Deluxe | ≈ 239,88 | ≈ 1.670,00 |
+| Renovación hosting Deluxe | ≈ 239,88 | ≈ 2.638,68 |
 | Mantenimiento mensual por la consultora (opcional) | Véase INF-005 | — |
 
 ---
