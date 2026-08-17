@@ -36,16 +36,16 @@ En esta fecha se entregan formalmente al Albergue "Peluchín" la totalidad de lo
 
 | ID | Entregable | Estado |
 |----|------------|--------|
-| **E1** | Plan de trabajo detallado y cronograma confirmado | ✅ Entregado y aprobado |
-| **E2** | Wireframes y mockups del sitio público | ✅ Entregado y aprobado |
-| **E3** | Sitio base con landing, galería de animales y ficha individual | ✅ Entregado y aprobado |
-| **E4** | Páginas de donaciones, voluntarios y contacto | ✅ Entregado y aprobado |
-| **E5** | Panel de administración completo | ✅ Entregado y aprobado |
-| **E6** | Blog, galería de eventos, FAQ y contenidos editables | ✅ Entregado y aprobado |
-| **E7** | Plataforma completa en staging con pruebas funcionales superadas | ✅ Entregado y aprobado |
-| **E8** | Despliegue en producción con SSL | ✅ Entregado y aprobado |
-| **E9** | Documentación: Manual de Sistemas y Manual de Usuario | ✅ Entregado y aprobado |
-| **E10** | Capacitación al personal del albergue (2 sesiones) | ✅ Realizada |
+| **E1** | Plan de trabajo detallado y cronograma confirmado | Entregado y aprobado |
+| **E2** | Wireframes y mockups del sitio público | Entregado y aprobado |
+| **E3** | Sitio base con landing, galería de animales y ficha individual | Entregado y aprobado |
+| **E4** | Páginas de donaciones, voluntarios y contacto | Entregado y aprobado |
+| **E5** | Panel de administración completo | Entregado y aprobado |
+| **E6** | Blog, galería de eventos, FAQ y contenidos editables | Entregado y aprobado |
+| **E7** | Plataforma completa en staging con pruebas funcionales superadas | Entregado y aprobado |
+| **E8** | Despliegue en producción con SSL | Entregado y aprobado |
+| **E9** | Documentación: Manual de Sistemas y Manual de Usuario | Entregado y aprobado |
+| **E10** | Capacitación al personal del albergue (2 sesiones) | Realizada |
 
 ---
 

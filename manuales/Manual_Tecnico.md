@@ -177,14 +177,14 @@ Visibilizar a los perritos en adopción del albergue "Peluchín", gestionar de f
 
 | # | Requerimiento | Meta | Resultado en producción |
 |---|---------------|------|-------------------------|
-| RNF01 | Rendimiento | Carga < 3 s en 4G | ✅ Cumplido (Lighthouse ≥ 90) |
-| RNF02 | Disponibilidad | 99% uptime | ✅ Cumplido (monitoreo activo) |
-| RNF03 | Seguridad | HTTPS, OWASP Top 10, backups | ✅ Cumplido (SSH, hardening, backups diarios) |
-| RNF04 | Responsividad | Mobile-first | ✅ Cumplido |
-| RNF05 | Usabilidad | Interfaz intuitiva | ✅ Cumplido |
-| RNF06 | Mantenibilidad | Documento y modular | ✅ Cumplido |
-| RNF07 | Idioma | Español | ✅ Cumplido |
-| RNF08 | Accesibilidad | Contraste, alt en imágenes | ✅ Cumplido |
+| RNF01 | Rendimiento | Carga < 3 s en 4G | Cumplido (Lighthouse ≥ 90) |
+| RNF02 | Disponibilidad | 99% uptime | Cumplido (monitoreo activo) |
+| RNF03 | Seguridad | HTTPS, OWASP Top 10, backups | Cumplido (SSH, hardening, backups diarios) |
+| RNF04 | Responsividad | Mobile-first | Cumplido |
+| RNF05 | Usabilidad | Interfaz intuitiva | Cumplido |
+| RNF06 | Mantenibilidad | Documento y modular | Cumplido |
+| RNF07 | Idioma | Español | Cumplido |
+| RNF08 | Accesibilidad | Contraste, alt en imágenes | Cumplido |
 
 ---
 
@@ -713,13 +713,13 @@ stateDiagram-v2
 
 | Caso de prueba | Resultado |
 |----------------|-----------|
-| Pre-adopción completa | ✅ Solicitud guardada + correos + número de seguimiento |
-| Reporte de donación | ✅ Donación registrada + correo de agradecimiento |
-| Registro de voluntario | ✅ Voluntario visible en admin |
-| CRUD de animales | ✅ Crear/editar/eliminar/cambiar estado |
-| Cambio de estado de solicitud | ✅ Flujo completo con notificaciones |
-| Filtros de galería por taxonomía | ✅ Resultados correctos |
-| Botón flotante de WhatsApp | ✅ Enlace `wa.me` correcto en móvil y escritorio |
+| Pre-adopción completa | Solicitud guardada + correos + número de seguimiento |
+| Reporte de donación | Donación registrada + correo de agradecimiento |
+| Registro de voluntario | Voluntario visible en admin |
+| CRUD de animales | Crear/editar/eliminar/cambiar estado |
+| Cambio de estado de solicitud | Flujo completo con notificaciones |
+| Filtros de galería por taxonomía | Resultados correctos |
+| Botón flotante de WhatsApp | Enlace `wa.me` correcto en móvil y escritorio |
 
 ### 10.2. Pruebas de rendimiento
 

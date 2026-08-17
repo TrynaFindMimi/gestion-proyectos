@@ -77,19 +77,19 @@ Reconocemos y aceptamos que el proyecto incluye los siguientes módulos y funcio
 
 | Módulo | Confirmación |
 |--------|-------------|
-| Sitio web público completo (landing, galería de perros y gatos, formularios, donaciones, blog, contacto, FAQ) | ✅ |
-| Galería de perros y gatos con fichas individuales y galería de imágenes | ✅ |
-| Formulario de pre-adopción multi-paso con notificaciones automáticas | ✅ |
-| Sistema de donaciones con QR Simple, datos bancarios y formulario de reporte | ✅ |
-| Registro de voluntarios con áreas de interés y disponibilidad | ✅ |
-| Panel de administración completo (dashboard, CRUDs de animales, gestión de estados) | ✅ |
-| Blog y galería de eventos gestionables desde el panel admin | ✅ |
-| Notificaciones automáticas por correo electrónico | ✅ |
-| SEO básico, seguridad (SSL, OWASP), despliegue en producción | ✅ |
-| Documentación (Manual de Sistemas, Manual de Usuario) | ✅ |
-| Capacitación al personal del albergue (2 sesiones) | ✅ |
-| Garantía post-despliegue (2 meses) | ✅ |
-| Pre-carga de hasta 20 fichas de animales | ✅ |
+| Sitio web público completo (landing, galería de perros y gatos, formularios, donaciones, blog, contacto, FAQ) | Sí |
+| Galería de perros y gatos con fichas individuales y galería de imágenes | Sí |
+| Formulario de pre-adopción multi-paso con notificaciones automáticas | Sí |
+| Sistema de donaciones con QR Simple, datos bancarios y formulario de reporte | Sí |
+| Registro de voluntarios con áreas de interés y disponibilidad | Sí |
+| Panel de administración completo (dashboard, CRUDs de animales, gestión de estados) | Sí |
+| Blog y galería de eventos gestionables desde el panel admin | Sí |
+| Notificaciones automáticas por correo electrónico | Sí |
+| SEO básico, seguridad (SSL, OWASP), despliegue en producción | Sí |
+| Documentación (Manual de Sistemas, Manual de Usuario) | Sí |
+| Capacitación al personal del albergue (2 sesiones) | Sí |
+| Garantía post-despliegue (2 meses) | Sí |
+| Pre-carga de hasta 20 fichas de animales | Sí |
 
 ---
 
@@ -131,14 +131,14 @@ Reconocemos y aceptamos que **quedan expresamente excluidos** del alcance del pr
 
 | Exclusión | Confirmación |
 |-----------|-------------|
-| Diseño de logotipo ni identidad visual (proporcionado por el albergue) | ✅ |
-| Campañas de marketing digital o manejo de redes sociales | ✅ |
-| Carga masiva inicial de animales (más allá de 20 fichas de pre-carga) | ✅ |
-| Integración con sistemas contables o ERP | ✅ |
-| Desarrollo de aplicaciones móviles nativas (solo web responsiva) | ✅ |
-| Redacción y elaboración del contenido de páginas legales (Reglamento de Adopción, Política de Privacidad, Términos y Condiciones, acuerdos de seguimiento post-adopción y cualquier otro documento legal). **Solo transcribimos y publicamos** el contenido que el albergue nos proporcione. El albergue es el único responsable de redactar y aprobar dichos contenidos. | ✅ |
-| Hosting, servidores, dominio y certificados SSL: **por cuenta del albergue**. Realizamos la configuración y personalización del sitio en el editor de WordPress (plan del albergue) y publicaremos el sitio en el dominio que el albergue proporcione. Si no cuenta con plan propio, entregaremos **proformas con opciones de hosting** para que elija según su presupuesto. Como consultores brindaremos cotizaciones y asesoría, pero **no los proveeremos ni pagaremos**. Asimismo, **no nos comprometemos por la compra del dominio si su costo supera el presupuesto del proyecto**. La habilitación de funciones premium de WordPress con costo adicional requerirá aprobación previa del albergue. | ✅ |
-| Pasarela de pago con tarjeta de crédito (Red Enlace): **condicional** — solo si la ONG completa el papeleo de habilitación ante Red Enlace (única pasarela autorizada en Bolivia). De lo contrario, fuera de alcance. **En caso de que la ONG no obtenga la habilitación de la pasarela de pagos, el proyecto se mantendrá dentro de los límites presupuestarios originales y el dominio no será adquirido si su costo excede dicho presupuesto.** | ✅ |
+| Diseño de logotipo ni identidad visual (proporcionado por el albergue) | Sí |
+| Campañas de marketing digital o manejo de redes sociales | Sí |
+| Carga masiva inicial de animales (más allá de 20 fichas de pre-carga) | Sí |
+| Integración con sistemas contables o ERP | Sí |
+| Desarrollo de aplicaciones móviles nativas (solo web responsiva) | Sí |
+| Redacción y elaboración del contenido de páginas legales (Reglamento de Adopción, Política de Privacidad, Términos y Condiciones, acuerdos de seguimiento post-adopción y cualquier otro documento legal). **Solo transcribimos y publicamos** el contenido que el albergue nos proporcione. El albergue es el único responsable de redactar y aprobar dichos contenidos. | Sí |
+| Hosting, servidores, dominio y certificados SSL: **por cuenta del albergue**. Realizamos la configuración y personalización del sitio en el editor de WordPress (plan del albergue) y publicaremos el sitio en el dominio que el albergue proporcione. Si no cuenta con plan propio, entregaremos **proformas con opciones de hosting** para que elija según su presupuesto. Como consultores brindaremos cotizaciones y asesoría, pero **no los proveeremos ni pagaremos**. Asimismo, **no nos comprometemos por la compra del dominio si su costo supera el presupuesto del proyecto**. La habilitación de funciones premium de WordPress con costo adicional requerirá aprobación previa del albergue. | Sí |
+| Pasarela de pago con tarjeta de crédito (Red Enlace): **condicional** — solo si la ONG completa el papeleo de habilitación ante Red Enlace (única pasarela autorizada en Bolivia). De lo contrario, fuera de alcance. **En caso de que la ONG no obtenga la habilitación de la pasarela de pagos, el proyecto se mantendrá dentro de los límites presupuestarios originales y el dominio no será adquirido si su costo excede dicho presupuesto.** | Sí |
 
 ---
 
@@ -184,9 +184,9 @@ Aceptamos la siguiente propuesta de pago en **tres (3) cuotas**, por un precio t
 
 | | |
 |---|---|
-| **1.ª cuota (40%) — Bs. 5,424** | ✅ |
-| **2.ª cuota (35%) — Bs. 4,746** | ✅ |
-| **3.ª cuota (25%) — Bs. 3,390** | ✅ |
+| **1.ª cuota (40%) — Bs. 5,424** | Sí |
+| **2.ª cuota (35%) — Bs. 4,746** | Sí |
+| **3.ª cuota (25%) — Bs. 3,390** | Sí |
 
 #### 3.4. Propiedad intelectual y confidencialidad
 

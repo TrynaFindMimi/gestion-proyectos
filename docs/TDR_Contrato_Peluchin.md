@@ -130,7 +130,7 @@ A continuación se detalla cada página del sistema con sus botones, acciones, e
 |----------|------|-------------|
 | Galería de imágenes | Carrusel | Navegación con flechas < > y dots indicadores. Click en imagen la abre en lightbox/modal a pantalla completa. |
 | Datos del animal | Sección | Nombre, especie (perro/gato), edad aproximada, tamaño, sexo, raza (si se conoce), peso. |
-| Estado de salud | Badge / Iconos | Vacunado ✅, Esterilizado ✅, Desparasitado ✅, con colores verde/amarillo/rojo según estado. |
+| Estado de salud | Badge / Iconos | Vacunado (Sí), Esterilizado (Sí), Desparasitado (Sí), con colores verde/amarillo/rojo según estado. |
 | Personalidad | Tags | Etiquetas: "Juguetón", "Tranquilo", "Cariñoso", "Protector", "Socializa con otros animales", "Ideal para niños". |
 | Historia | Texto | Narrativa del rescate y personalidad del animal. |
 | Fecha de rescate | Dato | Día/mes/año de ingreso al albergue. |
@@ -139,7 +139,7 @@ A continuación se detalla cada página del sistema con sus botones, acciones, e
 | **"Regresar"** | Link / Botón outline | Regresa a `/adopcion`. |
 | **"Otros animales que buscan hogar"** | Slider inferior | 3 animales aleatorios de la galería con mismo formato de tarjeta. |
 | Etiqueta "En tratamiento" | Badge | Si el animal no está disponible para adopción, el botón de adoptar se reemplaza por un mensaje: "En recuperación. Pronto disponible" y botón **"Avísame cuando esté disponible"** (registra email). |
-| Etiqueta "Adoptado" | Badge verde | Se deshabilita el botón de adopción. Muestra "¡Adoptado! ❤️" con fecha de adopción. |
+| Etiqueta "Adoptado" | Badge verde | Se deshabilita el botón de adopción. Muestra "¡Adoptado!" con fecha de adopción. |
 
 ---
 
@@ -164,7 +164,7 @@ Validaciones: campos requeridos marcados con asterisco (*), mensajes de error in
 |----------|------|-------------|
 | Mensaje de impacto | Hero | "Tu donación salva vidas. Con Bs. 50 alimentas a un animal rescatado por una semana." |
 | **QR Simple** | Imagen + texto | Código QR escaneable con datos bancarios del albergue. Botón **"Descargar QR"** (descarga PNG). |
-| Datos de transferencia | Sección copiable | Banco, n.° de cuenta, titular, CI/NIT. Cada campo con botón **"Copiar"** (ícono de portapapeles, tooltip "Copiado ✅"). |
+| Datos de transferencia | Sección copiable | Banco, n.° de cuenta, titular, CI/NIT. Cada campo con botón **"Copiar"** (ícono de portapapeles, tooltip "Copiado (Sí)"). |
 | **"Reportar mi donación"** | Botón secundario | Despliega formulario opcional para trazabilidad. |
 | Formulario de reporte | Collapsible | Nombre del donante (opcional), monto (Bs.), fecha, comprobante (adjuntar imagen), mensaje al albergue (opcional), ¿desea recibo? (checkbox). Botón **"Enviar reporte"**. |
 | Post-reporte | Mensaje | "¡Gracias por tu generosidad! Recibirás un correo de confirmación." |
@@ -325,7 +325,7 @@ Acceso protegido por login (usuario y contraseña). Panel de administración del
 
 | Elemento | Tipo | Descripción |
 |----------|------|-------------|
-| Tabla de solicitudes | Data table | Columnas: fecha, nombre del solicitante, animal de interés, estado (badge: pendiente 🟡, en revisión 🔵, aprobado 🟢, rechazado 🔴), teléfono. Filtros por estado. Búsqueda. |
+| Tabla de solicitudes | Data table | Columnas: fecha, nombre del solicitante, animal de interés, estado (badge: pendiente (amarillo), en revisión (azul), aprobado (verde), rechazado (rojo)), teléfono. Filtros por estado. Búsqueda. |
 | **"Ver"** (ícono ojo) | Botón por fila | Abre detalle completo de la solicitud: todos los campos del formulario, notas internas, historial de cambios de estado. |
 | Cambiar estado | Dropdown + botón | Select con estados disponibles según estado actual (flujo: pendiente → en revisión → aprobado / rechazado). Botón **"Actualizar estado"**. |
 | Notas internas | Textarea + botón | Campo para notas del administrador. Botón **"Agregar nota"**. Lista cronológica de notas anteriores. |
