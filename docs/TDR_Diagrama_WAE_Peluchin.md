@@ -8,11 +8,6 @@
 
 ---
 
-### 0. QUÉ SE CORRIGIÓ Y POR QUÉ
-
-En UML/WAE, `<<link>>`, `<<submit>>` y `<<build>>` **son dependencias**, y toda dependencia estereotipada se dibuja con **línea discontinua** (no continua). Las asociaciones "estructurales" (una página que contiene un formulario, un proceso que agrupa páginas) van con **línea continua**. Los tres diagramas originales mezclaban ambos casos y además usaban la misma figura (rectángulo) para páginas, procesos y formularios, distinguiéndolos solo por color — lo cual no es notación WAE real, es solo un esquema de colores.
-
-Cambios aplicados a los tres diagramas:
 
 1. **Figuras diferenciadas por estereotipo** (no solo color):
    - `<<server page>>` → rectángulo de doble borde (forma "subroutine")
