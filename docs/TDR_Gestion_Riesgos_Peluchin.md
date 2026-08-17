@@ -19,7 +19,7 @@
 | **Cliente** | Albergue "Peluchín" (ONG sin fines de lucro) |
 | **Ubicación** | Llojeta, La Paz, Bolivia |
 | **Equipo desarrollador** | Mariana del Arroyo, Nahomi Humerez, Santiago Acha, Jorge Saenz |
-| **Plataforma** | WordPress (CMS) |
+| **Plataforma** | Hostinger Web Builder (constructor visual no-code) |
 | **Duración total** | 16 semanas (8 semanas de desarrollo + 8 semanas de garantía) |
 | **Metodología** | Configuración por sprints de 2 semanas |
 | **Precio base** | Bs. 12,000 (más IVA) |
@@ -52,18 +52,18 @@ El detalle de cada riesgo (ID) se encuentra en la [sección 4 — Registro de ri
 3. [Resumen ejecutivo — riesgos críticos y alto](#3-resumen-ejecutivo-riesgos-críticos-y-alto)
 4. [Registro de riesgos detallado](#4-registro-de-riesgos-detallado)
    - 4.1. [Riesgos técnicos (T01–T12)](#41-riesgos-técnicos)
-     - T01 — [Incompatibilidad de plugins](#t01-incompatibilidad-de-plugins-entre-sí-o-con-la-versión-de-wordpress)
-     - T02 — [Vulnerabilidades de seguridad](#t02-vulnerabilidades-de-seguridad-en-wordpress-o-plugins)
-     - T03 — [Problemas de rendimiento](#t03-problemas-de-rendimiento-por-exceso-de-plugins)
-     - T04 — [Fallos en la migración a producción](#t04-fallos-en-la-migración-de-staging-a-producción)
-     - T05 — [Incompatibilidad con PHP del servidor](#t05-incompatibilidad-con-la-versión-de-php-del-servidor)
-     - T06 — [Conflictos con el tema tras actualizaciones](#t06-conflictos-con-el-tema-después-de-actualizaciones)
-     - T07 — [Fallos en el envío de correos](#t07-fallos-en-el-envío-de-correos-automáticos)
-     - T08 — [Caída del hosting compartido](#t08-caída-del-hosting-compartido-por-tráfico-o-recursos)
-     - T09 — [Errores en la integración de WhatsApp](#t09-errores-en-la-integración-de-whatsapp)
-     - T10 — [Pérdida de datos o fallo de backups](#t10-pérdida-de-datos-o-fallo-de-backups)
-     - T11 — [Ataque cibernético / hackeo](#t11-ataque-cibernético-hackeo-del-sitio-en-producción)
-     - T12 — [Plugins premium no presupuestados](#t12-necesidad-de-plugins-premium-no-presupuestados)
+      - T01 — [Limitaciones o incompatibilidad de bloques del constructor](#t01-limitaciones-o-incompatibilidad-de-bloques-del-constructor)
+      - T02 — [Vulnerabilidades de seguridad](#t02-vulnerabilidades-de-seguridad-de-la-plataforma-o-el-contenido)
+      - T03 — [Problemas de rendimiento](#t03-problemas-de-rendimiento-por-exceso-de-elementos-o-imágenes)
+      - T04 — [Fallos en la publicación a producción](#t04-fallos-en-la-publicación-o-en-la-configuración-de-dns)
+      - T05 — [Incompatibilidad con la versión del plan](#t05-incompatibilidad-de-bloquesformatos-con-la-versión-del-plan)
+      - T06 — [Conflictos de diseño tras cambios de plantilla](#t06-conflictos-de-diseño-después-de-cambios-de-plantilla)
+      - T07 — [Fallos en el envío de correos](#t07-fallos-en-el-envío-de-correos-automáticos)
+      - T08 — [Caída del servicio de Hostinger](#t08-caída-del-servicio-por-tráfico-o-recursos)
+      - T09 — [Errores en la integración de WhatsApp](#t09-errores-en-la-integración-de-whatsapp)
+      - T10 — [Pérdida de datos o fallo de backups](#t10-pérdida-de-datos-o-fallo-de-backups)
+      - T11 — [Ataque cibernético / hackeo](#t11-ataque-cibernético-hackeo-del-sitio-en-producción)
+      - T12 — [Funciones premium del constructor no presupuestadas](#t12-necesidad-de-funciones-premium-del-constructor-no-presupuestadas)
    - 4.2. [Riesgos operativos (O01–O10)](#42-riesgos-operativos)
      - O01 — [Retraso en la entrega de materiales](#o01-retraso-en-la-entrega-de-materiales-por-parte-del-albergue)
      - O02 — [Hosting/servidores no obtenidos a tiempo](#o02-la-ong-no-obtiene-hosting-o-servidores-a-tiempo)
@@ -157,8 +157,8 @@ Se utiliza un análisis **cualitativo** basado en la combinación de **probabili
 |----|--------|-----------|-------|---------|-----------|--------------------------------|
 | **O02** | La ONG no obtiene hosting/servidores a tiempo | Operativo | Media | Alto | **Alta (6)** | Retraso de 1–2 semanas en E8, E9 y E10 |
 | **O01** | Retraso en entrega de materiales del albergue | Operativo | Media | Alto | **Alta (6)** | Retraso de 3–7 días en E3 y E4 |
-| **T01** | Incompatibilidad de plugins | Técnico | Media | Alto | **Alta (6)** | Retraso de 3–5 días en sprint afectado |
-| **T02** | Vulnerabilidades de seguridad | Técnico | Media | Alto | **Alta (6)** | 2–5 días; compromete datos de adoptantes/donantes |
+| **T01** | Limitaciones o incompatibilidad de bloques del constructor | Técnico | Media | Alto | **Alta (6)** | Retraso de 3–5 días en sprint afectado |
+| **T02** | Vulnerabilidades de seguridad de la plataforma | Técnico | Media | Alto | **Alta (6)** | 2–5 días; compromete datos de adoptantes/donantes |
 | **F01** | Retraso en pagos de cuotas | Financiero | Media | Alto | **Alta (6)** | Tensión contractual; puede condicionar entrega de código |
 
 ---
@@ -173,90 +173,90 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 
 ---
 
-##### T01 — Incompatibilidad de plugins entre sí o con la versión de WordPress
+##### T01 — Limitaciones o incompatibilidad de bloques del constructor
 
 | Campo | Detalle |
 |-------|---------|
-| **Descripción** | Conflicto entre plugins, o entre un plugin y la versión de WordPress/PHP, que provoca errores funcionales, pantallas en blanco o caída de secciones (formularios, galería, admin). |
+| **Descripción** | Un bloque o funcionalidad requerida del constructor de Hostinger Web Builder no existe, presenta errores o no se comporta como se espera (formularios, galería, colecciones), lo que provoca retrasos o soluciones alternativas. |
 | **Probabilidad / Impacto / Severidad** | Media / Alto / **Alta (6)** |
-| **Señales de alerta** | Errores de consola (PHP fatal), conflictos al activar un plugin, plugins con última actualización antigua, errores posteriores a actualizaciones. |
-| **Plan de mitigación** | Entorno staging con la misma versión de WordPress que producción; activación de plugins de uno en uno con prueba funcional; selección inicial restringida de plugins con soporte activo (< 6 meses); `WP_DEBUG_LOG` activado en desarrollo. |
-| **Plan de contingencia** | Desactivar selectivamente el plugin conflictivo (vía panel o FTP/phpMyAdmin si hay pantalla en blanco); reemplazarlo por una alternativa equivalente verificada; restaurar backup si el daño es mayor; informar del impacto al albergue. |
+| **Señales de alerta** | Errores de visualización en el editor, bloques que no guardan, funcionalidad no disponible en el plan contratado, errores tras cambios de plantilla. |
+| **Plan de mitigación** | Probar cada bloque requerido en staging antes de publicarlo; uso de bloques HTML/código personalizado como respaldo; selección anticipada de la plantilla adecuada; documentación de las limitaciones del plan. |
+| **Plan de contingencia** | Reemplazar el bloque por una alternativa integrada del constructor o por código personalizado (HTML/CSS); contactar al soporte de Hostinger; restaurar una versión previa si el daño es mayor; informar del impacto al albergue. |
 | **Impacto en el cronograma** | Retraso de **3 a 5 días hábiles** en el sprint afectado (habitualmente S1–S3). Mitigado por las pruebas en staging, el impacto se reduce a ~2 días. |
-| **Impacto en el costo** | Ninguno; eventual adquisición de plugin alternativo previa aprobación de la ONG. |
-| **Responsable** | Desarrollador Backend / QA Tester |
-
----
-
-##### T02 — Vulnerabilidades de seguridad en WordPress o plugins
-
-| Campo | Detalle |
-|-------|---------|
-| **Descripción** | Explotación de una vulnerabilidad conocida (OWASP Top 10) en WordPress, tema o plugins, que comprometa el sitio o los datos de adoptantes, donantes y voluntarios (incumple RNF03). |
-| **Probabilidad / Impacto / Severidad** | Media / Alto / **Alta (6)** |
-| **Señales de alerta** | Alertas de Wordfence/Sucuri, intentos reiterados de login, CVEs publicados sobre plugins instalados, tráfico o modificaciones anómalas. |
-| **Plan de mitigación** | Wordfence/Sucuri activo; actualizaciones automáticas de seguridad; backups diarios; hardening (prefijo de BD, límite de intentos de login, doble factor, principio de menor privilegio); escaneo en cada sprint. |
-| **Plan de contingencia** | Poner el sitio en modo mantenimiento; restaurar el backup limpio más reciente; parchear la vulnerabilidad; escaneo completo; notificar al albergue (y a afectados si hubo fuga de datos, conforme a normativa boliviana de protección de datos). |
-| **Impacto en el cronograma** | Si ocurre en desarrollo: **2–3 días**. Si ocurre en producción durante la garantía: **3–5 días** de atención de soporte (semanas 9–16). |
-| **Impacto en el costo** | Bajo (herramientas ya contempladas); posible servicio externo de limpieza/monitoreo no cubierto por la garantía. |
-| **Responsable** | Desarrollador Backend / QA Tester |
-
----
-
-##### T03 — Problemas de rendimiento por exceso de plugins
-
-| Campo | Detalle |
-|-------|---------|
-| **Descripción** | Acumulación de plugins, scripts y peso de imágenes que degrada la velocidad de carga por encima de los 3 segundos exigidos (RNF01) o incumple el uptime del 99% (RNF02). |
-| **Probabilidad / Impacto / Severidad** | Media / Medio / **Media (4)** |
-| **Señales de alerta** | PageSpeed/Lighthouse < 60, GTmetrix lento, consultas lentas, quejas del albergue o de visitantes. |
-| **Plan de mitigación** | Mínimo de plugins imprescindibles; caché (WP Super Cache/LiteSpeed); compresión de imágenes (Smush/EWWW); CDN si aplica; auditoría de rendimiento en cada demo (herramientas de testing del plan). |
-| **Plan de contingencia** | Desactivar plugins no esenciales; purgar caché; optimizar imágenes/scripts; si la causa es el hosting compartido, escalar plan o migrar a VPS (con asesoría; costo a cargo de la ONG). |
-| **Impacto en el cronograma** | **2–3 días** dentro del Sprint 4 (QA y optimización), sin comprometer la entrega si se detecta en staging. |
-| **Impacto en el costo** | Eventual mejora de hosting/CDN a cargo de la ONG. |
+| **Impacto en el costo** | Ninguno; eventual activación de función premium previa aprobación de la ONG. |
 | **Responsable** | Desarrollador Frontend / QA Tester |
 
 ---
 
-##### T04 — Fallos en la migración de staging a producción
+##### T02 — Vulnerabilidades de seguridad de la plataforma o el contenido
 
 | Campo | Detalle |
 |-------|---------|
-| **Descripción** | Error en la migración con All-in-One WP Migration (enlaces rotos, medios que no cargan, límite de tamaño de subida del hosting, diferencias de versión PHP/MySQL). |
+| **Descripción** | Explotación de una vulnerabilidad (OWASP Top 10) en la plataforma, en bloques de código personalizado o en las cuentas de acceso, que comprometa el sitio o los datos de adoptantes, donantes y voluntarios (incumple RNF03). |
+| **Probabilidad / Impacto / Severidad** | Media / Alto / **Alta (6)** |
+| **Señales de alerta** | Alertas de seguridad de Hostinger (malware, DDoS), intentos reiterados de login en el panel, tráfico o modificaciones anómalas. |
+| **Plan de mitigación** | Seguridad gestionada por Hostinger (SSL, DDoS, escaneo de malware); backups automáticos; contraseñas fuertes y 2FA del panel; principio de menor privilegio en accesos; revisión del código personalizado antes de publicar. |
+| **Plan de contingencia** | Poner el sitio en modo mantenimiento; restaurar el backup limpio más reciente desde hPanel; parchear la causa; escaneo completo; notificar al albergue (y a afectados si hubo fuga de datos, conforme a normativa boliviana de protección de datos). |
+| **Impacto en el cronograma** | Si ocurre en desarrollo: **2–3 días**. Si ocurre en producción durante la garantía: **3–5 días** de atención de soporte (semanas 9–16). |
+| **Impacto en el costo** | Bajo (herramientas ya contempladas en el plan); posible servicio externo de limpieza/monitoreo no cubierto por la garantía. |
+| **Responsable** | Desarrollador Backend / QA Tester |
+
+---
+
+##### T03 — Problemas de rendimiento por exceso de elementos o imágenes
+
+| Campo | Detalle |
+|-------|---------|
+| **Descripción** | Acumulación de bloques, scripts y peso de imágenes que degrada la velocidad de carga por encima de los 3 segundos exigidos (RNF01) o incumple el uptime del 99% (RNF02). |
+| **Probabilidad / Impacto / Severidad** | Media / Medio / **Media (4)** |
+| **Señales de alerta** | PageSpeed/Lighthouse < 60, GTmetrix lento, quejas del albergue o de visitantes. |
+| **Plan de mitigación** | Uso eficiente de bloques; optimización y compresión de imágenes en la biblioteca de medios; CDN del plan; auditoría de rendimiento en cada demo (herramientas de testing del plan). |
+| **Plan de contingencia** | Eliminar bloques no esenciales; optimizar imágenes/scripts; si la causa es el plan contratado, escalar el plan de Hostinger (con asesoría; costo a cargo de la ONG). |
+| **Impacto en el cronograma** | **2–3 días** dentro del Sprint 4 (QA y optimización), sin comprometer la entrega si se detecta en staging. |
+| **Impacto en el costo** | Eventual mejora del plan a cargo de la ONG. |
+| **Responsable** | Desarrollador Frontend / QA Tester |
+
+---
+
+##### T04 — Fallos en la publicación o en la configuración de DNS
+
+| Campo | Detalle |
+|-------|---------|
+| **Descripción** | Error al publicar el sitio (dominio no propaga, DNS mal configurado, sitio no disponible tras la publicación, pérdida de cambios). |
 | **Probabilidad / Impacto / Severidad** | Baja / Medio / **Baja (2)** |
-| **Señales de alerta** | Enlaces internos rotos post-migración, imágenes sin cargar, límite de upload del hosting, versiones de PHP no declaradas. |
-| **Plan de mitigación** | Prueba de migración previa en un entorno de pruebas del hosting; backup completo antes de migrar; exportación de medios por separado si el archivo es grande; verificación de requisitos PHP 8+/MySQL antes del despliegue. |
-| **Plan de contingencia** | Re-migrar desde el backup; corregir rutas en la base de datos (search-replace); ampliar límites vía `php.ini`; recurrir al soporte del proveedor. |
-| **Impacto en el cronograma** | **1–2 días**; crítico si coincide con la Semana 7–8 (E8). Se acumula con O02 si el hosting aún no está disponible. |
+| **Señales de alerta** | Enlaces rotos post-publicación, imágenes sin cargar, dominio sin propagar, configuración de DNS incompleta. |
+| **Plan de mitigación** | Prueba previa en staging; backup antes de publicar; verificación de DNS antes del despliegue; revisión del checklist de publicación. |
+| **Plan de contingencia** | Corregir DNS/dominio en hPanel; republicar desde el editor; restaurar desde backup; recurrir al soporte de Hostinger. |
+| **Impacto en el cronograma** | **1–2 días**; crítico si coincide con la Semana 7–8 (E8). Se acumula con O02 si el plan aún no está disponible. |
 | **Impacto en el costo** | Ninguno. |
 | **Responsable** | Desarrollador Backend / QA Tester |
 
 ---
 
-##### T05 — Incompatibilidad con la versión de PHP del servidor
+##### T05 — Incompatibilidad de bloques/formatos con la versión del plan
 
 | Campo | Detalle |
 |-------|---------|
-| **Descripción** | El hosting proporcionado por la ONG opera con PHP 7.x u obsoleto; WordPress y los plugins requieren PHP 8+. |
+| **Descripción** | El plan Web Builder contratado por la ONG no incluye alguna funcionalidad requerida (p. ej., ecommerce, membresías) o una actualización de la plataforma cambia el comportamiento de bloques existentes. |
 | **Probabilidad / Impacto / Severidad** | Baja / Medio / **Baja (2)** |
-| **Señales de alerta** | Avisos de incompatibilidad, pantalla blanca, requisitos no declarados por el proveedor. |
-| **Plan de mitigación** | Verificación de requisitos del hosting antes del despliegue (Sprint 4); exigencia de PHP 8+ en las proformas entregadas a la ONG (Semana 7). |
-| **Plan de contingencia** | Solicitar al proveedor la actualización de PHP (típicamente sin costo); si no es posible, instalar versiones compatibles del tema/plugins o recomendar hosting alternativo. |
+| **Señales de alerta** | Funcionalidad no disponible, avisos de la plataforma, cambios de comportamiento tras actualizaciones. |
+| **Plan de mitigación** | Verificación de requisitos del plan antes del despliegue (Sprint 4); exigencia de plan Premium en las proformas entregadas a la ONG (Semana 7). |
+| **Plan de contingencia** | Solicitar la activación de la función en el plan (típicamente actualizando el plan); si no es posible, usar alternativa del constructor o bloques HTML; recomendar plan alternativo. |
 | **Impacto en el cronograma** | **1–2 días** en las semanas 7–8 (E8). |
 | **Impacto en el costo** | Ninguno. |
 | **Responsable** | Desarrollador Backend |
 
 ---
 
-##### T06 — Conflictos con el tema después de actualizaciones
+##### T06 — Conflictos de diseño después de cambios de plantilla
 
 | Campo | Detalle |
 |-------|---------|
-| **Descripción** | Tras actualizar WordPress o el tema base, el tema hijo personalizado presenta roturas de layout, estilos perdidos o funciones obsoletas. |
+| **Descripción** | Tras actualizar la plantilla o aplicar cambios mayores de diseño, el sitio presenta roturas de layout, estilos perdidos o secciones desalineadas. |
 | **Probabilidad / Impacto / Severidad** | Media / Medio / **Media (4)** |
-| **Señales de alerta** | Layout roto tras un update, CSS personalizado sin aplicar, errores de funciones PHP del tema hijo. |
-| **Plan de mitigación** | Todo el código personalizado en un **tema hijo**; pruebas de actualizaciones en staging antes de aplicar en producción; control de versiones del tema en Git. |
-| **Plan de contingencia** | Revertir la actualización; corregir CSS/funciones del tema hijo; aplicar la actualización de forma parcial. |
+| **Señales de alerta** | Layout roto tras un cambio, estilos sin aplicar, secciones duplicadas. |
+| **Plan de mitigación** | Duplicar el sitio antes de cambios mayores; pruebas de cambios en staging antes de publicar; control de versiones de la configuración exportada en Git. |
+| **Plan de contingencia** | Revertir el cambio desde el historial/backup; corregir los bloques afectados; aplicar el cambio de forma parcial. |
 | **Impacto en el cronograma** | **2–3 días** en el sprint afectado (S1, S3 o garantía). |
 | **Impacto en el costo** | Ninguno. |
 | **Responsable** | Desarrollador Frontend |
@@ -270,25 +270,25 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 | **Descripción** | Los correos de confirmación (pre-adopción, donación, voluntariado) no se envían o llegan a spam por SMTP mal configurado o límites del hosting. |
 | **Probabilidad / Impacto / Severidad** | Media / Medio / **Media (4)** |
 | **Señales de alerta** | Correos que no llegan en pruebas, rebotes, entregabilidad en spam, configuración SMTP pendiente. |
-| **Plan de mitigación** | WP Mail SMTP con credenciales SMTP reales (Gmail/Resend/SendGrid en planes gratuitos); prueba de entrega de cada flujo; verificación de dominio; registro de la cola de correos. |
-| **Plan de contingencia** | Cambiar de proveedor SMTP; habilitar log de correos; prueba con cuentas de prueba del albergue; configurar remitente alternativo. |
+| **Plan de mitigación** | Form Builder con notificaciones configuradas y correo del dominio (mailbox/SMTP); prueba de entrega de cada flujo; verificación del remitente; registro de envíos de formularios. |
+| **Plan de contingencia** | Cambiar el remitente/cuenta de correo; revisar la configuración del Form Builder; prueba con cuentas de prueba del albergue; configurar remitente alternativo. |
 | **Impacto en el cronograma** | **2–4 días** en el Sprint 2 (E4, formularios); si se detecta a tiempo en staging, ~1 día. |
 | **Impacto en el costo** | Ninguno (planes gratuitos). |
 | **Responsable** | Desarrollador Backend / QA Tester |
 
 ---
 
-##### T08 — Caída del hosting compartido por tráfico o recursos
+##### T08 — Caída del servicio por tráfico o recursos
 
 | Campo | Detalle |
 |-------|---------|
-| **Descripción** | El hosting compartido contratado por la ONG se satura por tráfico o consumo de recursos, afectando la disponibilidad (RNF02: 99% uptime). |
+| **Descripción** | El servicio de Hostinger Web Builder se satura por tráfico o consumo de recursos, afectando la disponibilidad (RNF02: 99% uptime). |
 | **Probabilidad / Impacto / Severidad** | Baja / Medio / **Baja (2)** |
 | **Señales de alerta** | HTTP 503, lentitud sostenida, alertas de uso de recursos del proveedor, quejas de visitantes. |
-| **Plan de mitigación** | Monitoreo de uptime (UptimeRobot); optimización y caché activas; proformas de hosting con recursos suficientes (recomendación de VPS como escalón documentado). |
-| **Plan de contingencia** | Comunicarse con el proveedor; escalar temporalmente el plan; si la caída es recurrente, migrar a VPS (requiere adenda si implica costo para la ONG). |
+| **Plan de mitigación** | Monitoreo de uptime (UptimeRobot); optimización y CDN activas; proformas del plan con recursos suficientes (recomendación de escalar plan documentada). |
+| **Plan de contingencia** | Comunicarse con el soporte de Hostinger; escalar temporalmente el plan; si la caída es recurrente, migrar a un plan superior (requiere adenda si implica costo para la ONG). |
 | **Impacto en el cronograma** | Indisponibilidad temporal; si prolongada y afecta la demo final o E8, retraso de **2–5 días**. |
-| **Impacto en el costo** | Eventual mejora de hosting a cargo de la ONG. |
+| **Impacto en el costo** | Eventual mejora del plan a cargo de la ONG. |
 | **Responsable** | Desarrollador Backend |
 
 ---
@@ -312,11 +312,11 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 
 | Campo | Detalle |
 |-------|---------|
-| **Descripción** | Pérdida de contenido (fichas de animales, solicitudes de adopción, donaciones) por fallo de base de datos, sobrescritura o backup no restaurable. |
+| **Descripción** | Pérdida de contenido (fichas de animales, solicitudes de adopción, donaciones) por fallo de la plataforma, sobrescritura o backup no restaurable. |
 | **Probabilidad / Impacto / Severidad** | Baja / Alto / **Media (3)** |
-| **Señales de alerta** | Backups fallidos en UpdraftPlus, espacio insuficiente, errores de conexión a BD. |
-| **Plan de mitigación** | Backups automáticos diarios con retención (UpdraftPlus); backup manual antes de cada migración y actualización mayor; almacenamiento remoto (Google Drive/Dropbox); verificación periódica de restauración. |
-| **Plan de contingencia** | Restaurar el último backup válido; reconstruir los datos del período perdido con el albergue (registro manual); revisión de la causa raíz. |
+| **Señales de alerta** | Backups fallidos en hPanel, espacio insuficiente, errores de la plataforma al guardar. |
+| **Plan de mitigación** | Backups automáticos del plan (semanal en Premium; mejorable a diario); backup manual antes de cada publicación/actualización mayor; descarga periódica de la configuración exportada; verificación periódica de restauración. |
+| **Plan de contingencia** | Restaurar el último backup válido desde hPanel; reconstruir los datos del período perdido con el albergue (registro manual); revisión de la causa raíz. |
 | **Impacto en el cronograma** | **3–5 días** si ocurre antes de E8; **2–3 días** dentro del período de garantía. |
 | **Impacto en el costo** | Ninguno. |
 | **Responsable** | Desarrollador Backend / QA Tester |
@@ -329,8 +329,8 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 |-------|---------|
 | **Descripción** | Compromiso del sitio tras el despliegue (defacing, malware, phishing), con riesgo reputacional y de datos personales. |
 | **Probabilidad / Impacto / Severidad** | Baja / Alto / **Media (3)** |
-| **Señales de alerta** | Alertas de Wordfence, cambios no autorizados, detección de malware por buscadores, accesos anómalos. |
-| **Plan de mitigación** | Hardening de WordPress, doble factor, actualizaciones automáticas, backups diarios, monitoreo de seguridad activo durante la garantía. |
+| **Señales de alerta** | Alertas de seguridad de Hostinger, cambios no autorizados, detección de malware por buscadores, accesos anómalos. |
+| **Plan de mitigación** | Seguridad gestionada por Hostinger (SSL, DDoS, malware), 2FA en el panel, contraseñas fuertes, backups automáticos, monitoreo de seguridad activo durante la garantía. |
 | **Plan de contingencia** | Puesta en modo mantenimiento; restauración desde backup limpio; limpieza; rotación de credenciales; notificación al albergue; refuerzo de medidas. |
 | **Impacto en el cronograma** | **5–7 días** dentro del período de garantía (semanas 9–16). Posterior a la garantía sería un nuevo proyecto. |
 | **Impacto en el costo** | Posible servicio externo de limpieza no cubierto por la garantía. |
@@ -338,15 +338,15 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 
 ---
 
-##### T12 — Necesidad de plugins premium no presupuestados
+##### T12 — Necesidad de funciones premium del constructor no presupuestadas
 
 | Campo | Detalle |
 |-------|---------|
-| **Descripción** | Una funcionalidad clave requiere un plugin de pago cuyo costo no estaba contemplado. |
+| **Descripción** | Una funcionalidad clave requiere una función o plan de pago del constructor cuyo costo no estaba contemplado. |
 | **Probabilidad / Impacto / Severidad** | Media / Bajo / **Baja (2)** |
-| **Señales de alerta** | Límite del plan gratuito alcanzado, funcionalidad insuficiente en alternativas gratuitas. |
-| **Plan de mitigación** | Priorización de plugins gratuitos; identificación temprana de limitaciones; registro de posibles costos en las proformas a la ONG. |
-| **Plan de contingencia** | Solicitar aprobación previa a la ONG (contrato exige aprobación para plugins premium); cotizar alternativa manual/código propio. |
+| **Señales de alerta** | Límite del plan gratuito alcanzado, funcionalidad insuficiente en el plan contratado. |
+| **Plan de mitigación** | Priorización de funciones incluidas en el plan Premium; identificación temprana de limitaciones; registro de posibles costos en las proformas a la ONG. |
+| **Plan de contingencia** | Solicitar aprobación previa a la ONG (contrato exige aprobación para funciones premium); cotizar alternativa con bloques HTML/código personalizado. |
 | **Impacto en el cronograma** | **1–2 días** por proceso de aprobación. |
 | **Impacto en el costo** | Costo del plugin a cargo de la ONG previa aprobación. |
 | **Responsable** | Project Manager |
@@ -379,7 +379,7 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 | **Descripción** | La ONG no contrata el hosting/dominio (a su cargo) para la Semana 7–9; el entregable E8 (despliegue en producción) no puede ejecutarse. |
 | **Probabilidad / Impacto / Severidad** | Media / Alto / **Alta (6)** |
 | **Señales de alerta** | Sin hosting contratado en la Semana 6; proformas entregadas sin respuesta; falta de credenciales de acceso al servidor. |
-| **Plan de mitigación** | Entrega de proformas con opciones económicas de hosting WordPress (Semanas 6–7); asesoría y seguimiento semanal; definición clara de requisitos (PHP 8+, MySQL, espacio). |
+| **Plan de mitigación** | Entrega de proformas con opciones económicas de hosting (Hostinger Web Builder) (Semanas 6–7); asesoría y seguimiento semanal; definición clara de requisitos del plan. |
 | **Plan de contingencia** | Presentar 2–3 opciones de hosting económicas y apoyar la contratación (asesoría); mantener el sitio en staging plenamente funcional mientras tanto; si la demora supera 1 semana, reprogramar E8/E9/E10 e informar formalmente el nuevo cronograma. |
 | **Impacto en el cronograma** | **CRÍTICO:** retraso de **1 a 2 semanas** en E8 (despliegue), E9 (documentación) y E10 (capacitación), desplazando también el inicio de la garantía (E11). Es la dependencia externa más riesgosa del plan. |
 | **Impacto en el costo** | Costo de hosting/dominio a cargo de la ONG; el contrato prevé que el dominio no se adquirirá si excede el presupuesto. |
@@ -454,7 +454,7 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 | **Descripción** | Cortes eléctricos o fallas de internet que interrumpen el trabajo de desarrollo o las reuniones. |
 | **Probabilidad / Impacto / Severidad** | Alta / Bajo / **Media (3)** |
 | **Señales de alerta** | Cortes frecuentes del proveedor eléctrico/de internet. |
-| **Plan de mitigación** | Trabajo en entorno local (Local by Flywheel); commits frecuentes a Git; sincronización periódica; configuración posible de forma offline. |
+| **Plan de mitigación** | Trabajo en el editor en línea de Hostinger Web Builder; commits frecuentes a Git de documentación y configuración exportada; sincronización periódica; configuración posible desde el móvil o cualquier conexión. |
 | **Plan de contingencia** | Recuperar el trabajo desde el repositorio/backup; continuar offline; reprogramar demos si la conectividad falla. |
 | **Impacto en el cronograma** | **0.5–1 día por evento**; bajo impacto acumulado gracias al trabajo local y al control de versiones. |
 | **Impacto en el costo** | Ninguno. |
@@ -571,15 +571,15 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 
 ---
 
-##### F05 — Costo de plugins premium necesarios
+##### F05 — Costo de funciones premium del constructor necesarias
 
 | Campo | Detalle |
 |-------|---------|
-| **Descripción** | Funcionalidad que requiere plugins de pago adicionales a los previstos (relacionado con T12). |
+| **Descripción** | Funcionalidad que requiere funciones o planes de pago adicionales a los previstos (relacionado con T12). |
 | **Probabilidad / Impacto / Severidad** | Media / Bajo / **Baja (2)** |
-| **Señales de alerta** | Límite del plan gratuito alcanzado; funcionalidad requerida no cubierta. |
-| **Plan de mitigación** | Priorización de plugins gratuitos; identificación anticipada de limitaciones. |
-| **Plan de contingencia** | Solo se adquieren con aprobación previa de la ONG; alternativa manual/código propio si la ONG no los aprueba. |
+| **Señales de alerta** | Límite del plan alcanzado; funcionalidad requerida no cubierta. |
+| **Plan de mitigación** | Priorización de funciones incluidas en el plan; identificación anticipada de limitaciones. |
+| **Plan de contingencia** | Solo se adquieren con aprobación previa de la ONG; alternativa con bloques HTML/código personalizado si la ONG no los aprueba. |
 | **Impacto en el cronograma** | **1–2 días** por proceso de aprobación. |
 | **Impacto en el costo** | Costo a cargo de la ONG previa aprobación. |
 | **Responsable** | Project Manager |
@@ -605,7 +605,7 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 
 | Campo | Detalle |
 |-------|---------|
-| **Descripción** | Variaciones de costos de herramientas o insumos (hosting, plugins) frente a un precio de contrato fijo (Bs. 12,000 + IVA). |
+| **Descripción** | Variaciones de costos de herramientas o insumos (hosting, funciones premium del constructor) frente a un precio de contrato fijo (Bs. 12,000 + IVA). |
 | **Probabilidad / Impacto / Severidad** | Baja / Bajo / **Baja (1)** |
 | **Señales de alerta** | Variación de precios de proveedores; cotizaciones con vigencia corta. |
 | **Plan de mitigación** | Precio fijo pactado; cotizaciones con vigencia; priorización de herramientas gratuitas. |
@@ -624,21 +624,21 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 |-----------|----|--------|-----------|------------------|
 | 1 | **O02** | Hosting/servidores no disponibles a tiempo | Alta (6) | Mitigación intensiva desde la Semana 6 |
 | 2 | **O01** | Retraso en materiales del albergue | Alta (6) | Recordatorios semanales + placeholders |
-| 3 | **T01** | Incompatibilidad de plugins | Alta (6) | Pruebas en staging obligatorias |
+| 3 | **T01** | Limitaciones/incompatibilidad de bloques del constructor | Alta (6) | Pruebas en staging obligatorias |
 | 4 | **T02** | Vulnerabilidades de seguridad | Alta (6) | Hardening + backups + monitoreo |
 | 5 | **F01** | Retraso en pagos de cuotas | Alta (6) | Seguimiento financiero estricto |
 | 6 | **O09** | Retraso en aprobaciones de demos | Media (4) | Aprobación tácita pactada |
 | 7 | **O04** | Cambios de alcance | Media (4) | Gestión de cambios por adenda |
-| 8 | **T07** | Fallos en correos automáticos | Media (4) | SMTP verificado en Sprint 2 |
-| 9 | **T03** | Rendimiento por exceso de plugins | Media (4) | Auditoría en cada sprint |
-| 10 | **T06** | Conflictos de tema tras updates | Media (4) | Child theme + pruebas |
+| 8 | **T07** | Fallos en correos automáticos | Media (4) | SMTP/correo del dominio verificado en Sprint 2 |
+| 9 | **T03** | Rendimiento por exceso de elementos/imágenes | Media (4) | Auditoría en cada sprint |
+| 10 | **T06** | Conflictos de diseño tras cambios de plantilla | Media (4) | Duplicar sitio + pruebas en staging |
 | 11 | **O05** | Responsable del albergue poco disponible | Media (4) | Contacto alterno |
 | 12 | **F02** | Costo del dominio > presupuesto | Media (4) | Cotizaciones anticipadas |
 | 13 | **F04** | Incremento de alcance no presupuestado | Media (4) | Control de alcance estricto |
 | 14 | **T10** | Pérdida de datos / fallo de backups | Media (3) | Backups diarios verificados |
 | 15 | **T11** | Hackeo en producción | Media (3) | Hardening + monitoreo |
 | 16 | **O03 / F03** | Red Enlace no habilitada | Media (3) | Aceptado (sin impacto) |
-| 17 | **O07** | Cortes de energía/conectividad | Media (3) | Trabajo local + Git |
+| 17 | **O07** | Cortes de energía/conectividad | Media (3) | Editor en línea + Git |
 | 18–29 | T04, T05, T08, T09, T12, O06, O08, O10, F05, F06, F07 | Resto de riesgos | Baja (1–2) | Monitoreo pasivo |
 
 #### 5.2. Matriz de severidad (ubicación de riesgos)
@@ -726,10 +726,10 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 | Rol | Responsabilidades |
 |-----|-------------------|
 | **Project Manager** | Dueño del registro de riesgos; monitoreo semanal de dependencias; gestión de cambios (adendas); escalamiento al albergue; control de la reserva de contingencia. |
-| **Desarrollador Backend** | Riesgos de servidor, base de datos, seguridad (T02, T04, T05, T08, T10, T11) y configuración SMTP (T07). |
-| **Desarrollador Frontend** | Riesgos del tema, rendimiento front (T03, T06, T09) y responsividad. |
+| **Desarrollador Backend** | Riesgos de plataforma, seguridad y backups (T02, T04, T05, T08, T10, T11) y configuración SMTP/correo (T07). |
+| **Desarrollador Frontend** | Riesgos del diseño, rendimiento front (T03, T06, T09) y responsividad. |
 | **QA Tester** | Pruebas en staging, verificación de migraciones (T04), entregabilidad de correos (T07), pruebas de seguridad (T02). |
-| **Diseñador UX/UI** | Anticipación de limitaciones de plugins premium (T12/F05) y soporte en aprobaciones de diseño. |
+| **Diseñador UX/UI** | Anticipación de limitaciones del constructor (T12/F05) y soporte en aprobaciones de diseño. |
 | **Todo el equipo** | Reporte de señales de alerta en el daily; ejecución de los planes de contingencia asignados. |
 
 ---
@@ -752,7 +752,7 @@ Los riesgos se agrupan en las mismas categorías del Plan del Proyecto: **técni
 | **OP01** | Habilitación de Red Enlace durante la vigencia | Adelantar el papeleo de habilitación desde la Semana 1; seguimiento mensual del avance | Ampliación del alcance como adenda (mayor valor del producto) |
 | **OP02** | Adopciones/donaciones incrementadas tras el lanzamiento | Publicación de historias de adopción y campañas desde la demo de E4 | Mayor visibilidad del albergue y del proyecto |
 | **OP03** | Contenido placeholder bien recibido por el albergue | Entregar ejemplos de alto nivel | Menor tiempo de espera por materiales |
-| **OP04** | Reutilización del tema hijo y plugins configurados | Documentar el procedimiento en el Manual de Sistemas | Menor esfuerzo en soporte y futuros proyectos |
+| **OP04** | Reutilización de la configuración y bloques del constructor | Documentar el procedimiento en el Manual de Sistemas | Menor esfuerzo en soporte y futuros proyectos |
 
 ---
 
@@ -778,14 +778,14 @@ El registro se mantendrá actualizado durante toda la vigencia del contrato (8 s
 
 | Riesgo del Plan (`TDR_Plan_Proyecto_Cronograma`) | ID en esta gestión |
 |---------------------------------------------------|---------------------|
-| Incompatibilidad de plugins | T01 |
-| Vulnerabilidades de seguridad en WordPress o plugins | T02 |
-| Problemas de rendimiento por exceso de plugins | T03 |
-| Fallos en la migración de staging a producción | T04 |
-| Incompatibilidad con la versión de PHP del servidor | T05 |
-| Conflictos con el tema después de actualizaciones | T06 |
+| Limitaciones/incompatibilidad de bloques del constructor | T01 |
+| Vulnerabilidades de seguridad de la plataforma o el contenido | T02 |
+| Problemas de rendimiento por exceso de elementos o imágenes | T03 |
+| Fallos en la publicación o en la configuración de DNS | T04 |
+| Incompatibilidad de bloques/formatos con la versión del plan | T05 |
+| Conflictos de diseño después de cambios de plantilla | T06 |
 | Fallos en el envío de correos automáticos | T07 |
-| Caída del hosting compartido por tráfico o recursos | T08 |
+| Caída del servicio por tráfico o recursos | T08 |
 | Errores en la integración de WhatsApp | T09 |
 | Retraso en entrega de materiales por el albergue | O01 |
 | La ONG no obtiene hosting o servidores a tiempo | O02 |
@@ -798,5 +798,5 @@ El registro se mantendrá actualizado durante toda la vigencia del contrato (8 s
 | Retraso en pagos de cuotas por parte de la ONG | F01 |
 | El costo del dominio supera el presupuesto | F02 |
 | Incremento del alcance no presupuestado | F04 |
-| Costo de plugins premium necesarios | F05 / T12 |
+| Costo de funciones premium del constructor necesarias | F05 / T12 |
 

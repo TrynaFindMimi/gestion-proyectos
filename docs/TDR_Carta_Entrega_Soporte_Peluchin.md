@@ -53,7 +53,7 @@ En esta fecha se entregan formalmente al Albergue "Peluchín" la totalidad de lo
 
 #### 4.1. Cubierto por la garantía
 
-Durante el período de garantía de **2 (dos) meses** posteriores a la puesta en producción, EL EQUIPO DESARROLLADOR se compromete a corregir, sin costo adicional, los **errores de código o bugs que afecten la funcionalidad descrita en el contrato**.
+Durante el período de garantía de **2 (dos) meses** posteriores a la puesta en producción, EL EQUIPO DESARROLLADOR se compromete a corregir, sin costo adicional, los **errores de configuración o bugs que afecten la funcionalidad descrita en el contrato**.
 
 #### 4.2. NO cubierto por la garantía
 
@@ -140,14 +140,14 @@ Durante el período de garantía, las incidencias se gestionarán de la siguient
 
 ### 12. ACTUALIZACIONES DE SEGURIDAD DURANTE LA GARANTÍA
 
-Durante el período de garantía, EL EQUIPO DESARROLLADOR realizará las **actualizaciones de seguridad de WordPress y de los plugins** instalados, de acuerdo con el siguiente procedimiento:
+Durante el período de garantía, EL EQUIPO DESARROLLADOR realizará las **actualizaciones de seguridad y la revisión de la configuración de la plataforma Hostinger Web Builder** (seguridad gestionada, backups y bloques instalados), de acuerdo con el siguiente procedimiento:
 
 1. Verificación de compatibilidad en el entorno de **staging** antes de aplicar en producción.
-2. **Backup completo previo** a cada actualización.
-3. Aplicación de la actualización en producción y verificación de los flujos críticos (formularios, donaciones, panel).
+2. **Backup completo previo** a cada actualización o cambio mayor.
+3. Aplicación del cambio en producción y verificación de los flujos críticos (formularios, donaciones, panel).
 4. Registro del cambio en la bitácora correspondiente.
 
-No se realizarán **actualizaciones mayores de tema, rediseños ni cambios de funcionalidad** dentro de la garantía sin previo acuerdo por escrito.
+No se realizarán **cambios de plantilla, rediseños ni cambios de funcionalidad** dentro de la garantía sin previo acuerdo por escrito.
 
 ---
 

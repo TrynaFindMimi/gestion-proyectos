@@ -54,16 +54,16 @@ Mediante la presente carta, declaramos que:
 
 | Componente | Tecnología propuesta |
 |------------|---------------------|
-| CMS | WordPress (última versión estable) |
-| Tema | Tema base ligero (Astra/Kadence/GeneratePress) con tema hijo personalizado |
-| Constructor visual | Gutenberg / Elementor |
-| Plugins | CPT UI, ACF, WPForms/CF7, Yoast SEO, Wordfence, UpdraftPlus, WP Mail SMTP |
-| Base de datos | MySQL / MariaDB |
-| Almacenamiento de imágenes | Biblioteca de medios nativa de WordPress |
-| Envío de correos | WP Mail SMTP |
-| Despliegue | Migración mediante plugin (All-in-One WP Migration). Servidores/hosting proporcionados por la ONG. |
-| Control de versiones | Git (GitHub) para tema y configuraciones |
-| Entorno local | Local by Flywheel / XAMPP |
+| Plataforma / CMS | Hostinger Web Builder (constructor visual no-code) |
+| Tema / diseño | Plantillas del constructor (300+) personalizadas con la marca del albergue |
+| Constructor visual | Editor drag & drop de Hostinger Web Builder |
+| Funcionalidades | Bloques integrados (catálogo/colecciones, formularios, blog, donaciones, SEO, correos) |
+| Base de datos | No aplica (sin BD propia; formularios y contenido gestionados por la plataforma) |
+| Almacenamiento de imágenes | Biblioteca de medios del constructor |
+| Envío de correos | Correo del dominio (mailbox) / SMTP del plan |
+| Despliegue | Publicación directa desde el editor en el plan Web Builder contratado por la ONG |
+| Control de versiones | Git (GitHub) para documentación y configuración exportada |
+| Entorno de trabajo | Editor en línea de Hostinger + entorno de pruebas (staging) del plan |
 
 4. **Nos comprometemos a cumplir** con la totalidad de los entregables, plazos, hitos de pago, obligaciones de confidencialidad, garantía, soporte post-lanzamiento y cesión de propiedad intelectual estipulados en el Contrato y los TDR.
 
@@ -137,7 +137,7 @@ Reconocemos y aceptamos que **quedan expresamente excluidos** del alcance del pr
 | Integración con sistemas contables o ERP | ✅ |
 | Desarrollo de aplicaciones móviles nativas (solo web responsiva) | ✅ |
 | Redacción y elaboración del contenido de páginas legales (Reglamento de Adopción, Política de Privacidad, Términos y Condiciones, acuerdos de seguimiento post-adopción y cualquier otro documento legal). **Solo transcribimos y publicamos** el contenido que el albergue nos proporcione. El albergue es el único responsable de redactar y aprobar dichos contenidos. | ✅ |
-| Hosting, servidores, dominio y certificados SSL: **por cuenta del albergue**. Realizamos la configuración y personalización de WordPress en entorno local y migraremos el sitio a los servidores que el albergue proporcione. Si no cuenta con hosting propio, entregaremos **proformas con opciones de hosting WordPress** para que elija según su presupuesto. Como consultores brindaremos cotizaciones y asesoría, pero **no los proveeremos ni pagaremos**. Asimismo, **no nos comprometemos por la compra del dominio si su costo supera el presupuesto del proyecto**. La instalación de plugins premium con costo adicional requerirá aprobación previa del albergue. | ✅ |
+| Hosting, servidores, dominio y certificados SSL: **por cuenta del albergue**. Realizamos la configuración y personalización del sitio en el editor de Hostinger Web Builder (plan del albergue) y publicaremos el sitio en el dominio que el albergue proporcione. Si no cuenta con plan propio, entregaremos **proformas con opciones de hosting** para que elija según su presupuesto. Como consultores brindaremos cotizaciones y asesoría, pero **no los proveeremos ni pagaremos**. Asimismo, **no nos comprometemos por la compra del dominio si su costo supera el presupuesto del proyecto**. La habilitación de funciones premium del constructor con costo adicional requerirá aprobación previa del albergue. | ✅ |
 | Pasarela de pago con tarjeta de crédito (Red Enlace): **condicional** — solo si la ONG completa el papeleo de habilitación ante Red Enlace (única pasarela autorizada en Bolivia). De lo contrario, fuera de alcance. **En caso de que la ONG no obtenga la habilitación de la pasarela de pagos, el proyecto se mantendrá dentro de los límites presupuestarios originales y el dominio no será adquirido si su costo excede dicho presupuesto.** | ✅ |
 
 ---
@@ -162,9 +162,9 @@ El equipo se compromete a ejecutar el proyecto bajo las siguientes condiciones:
 
 #### 3.2. Metodología de trabajo aceptada
 
-- CMS WordPress con tema base ligero (Astra/Kadence/GeneratePress) y tema hijo personalizado.
-- Constructor visual Gutenberg / Elementor para maquetación de páginas.
-- Plugins para funcionalidades específicas: CPT UI + ACF, WPForms/CF7, Yoast SEO, Wordfence, UpdraftPlus, WP Mail SMTP.
+- Plataforma Hostinger Web Builder con plantillas del constructor personalizadas con la marca del albergue.
+- Constructor visual drag & drop para maquetación de páginas.
+- Funcionalidades integradas del constructor: catálogo/colecciones de animales, formularios (pre-adopción, donación, voluntariado), blog, SEO, correos del dominio y seguridad gestionada.
 - Sprints de 2 semanas con demo funcional del sitio configurado al final de cada sprint.
 - Gestión de tareas en Trello/Jira/Notion.
 - Comunicación vía WhatsApp para coordinación rápida **dentro del horario laboral** (lunes a viernes, 9:00 a 18:00, hora de Bolivia).

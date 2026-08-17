@@ -50,8 +50,9 @@
      - 3.4.4. [Rotación de credenciales de hosting, BD y SMTP](#344-rotación-de-credenciales-de-hosting-bd-y-smtp)
    - 3.5. [Autenticación de doble factor (2FA)](#35-autenticación-de-doble-factor-2fa)
    - 3.6. [Seguridad de sesión](#36-seguridad-de-sesión)
-   - 3.7. [Alta y baja de usuarios](#37-alta-y-baja-de-usuarios)
-4. [Arquitectura del sistema](#4-arquitectura-del-sistema)
+    - 3.7. [Alta y baja de usuarios](#37-alta-y-baja-de-usuarios)
+    - 3.8. [Bóveda de usuarios y contraseñas](#38-bóveda-de-usuarios-y-contraseñas)
+ 4. [Arquitectura del sistema](#4-arquitectura-del-sistema)
    - 4.1. [Vista general (diagrama de arquitectura)](#41-vista-general-diagrama-de-arquitectura)
    - 4.2. [Componentes y servicios externos](#42-componentes-y-servicios-externos)
    - 4.3. [Mapa de navegación — sitio público](#43-mapa-de-navegación--sitio-público)
@@ -131,6 +132,7 @@ Cubre el sitio público y el panel de administración construidos sobre WordPres
 | 7 | `docs/bitacoras/` | Bitácoras de los Sprint 1–4 |
 | 8 | `docs/Acta_Final_Entrega_Peluchin.md` | Acta de entrega y recepción |
 | 9 | `manuales/Manual_Usuario.md` | Uso del panel para el personal del albergue |
+| 10 | `manuales/Boveda_Usuarios.md` | Bóveda confidencial de usuarios y contraseñas (§3.8) |
 
 ### 1.5. Datos de producción
 
@@ -192,12 +194,13 @@ Visibilizar a los perritos en adopción del albergue "Peluchín", gestionar de f
 
 ### 3.1. Cuentas y contraseñas del sistema
 
-Las contraseñas del sistema se registran directamente en este manual. La **Tabla de rotación (Anexo F)** documenta el historial de cambios; cuando se rote una contraseña, debe actualizarse **en este manual el mismo día**.
+Las contraseñas del sistema se registran en la **Bóveda de Usuarios y Contraseñas** (`manuales/Boveda_Usuarios.md`), documento confidencial de referencia (§3.8). Este manual resume la matriz de credenciales a nivel de referencia; la bóveda es la fuente única y vigente de las contraseñas reales. La **Tabla de rotación (Anexo F)** documenta el historial de cambios; cuando se rote una contraseña, debe actualizarse **en la bóveda el mismo día**.
 
 | Regla | Descripción |
 |-------|-------------|
 | Custodia del manual | El documento impreso o digital debe resguardarse por el responsable del albergue |
-| Registro de cambios | Toda rotación de credenciales se actualiza **el mismo día** en este manual |
+| Custodia de la bóveda | La bóveda (§3.8) se resguarda con el mismo nivel de seguridad que este manual; contiene las contraseñas vigentes |
+| Registro de cambios | Toda rotación de credenciales se actualiza **el mismo día** en la bóveda y en este manual |
 | Acceso al documento | Solo el administrador principal y un suplente designado |
 | Revisión | Revisar y actualizar las contraseñas cada 6 meses |
 
@@ -312,7 +315,7 @@ Sea estricto: **no comparta** las credenciales del hosting con voluntarios ni ed
 | Prohibido | Nombre del albergue, fechas personales, palabras comunes, secuencias |
 | Reutilización | No reutilizar contraseñas de otros servicios (hosting ≠ panel ≠ BD) |
 | Compartición | Prohibida; cada persona usa su propia cuenta |
-| Almacenamiento | Únicamente en este manual (§3.1) o en el gestor de contraseñas del navegador del equipo corporativo |
+| Almacenamiento | Únicamente en la bóveda (`manuales/Boveda_Usuarios.md`, §3.8) o en el gestor de contraseñas del navegador del equipo corporativo |
 | Forzar cambio | WordPress: activar "Forzar restablecimiento de contraseña" por usuario si se sospecha exposición |
 
 Las contraseñas del panel se almacenan en la base de datos con **hash seguro (wp_hash_password / PBKDF2)**, de modo que no son legibles ni por el administrador de la BD.
@@ -383,6 +386,25 @@ Estas rotaciones se realizan únicamente por el soporte técnico (o por el respo
 | Alta de voluntario | `Usuarios → Añadir nuevo` (rol Voluntario), correo del albergue o del voluntario según criterio del admin |
 | Baja de voluntario | El administrador **elimina la cuenta** (`Usuarios → Eliminar`) o la **desactiva**; rotar cualquier contraseña compartida y actualizar este manual |
 | Baja de editor / admin | Eliminar cuenta; en caso de renuncia, rotar también las credenciales de hosting, SMTP y dominio si esa persona las conocía |
+
+### 3.8. Bóveda de usuarios y contraseñas
+
+La **Bóveda de Usuarios y Contraseñas** es el documento confidencial que concentra las credenciales vigentes de todos los componentes del sistema. Es la **fuente única y autorizada** de contraseñas reales; la matriz de esta sección (§3.2) se mantiene como referencia de organización y roles.
+
+| Dato | Valor |
+|------|-------|
+| **Ubicación** | `manuales/Boveda_Usuarios.md` |
+| **Contenido** | Matriz de credenciales por componente (§2), reglas de custodia (§1) e historial de rotación (§3) |
+| **Custodia** | Responsable del albergue + un suplente designado |
+| **Fuente de verdad** | Contraseñas vigentes para panel, hosting, FTP/SFTP/SSH, BD, SMTP, dominio/DNS, backups y servicios externos |
+| **Registro de cambios** | Toda rotación se registra **el mismo día** en la sección 3 (historial) y se actualiza la sección 2 de la bóveda |
+
+Reglas de uso de la bóveda:
+
+- Sustituye el registro directo de contraseñas en este manual: las credenciales sensibles solo se consultan desde la bóveda.
+- Los procedimientos de rotación y recuperación se mantienen en este manual (§3.4); al ejecutarlos, actualice primero la bóveda y luego este manual.
+- Su acceso queda limitado a los responsables indicados; no incluir a editores ni voluntarios.
+- Vincular este manual a la bóveda no exime de la política de almacenamiento de §3.3: las contraseñas no deben registrarse en otro lugar no autorizado.
 
 
 ---
@@ -642,7 +664,7 @@ stateDiagram-v2
 | Herramienta | UpdraftPlus |
 | Destino remoto | Google Drive / Dropbox (cuenta técnica) |
 | Retención | 30 copias |
-| Cifrado | Activo (clave en §3.1) |
+| Cifrado | Activo (clave en la bóveda §2.7) |
 | Verificación | Restauración de prueba mensual (§11.3) |
 | Backup previo a migraciones | Manual obligatorio |
 
@@ -845,7 +867,7 @@ Una vez vencido el período de garantía (E11), todo requerimiento de soporte, m
 | OWASP Top 10 | Lista de riesgos de seguridad web más comunes |
 | Uptime | Disponibilidad del servicio |
 | 2FA | Autenticación de doble factor |
-| Credenciales del sistema | Usuarios y contraseñas de todos los componentes, registrados directamente en §3.1 |
+| Credenciales del sistema | Usuarios y contraseñas de todos los componentes, registrados en la bóveda confidencial `manuales/Boveda_Usuarios.md` (§3.8) |
 | Rotación de credenciales | Cambio planificado de una contraseña para reducir exposición |
 | Hardening | Endurecimiento de la configuración para reducir vulnerabilidades |
 | WSOD | Pantalla en blanco (White Screen of Death) |
@@ -862,7 +884,7 @@ Una vez vencido el período de garantía (E11), todo requerimiento de soporte, m
 - **Anexo C:** Diagrama de clases y modelo de datos (§6).
 - **Anexo D:** Diagramas de secuencia y estados (§6.4, §7).
 - **Anexo E:** Plantilla de restablecimiento de contraseñas (capítulo 3).
-- **Anexo F:** Hoja de rotación de credenciales (§3.1) — uso mensual/trimestral.
+- **Anexo F:** Hoja de rotación de credenciales (§3.1) — uso mensual/trimestral. El historial de rotación operativo se registra en la bóveda (`manuales/Boveda_Usuarios.md` §3).
 - **Anexo G:** Checklist de mantenimiento mensual (§11.1).
 - **Anexo H:** Proformas de infraestructura y dominio (`docs/proformas/`) — dominio `.bo` (INF-001) y `.com` (INF-002), y hosting (GoDaddy INF-003, consultora INF-004, Bluehost INF-006, Hostinger INF-007).
 

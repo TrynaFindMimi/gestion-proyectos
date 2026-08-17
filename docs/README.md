@@ -17,7 +17,7 @@
 | # | Documento | Contenido |
 |---|-----------|-----------|
 | 1 | [TDR_Peluchin.md](TDR_Peluchin.md) | Términos de referencia: información general, objetivos, alcance, requerimientos, entregables, pagos y condiciones |
-| 2 | [TDR_Plan_Proyecto_Cronograma_Peluchin.md](TDR_Plan_Proyecto_Cronograma_Peluchin.md) | Plan del proyecto: sprints, dependencias, entregables (E1–E11) y riesgos identificados |
+| 2 | [TDR_Plan_Proyecto_Cronograma_Peluchin.md](TDR_Plan_Proyecto_Cronograma_Peluchin.md) | Plan del proyecto: cronograma por sprints, metodología Scrum + Kanban, dependencias y entregables (E1–E11) |
 | 3 | [TDR_Contrato_Peluchin.md](TDR_Contrato_Peluchin.md) | Contrato de desarrollo (cláusulas, pagos, propiedad intelectual) |
 | 4 | [TDR_Carta_Aceptacion_Peluchin.md](TDR_Carta_Aceptacion_Peluchin.md) | Carta de aceptación del proyecto |
 | 5 | [TDR_Gestion_Riesgos_Peluchin.md](TDR_Gestion_Riesgos_Peluchin.md) | Gestión de riesgos: registro detallado, mitigación, contingencia y monitoreo |
@@ -36,7 +36,7 @@
 | Manual | Contenido |
 |--------|-----------|
 | [Manual de Sistemas (técnico)](../manuales/Manual_Tecnico.md) | Arquitectura, stack, modelo de datos, seguridad, despliegue, metodología Scrum + Kanban y mantenimiento |
-| [Manual de Usuario](../manuales/Manual_Usuario.md) | Guía práctica del panel de administración para el personal del albergue |
+| [Bóveda de Usuarios y Contraseñas](../manuales/Boveda_Usuarios.md) | Credenciales confidenciales de todos los componentes del sistema (documento restringido) |
 
 ---
 
@@ -52,7 +52,7 @@ flowchart LR
     PLAN --> WAE["TDR_Diagrama_WAE_Peluchin.md"]
     PLAN --> SISTEMAS["Manual de Sistemas"]
     ENTREGA --> SISTEMAS
-    ENTREGA --> USUARIO["Manual de Usuario"]
+    SISTEMAS --> BOVEDA["Bóveda de Usuarios y Contraseñas"]
 ```
 
 ---
@@ -61,8 +61,8 @@ flowchart LR
 
 | Concepto | Detalle |
 |----------|---------|
-| **Plataforma** | WordPress (CMS) |
+| **Plataforma** | Hostinger Web Builder (constructor visual no-code) |
 | **Duración total** | 16 semanas (8 de desarrollo + 8 de garantía) |
-| **Metodología** | Sprints de 2 semanas |
+| **Metodología** | Scrum + Kanban (sprints de 2 semanas con tablero Kanban) |
 | **Precio base** | Bs. 12,000 (más IVA) |
 | **Entregables** | E1–E11 (ver Plan del Proyecto) |

@@ -32,7 +32,7 @@ El documento está compuesto por los siguientes diagramas:
 
 | Estereotipo | Símbolo | Descripción |
 |-------------|---------|-------------|
-| `<<server page>>` | Página del servidor | Página construida y ejecutada en el servidor (WordPress/PHP) que genera el HTML de salida. |
+| `<<server page>>` | Página del servidor | Página construida y ejecutada en el servidor (Hostinger Web Builder) que genera el HTML de salida. |
 | `<<client page>>` | Página del cliente | Resultado renderizado en el navegador del usuario (producido por una `<<server page>>` vía `<<build>>`). |
 | `<<process>>` | Proceso | Flujo de negocio que agrupa páginas y formularios (p. ej., proceso de pre-adopción, de donación). |
 | `<<link>>` | Enlace | Navegación por hipervínculo entre páginas. |
@@ -268,7 +268,7 @@ flowchart LR
     end
 
     subgraph PROC["PROCESOS (<<process>>)"]
-        PR1["Renderizado\n(build PHP)"]
+        PR1["Renderizado\n(build de la plataforma)"]
         PR2["Validación y\nregistro"]
         PR3["Notificaciones\npor correo"]
     end
@@ -278,9 +278,9 @@ flowchart LR
         FADM["<<form>> panel\nCRUD · estados · reportes"]
     end
 
-    subgraph SERVIDOR["SERVIDOR (Hosting de la ONG)"]
-        WP["WordPress + Tema hijo\n(PHP)"]
-        PLUG["Plugins\nCPT UI + ACF · WPForms\nYoast SEO · Wordfence · SMTP"]
+    subgraph SERVIDOR["SERVIDOR (Hostinger Web Builder)"]
+        WP["Hostinger Web Builder\n(constructor + alojamiento)"]
+        PLUG["Bloques y apps integradas\nColecciones · Form Builder\nBlog · SEO · Correos · Seguridad"]
     end
 
     subgraph MEDIA["MEDIA / ARCHIVOS"]
@@ -335,8 +335,8 @@ flowchart LR
 
 | Proceso (`<<process>>`) | Descripción |
 |-------------------------|-------------|
-| Renderizado (build PHP) | Proceso que construye (`<<build>>`) la `<<client page>>` a partir de la `<<server page>>` |
-| Validación y registro | Proceso que valida los `<<form>>` y registra la información en el sistema (WordPress) |
+| Renderizado (build de la plataforma) | Proceso que construye (`<<build>>`) la `<<client page>>` a partir de la `<<server page>>` |
+| Validación y registro | Proceso que valida los `<<form>>` y registra la información en la plataforma (Hostinger Web Builder) |
 | Notificaciones por correo | Proceso que envía correos automáticos (confirmaciones y notificaciones) vía SMTP |
 
 #### 4.3. Formularios de la arquitectura
@@ -350,8 +350,8 @@ flowchart LR
 
 | Componente | Estereotipo WAE | Rol en el sistema |
 |------------|-----------------|-------------------|
-| WordPress + Tema hijo | Componente servidor | Motor PHP que construye (`<<build>>`) las páginas del servidor |
-| Plugins | Componente servidor | Funcionalidad (CPT/ACF, formularios, SEO, seguridad, correos SMTP) |
+| Hostinger Web Builder (constructor + alojamiento) | Componente servidor | Plataforma que construye (`<<build>>`) las páginas del servidor y aloja el sitio |
+| Bloques y apps integradas | Componente servidor | Funcionalidad (colecciones, formularios, blog, SEO, correos, seguridad) |
 | SMTP | `<<external service>>` | Envío de correos automáticos (confirmaciones y notificaciones) |
 | QR Simple / Banca | `<<external service>>` | Canal de donación (reporte y verificación) |
 | WhatsApp (wa.me) | `<<external service>>` | Contacto y compartir fichas |
