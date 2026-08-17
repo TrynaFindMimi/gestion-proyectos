@@ -10,11 +10,11 @@
 
 **EQUIPO DESARROLLADOR:** Mariana del Arroyo · Nahomi Humerez · Santiago Acha · Jorge Saenz
 
-**VERSIÓN:** 2.0
+**VERSIÓN:** 1.0
 
-**FECHA:** [dd/mm/aaaa]
+**FECHA:** 14/08/2026
 
-**ESTADO:** [Borrador / En revisión / Aprobado]
+**ESTADO:** Aprobado — Sistema en producción
 
 ---
 
@@ -25,22 +25,32 @@
    - 1.2. [Alcance](#12-alcance)
    - 1.3. [Público destinatario](#13-público-destinatario)
    - 1.4. [Documentos de referencia](#14-documentos-de-referencia)
+   - 1.5. [Datos de producción](#15-datos-de-producción)
 2. [Descripción general del sistema](#2-descripción-general-del-sistema)
    - 2.1. [Propósito del sistema](#21-propósito-del-sistema)
    - 2.2. [Usuarios y roles](#22-usuarios-y-roles)
    - 2.3. [Módulos funcionales](#23-módulos-funcionales)
-   - 2.4. [Requerimientos no funcionales (resumen)](#24-requerimientos-no-funcionales-resumen)
-3. [Metodología de desarrollo — Scrum + Kanban](#3-metodología-de-desarrollo--scrum--kanban)
-   - 3.1. [Enfoque híbrido (ScrumBan)](#31-enfoque-híbrido-scrumban)
-   - 3.2. [Roles y responsabilidades](#32-roles-y-responsabilidades)
-   - 3.3. [Ciclo de sprint (Scrum)](#33-ciclo-de-sprint-scrum)
-   - 3.4. [Ceremonias](#34-ceremonias)
-   - 3.5. [Artefactos](#35-artefactos)
-   - 3.6. [Tablero Kanban y flujo de trabajo](#36-tablero-kanban-y-flujo-de-trabajo)
-   - 3.7. [Límites de trabajo en curso (WIP)](#37-límites-de-trabajo-en-curso-wip)
-   - 3.8. [Definición de hecho (Definition of Done — DoD)](#38-definición-de-hecho-definition-of-done--dod)
-   - 3.9. [Mapeo con el cronograma del proyecto](#39-mapeo-con-el-cronograma-del-proyecto)
-   - 3.10. [Herramientas de gestión](#310-herramientas-de-gestión)
+   - 2.4. [Requerimientos no funcionales (cumplidos)](#24-requerimientos-no-funcionales-cumplidos)
+3. [Credenciales de acceso y gestión de contraseñas](#3-credenciales-de-acceso-y-gestión-de-contraseñas)
+   - 3.1. [Bóveda de credenciales](#31-bóveda-de-credenciales)
+   - 3.2. [Matriz de credenciales del sistema](#32-matriz-de-credenciales-del-sistema)
+     - 3.2.1. [Panel de administración (WordPress)](#321-panel-de-administración-wordpress)
+     - 3.2.2. [Hosting (cPanel / Plesk)](#322-hosting-cpanel--plesk)
+     - 3.2.3. [FTP / SFTP / SSH](#323-ftp--sftp--ssh)
+     - 3.2.4. [Base de datos](#324-base-de-datos)
+     - 3.2.5. [SMTP — correos automáticos](#325-smtp--correos-automáticos)
+     - 3.2.6. [Dominio, DNS y correo del dominio](#326-dominio-dns-y-correo-del-dominio)
+     - 3.2.7. [Backups remotos (UpdraftPlus)](#327-backups-remotos-updraftplus)
+     - 3.2.8. [Pasarelas y servicios externos](#328-pasarelas-y-servicios-externos)
+   - 3.3. [Política de contraseñas](#33-política-de-contraseñas)
+   - 3.4. [Rotación y recuperación de contraseñas](#34-rotación-y-recuperación-de-contraseñas)
+     - 3.4.1. [Cambio de contraseña de un usuario del panel](#341-cambio-de-contraseña-de-un-usuario-del-panel)
+     - 3.4.2. [Recuperación de la contraseña del administrador](#342-recuperación-de-la-contraseña-del-administrador)
+     - 3.4.3. [Recuperación de la contraseña de un voluntario](#343-recuperación-de-la-contraseña-de-un-voluntario)
+     - 3.4.4. [Rotación de credenciales de hosting, BD y SMTP](#344-rotación-de-credenciales-de-hosting-bd-y-smtp)
+   - 3.5. [Autenticación de doble factor (2FA)](#35-autenticación-de-doble-factor-2fa)
+   - 3.6. [Seguridad de sesión](#36-seguridad-de-sesión)
+   - 3.7. [Alta y baja de usuarios](#37-alta-y-baja-de-usuarios)
 4. [Arquitectura del sistema](#4-arquitectura-del-sistema)
    - 4.1. [Vista general (diagrama de arquitectura)](#41-vista-general-diagrama-de-arquitectura)
    - 4.2. [Componentes y servicios externos](#42-componentes-y-servicios-externos)
@@ -50,49 +60,40 @@
    - 5.1. [Plataforma y lenguajes](#51-plataforma-y-lenguajes)
    - 5.2. [Tema y constructor visual](#52-tema-y-constructor-visual)
    - 5.3. [Plugins instalados](#53-plugins-instalados)
-   - 5.4. [Herramientas de desarrollo, despliegue y calidad](#54-herramientas-de-desarrollo-despliegue-y-calidad)
+   - 5.4. [Herramientas de despliegue y monitoreo](#54-herramientas-de-despliegue-y-monitoreo)
 6. [Modelo de datos](#6-modelo-de-datos)
    - 6.1. [Entidades principales](#61-entidades-principales)
    - 6.2. [Diagrama de clases UML](#62-diagrama-de-clases-uml)
    - 6.3. [Tipos de contenido personalizados (CPT) y campos ACF](#63-tipos-de-contenido-personalizados-cpt-y-campos-acf)
    - 6.4. [Estados de las entidades](#64-estados-de-las-entidades)
-7. [Descripción detallada de módulos y flujos](#7-descripción-detallada-de-módulos-y-flujos)
+7. [Módulos y flujos en producción](#7-módulos-y-flujos-en-producción)
    - 7.1. [Sitio público](#71-sitio-público)
-     - 7.1.1. [Landing y navegación](#711-landing-y-navegación)
-     - 7.1.2. [Catálogo y ficha de animales](#712-catálogo-y-ficha-de-animales)
-     - 7.1.3. [Formulario de pre-adopción](#713-formulario-de-pre-adopción)
-     - 7.1.4. [Donaciones y reporte de donación](#714-donaciones-y-reporte-de-donación)
-     - 7.1.5. [Registro de voluntarios](#715-registro-de-voluntarios)
-     - 7.1.6. [Blog, eventos, contacto, FAQ](#716-blog-eventos-contacto-faq)
    - 7.2. [Panel de administración](#72-panel-de-administración)
-     - 7.2.1. [Dashboard de KPIs](#721-dashboard-de-kpis)
-     - 7.2.2. [CRUD de animales](#722-crud-de-animales)
-     - 7.2.3. [Gestión de solicitudes de adopción](#723-gestión-de-solicitudes-de-adopción)
-     - 7.2.4. [Registro de donaciones](#724-registro-de-donaciones)
-     - 7.2.5. [Gestión de voluntarios](#725-gestión-de-voluntarios)
-     - 7.2.6. [Blog, eventos y contenido estático](#726-blog-eventos-y-contenido-estático)
-     - 7.2.7. [Reportes exportables](#727-reportes-exportables)
    - 7.3. [Notificaciones automáticas por correo](#73-notificaciones-automáticas-por-correo)
 8. [Seguridad](#8-seguridad)
    - 8.1. [Autenticación y roles](#81-autenticación-y-roles)
    - 8.2. [SSL/TLS](#82-ssltls)
    - 8.3. [Protección OWASP Top 10](#83-protección-owasp-top-10)
    - 8.4. [Backups y recuperación](#84-backups-y-recuperación)
-9. [Despliegue](#9-despliegue)
-   - 9.1. [Entornos (local, staging, producción)](#91-entornos-local-staging-producción)
-   - 9.2. [Requisitos de servidor](#92-requisitos-de-servidor)
-   - 9.3. [Procedimiento de despliegue y migración](#93-procedimiento-de-despliegue-y-migración)
-   - 9.4. [Configuración de DNS y SSL](#94-configuración-de-dns-y-ssl)
-10. [Pruebas y control de calidad](#10-pruebas-y-control-de-calidad)
+   - 8.5. [Hardening aplicado](#85-hardening-aplicado)
+9. [Entornos y despliegue](#9-entornos-y-despliegue)
+   - 9.1. [Entornos](#91-entornos)
+   - 9.2. [Requisitos de servidor instalados](#92-requisitos-de-servidor-instalados)
+   - 9.3. [Configuración de dominio y DNS](#93-configuración-de-dominio-y-dns)
+10. [Pruebas y control de calidad (resultados)](#10-pruebas-y-control-de-calidad-resultados)
     - 10.1. [Pruebas funcionales](#101-pruebas-funcionales)
     - 10.2. [Pruebas de rendimiento](#102-pruebas-de-rendimiento)
     - 10.3. [Pruebas de seguridad](#103-pruebas-de-seguridad)
     - 10.4. [Pruebas de responsividad](#104-pruebas-de-responsividad)
-11. [Mantenimiento y soporte](#11-mantenimiento-y-soporte)
-    - 11.1. [Actualizaciones](#111-actualizaciones)
-    - 11.2. [Procedimientos de operación](#112-procedimientos-de-operación)
-    - 11.3. [Monitoreo](#113-monitoreo)
-    - 11.4. [Solución de problemas comunes (FAQ técnica)](#114-solución-de-problemas-comunes-faq-técnica)
+11. [Mantenimiento y operación del sistema](#11-mantenimiento-y-operación-del-sistema)
+    - 11.1. [Rutina mensual de mantenimiento](#111-rutina-mensual-de-mantenimiento)
+    - 11.2. [Actualizaciones](#112-actualizaciones)
+    - 11.3. [Verificación y restauración de backups](#113-verificación-y-restauración-de-backups)
+    - 11.4. [Monitoreo](#114-monitoreo)
+    - 11.5. [Modo mantenimiento](#115-modo-mantenimiento)
+    - 11.6. [Reporte de incidencias y canales de soporte](#116-reporte-de-incidencias-y-canales-de-soporte)
+    - 11.7. [Solución de problemas comunes (FAQ técnica)](#117-solución-de-problemas-comunes-faq-técnica)
+    - 11.8. [Mantenimiento fuera del contrato — contacto técnico](#118-mantenimiento-fuera-del-contrato--contacto-técnico)
 12. [Riesgos técnicos y contingencias](#12-riesgos-técnicos-y-contingencias)
 13. [Glosario](#13-glosario)
 14. [Anexos](#14-anexos)
@@ -103,33 +104,45 @@
 
 ### 1.1. Objeto del manual
 
-El presente manual tiene como objeto documentar la arquitectura, los componentes, los flujos de trabajo, las medidas de seguridad y los procedimientos de operación, despliegue y mantenimiento del sitio web y sistema de gestión del albergue "Peluchín". Está orientado al personal técnico de soporte y mantenimiento, de modo que disponga de una referencia única y verificable para operar, diagnosticar y restaurar el sistema ante cualquier eventualidad.
+El presente manual documenta la **configuración final**, la **arquitectura**, las **credenciales de acceso**, las **medidas de seguridad** y todos los **procedimientos de operación y mantenimiento** del sitio web y sistema de gestión del albergue "Peluchín" entregados en producción. Está orientado al personal técnico de soporte y al personal del albergue designado para la administración técnica, de modo que dispongan de una referencia única y verificable para operar, diagnosticar, actualizar y restaurar el sistema.
+
+> Este manual corresponde al sistema **entregado y en producción** (E1–E10 aprobados). Período de garantía vigente: véase `docs/TDR_Carta_Entrega_Soporte_Peluchin.md`.
 
 ### 1.2. Alcance
 
-El manual cubre el sitio público y el panel de administración construidos sobre WordPress, incluyendo el modelo de datos, la configuración de plugins, el despliegue en los entornos local/staging/producción, los backups, la seguridad y el mantenimiento. No cubre el uso cotidiano del panel (ver Manual de Usuario / Manual de Administrador) ni las condiciones comerciales del contrato (ver `docs/TDR_Contrato_Peluchin.md`).
+Cubre el sitio público y el panel de administración construidos sobre WordPress en **producción**: configuraciones finales de plugins, modelo de datos, credenciales de acceso de todos los componentes, seguridad, backups, despliegue y los procedimientos de operación y mantenimiento. **No cubre** el uso cotidiano del panel (véase Manual de Usuario) ni las condiciones comerciales del contrato (véase `docs/TDR_Contrato_Peluchin.md`).
 
 ### 1.3. Público destinatario
 
-- Desarrolladores y personal técnico de soporte.
-- Administradores del hosting.
-- Personal técnico del albergue designado para mantenimiento.
+- Personal técnico de soporte del sistema.
+- Administradores del hosting y del dominio.
+- Administrador(es) del panel designados por el albergue.
+- Personal técnico externo contratado para mantenimiento futuro.
 
 ### 1.4. Documentos de referencia
 
 | # | Documento | Contenido de referencia |
 |---|-----------|--------------------------|
-| 1 | `docs/TDR_Peluchin.md` | Alcance, requerimientos funcionales y no funcionales, stack, entregables |
-| 2 | `docs/TDR_Plan_Proyecto_Cronograma_Peluchin.md` | Plan de sprints, metodología, stack de plugins, herramientas, despliegue |
-| 3 | `docs/TDR_Contrato_Peluchin.md` | Alcance contractual, garantía, propiedad intelectual |
+| 1 | `docs/TDR_Peluchin.md` | Alcance, requerimientos, stack y entregables |
+| 2 | `docs/TDR_Plan_Proyecto_Cronograma_Peluchin.md` | Plan de sprints y stack de plugins |
+| 3 | `docs/TDR_Contrato_Peluchin.md` | Condiciones contractuales y garantía |
 | 4 | `docs/TDR_Carta_Aceptacion_Peluchin.md` | Aceptación del proyecto |
-| 5 | `docs/TDR_Gestion_Riesgos_Peluchin.md` | Riesgos técnicos y planes de mitigación/contingencia |
+| 5 | `docs/TDR_Gestion_Riesgos_Peluchin.md` | Riesgos técnicos y contingencias |
 | 6 | `docs/TDR_Diagrama_WAE_Peluchin.md` | Mapas de navegación y arquitectura web |
-| 7 | `docs/bitacoras/` | Bitácoras de los Sprint 1–4 y retrospectivas |
-| 8 | `docs/Acta_Final_Entrega_Peluchin.md` | Acta de entrega y recepción del proyecto |
-| 9 | `docs/mockup/` | Mockups HTML del sitio público |
+| 7 | `docs/bitacoras/` | Bitácoras de los Sprint 1–4 |
+| 8 | `docs/Acta_Final_Entrega_Peluchin.md` | Acta de entrega y recepción |
+| 9 | `manuales/Manual_Usuario.md` | Uso del panel para el personal del albergue |
 
-> Nota: El diagrama UML del modelo de datos se incorporará como anexo cuando el documento `TDR_Diagrama_UML_Peluchin.md` esté disponible; mientras tanto, las secciones §6 de este manual recogen el modelo de datos vigente.
+### 1.5. Datos de producción
+
+| Dato | Valor |
+|------|-------|
+| **URL pública** | `https://alberguepeluchin.org.bo` |
+| **URL del panel** | `https://alberguepeluchin.org.bo/admin` (alias de `/wp-admin`) |
+| **Hosting** | Plan WordPress del proveedor contratado por el albergue (véase §3.2.2) |
+| **Certificado SSL** | Let's Encrypt, renovación automática |
+| **Estado** | Producción activa con copias de respaldo automáticas |
+| **Fecha de puesta en producción** | Ver bitácora Sprint 4 (E8) |
 
 ---
 
@@ -137,7 +150,7 @@ El manual cubre el sitio público y el panel de administración construidos sobr
 
 ### 2.1. Propósito del sistema
 
-El sistema tiene como propósito visibilizar a los perritos en adopción del albergue "Peluchín", gestionar de forma transparente las donaciones (mediante QR Simple, transferencia y efectivo), registrar voluntarios con sus áreas de interés y disponibilidad, difundir información (blog, eventos, FAQ) y administrar de forma centralizada los animales, las solicitudes de adopción, las donaciones y los voluntarios desde un panel de administración. Fuente: TDR §3, TDR_Why_Peluchin.md.
+Visibilizar a los perritos en adopción del albergue "Peluchín", gestionar de forma transparente las donaciones (QR Simple, transferencia y efectivo), registrar voluntarios con sus áreas de interés y disponibilidad, difundir información (blog, eventos, FAQ) y administrar de forma centralizada los animales, las solicitudes de adopción, las donaciones y los voluntarios desde un panel de administración.
 
 ### 2.2. Usuarios y roles
 
@@ -147,157 +160,240 @@ El sistema tiene como propósito visibilizar a los perritos en adopción del alb
 | Administrador | Personal del albergue con control total | Panel `/admin` | Todo: usuarios, configuración, CRUD de animales, solicitudes, donaciones, voluntarios, blog, eventos, contenido |
 | Editor | Contenido editorial (blog, páginas, eventos) | Panel `/admin` (permisos limitados) | CRUD de blog, eventos y contenido estático; sin gestión de donaciones, voluntarios ni configuración |
 | Voluntario | Colaborador con acceso limitado | Panel `/admin` (solo lectura en su área) | Consulta de su información y de los animales; sin modificación de datos |
-| Sistema | WordPress + plugins (correos, seguridad, backups) | Interno | Notificaciones automáticas, backups, monitoreo |
 
-> Configurado con Members / User Role Editor (Plan §Sprint 3). Fuente: TDR §5.1, Plan §Sprint 3.
+> Roles configurados con **Members / User Role Editor** (bitácora Sprint 3). La cuenta de **voluntario** no tiene permisos de escritura; su rol es de solo lectura.
 
 ### 2.3. Módulos funcionales
 
-| Módulo | Descripción | Fuente |
-|--------|-------------|--------|
-| Sitio web público | Landing, Quiénes somos, catálogo, pre-adopción, donaciones, voluntarios, eventos, blog, contacto, FAQ | TDR §4.1, WAE §2 |
-| Catálogo de perritos | Fichas con galería, datos y estado | TDR §4.1, UML §3 |
-| Formulario de pre-adopción | Multi-paso con notificaciones | UML §4, §6 |
-| Sistema de donaciones | QR Simple, datos bancarios, reporte | UML §5 |
-| Registro de voluntarios | Áreas de interés y disponibilidad | TDR §4.1 |
-| Panel de administración | Dashboard, CRUD animales, solicitudes, donaciones, voluntarios, blog, eventos, contenido | TDR §5.1, WAE §3 |
+| Módulo | Descripción |
+|--------|-------------|
+| Sitio web público | Landing, Quiénes Somos, catálogo, pre-adopción, donaciones, voluntarios, eventos, blog, contacto, FAQ |
+| Catálogo de perritos | Fichas con galería, datos y estado |
+| Formulario de pre-adopción | Multi-paso con notificaciones |
+| Sistema de donaciones | QR Simple, datos bancarios, reporte |
+| Registro de voluntarios | Áreas de interés y disponibilidad |
+| Panel de administración | Dashboard, CRUD animales, solicitudes, donaciones, voluntarios, blog, eventos, contenido |
 
-### 2.4. Requerimientos no funcionales (resumen)
+### 2.4. Requerimientos no funcionales (cumplidos)
 
-| # | Requerimiento | Meta |
-|---|---------------|------|
-| RNF01 | Rendimiento | Carga < 3 s en 4G |
-| RNF02 | Disponibilidad | 99% uptime |
-| RNF03 | Seguridad | HTTPS, OWASP Top 10, backups automáticos |
-| RNF04 | Responsividad | Mobile-first |
-| RNF05 | Usabilidad | Interfaz intuitiva |
-| RNF06 | Mantenibilidad | Código documentado, modular |
-| RNF07 | Idioma | Español |
-| RNF08 | Accesibilidad | Contraste, alt en imágenes |
-
-> Fuente: `docs/TDR_Peluchin.md` §6.
+| # | Requerimiento | Meta | Resultado en producción |
+|---|---------------|------|-------------------------|
+| RNF01 | Rendimiento | Carga < 3 s en 4G | ✅ Cumplido (Lighthouse ≥ 90) |
+| RNF02 | Disponibilidad | 99% uptime | ✅ Cumplido (monitoreo activo) |
+| RNF03 | Seguridad | HTTPS, OWASP Top 10, backups | ✅ Cumplido (SSH, hardening, backups diarios) |
+| RNF04 | Responsividad | Mobile-first | ✅ Cumplido |
+| RNF05 | Usabilidad | Interfaz intuitiva | ✅ Cumplido |
+| RNF06 | Mantenibilidad | Documento y modular | ✅ Cumplido |
+| RNF07 | Idioma | Español | ✅ Cumplido |
+| RNF08 | Accesibilidad | Contraste, alt en imágenes | ✅ Cumplido |
 
 ---
 
-## 3. METODOLOGÍA DE DESARROLLO — SCRUM + KANBAN
+## 3. CREDENCIALES DE ACCESO Y GESTIÓN DE CONTRASEÑAS
 
-### 3.1. Enfoque híbrido (ScrumBan)
+> **Advertencia general:** las contraseñas **no se imprimen en este manual** ni se envían por correo ordinario. Los valores reales residen en la **Bóveda de credenciales** (§3.1) y las personas responsables deben acudir a ella para consultarlos. Este capítulo define **qué credenciales existen, quién las administra, cada cuánto deben rotarse y cómo recuperarlas**.
 
-El proyecto se desarrolla con una metodología híbrida **ScrumBan**, que combina el marco **Scrum** (sprints de 2 semanas, ceremonias y artefactos) con el método **Kanban** (visualización del flujo de trabajo en un tablero y límites de trabajo en curso). Esta combinación se adoptó por las siguientes razones:
+### 3.1. Bóveda de credenciales
 
-- **Entregas incrementales y demostrables:** cada 2 semanas se presenta al albergue un incremento funcional (demo) que puede aprobar o solicitar ajustes.
-- **Transparencia del estado:** el tablero Kanban permite ver en tiempo real en qué columna está cada tarea (Backlog → Hecho).
-- **Flexibilidad:** las prioridades pueden ajustarse en la revisión del backlog sin comprometer el objetivo del sprint vigente.
-- **Eficiencia en equipos pequeños:** al limitar el trabajo en curso (WIP) se evita la multitarea y se acelera el flujo de entregables.
+| Aspecto | Configuración |
+|---------|---------------|
+| Herramienta | Gestor de contraseñas (por ejemplo Bitwarden / 1Password / Keepass) en una cuenta privada del albergue |
+| Ubicación de respaldo | Copia cifrada en papel (sobre lacrado) resguardada por el responsable del albergue |
+| Registro de cambios | Toda rotación de credenciales debe actualizarse en la Bóveda **el mismo día** |
+| Acceso a la Bóveda | Solo el administrador principal y un suplente designado |
+| Caducidad de entradas | Revisar y actualizar la Bóveda cada 6 meses |
 
-El marco es **Scrum** para la *planificación* (sprints de 2 semanas) y **Kanban** para la *ejecución* (flujo continuo de tareas por el tablero). Fuente: Plan §Metodología, README §Resumen del proyecto.
+**Regla de oro:** si una contraseña no está en la Bóveda, no debe usarse; si una contraseña sale de la Bóveda hacia un canal inseguro (WhatsApp, correo, impresión), debe rotarse de inmediato.
 
-### 3.2. Roles y responsabilidades
+### 3.2. Matriz de credenciales del sistema
 
-| Rol | Integrante | Responsabilidades |
-|-----|------------|-------------------|
-| **Product Owner** | Responsable del albergue "Peluchín" | Priorizar el Product Backlog, definir criterios de aceptación, aprobar las demos (máx. 5 días hábiles), proveer las dependencias (logo, fotos, contenido, hosting) |
-| **Scrum Master** | Mariana del Arroyo | Facilitar las ceremonias, eliminar impedimentos, resguardar la metodología y coordinar con el hosting y el albergue |
-| **Equipo de desarrollo** | Nahomi Humerez (diseño/UX y landing), Santiago Acha (configuración/backend y formularios), Jorge Saenz (QA/testing, manuales y capacitación) | Auto-organizarse para diseñar, construir, probar y documentar el incremento de cada sprint |
-| **Interesados** | Personal del albergue | Participar en las demos, pruebas de aceptación y aportar contenido |
+La tabla resume cada punto de acceso del sistema y su responsable. Los **valores reales** se consultan en la Bóveda.
 
-> Fuente: TDR_Plan §Reuniones programadas y bitácoras de los Sprint 1–4.
+| Componente | Cuenta(s) | Responsable de administración | Rotación recomendada | ¿Almacenada en Bóveda? |
+|-----------|-----------|-------------------------------|----------------------|------------------------|
+| Panel WordPress — Administrador | 2 cuentas (§3.2.1) | Responsable del albergue | Cada 90 días | Sí |
+| Panel WordPress — Editor | Cuenta compartida de turno (§3.2.1) | Administrador | Cada 90 días | Sí |
+| Panel WordPress — Voluntario | 1 cuenta por voluntario (§3.2.1) | Administrador | Cada 90 días o al salir el voluntario | Sí |
+| Hosting (cPanel/Plesk) | 1 cuenta principal (§3.2.2) | Responsable del albergue | Cada 90 días | Sí |
+| FTP / SFTP / SSH | 1 cuenta técnica (§3.2.3) | Soporte técnico | Cada 90 días | Sí |
+| Base de datos MySQL/MariaDB | Cuenta de aplicación (no admin) (§3.2.4) | Soporte técnico | Cada 180 días | Sí |
+| SMTP (correos automáticos) | Cuenta del remitente (§3.2.5) | Soporte técnico | Cada 180 días | Sí |
+| Dominio y DNS | Registrador (§3.2.6) | Responsable del albergue | Cada 90 días | Sí |
+| Backups remotos (UpdraftPlus) | Cuenta de almacenamiento (§3.2.7) | Soporte técnico | Cada 180 días | Sí |
+| Servicios externos (QR Simple, pasarela) | Según proveedor (§3.2.8) | Responsable del albergue | Según proveedor | Sí |
 
-### 3.3. Ciclo de sprint (Scrum)
+#### 3.2.1. Panel de administración (WordPress)
 
-Cada sprint tiene una duración fija de **2 semanas (14 días)** y se desarrolla dentro de las 8 semanas de desarrollo. El flujo del ciclo es:
+| Cuenta | Rol (permisos) | Usuario (usuario de acceso) | Uso |
+|--------|----------------|-----------------------------|-----|
+| Administrador principal | Administrador | `admin_peluchin` | Control total del panel (operador diario) |
+| Administrador de respaldo | Administrador | `admin_respaldo` | Sustitución, recuperación y auditoría |
+| Editor de contenido | Editor | `editor_peluchin` | Publicación de blog, eventos y contenido |
+| Voluntario (uno por persona) | Voluntario (solo lectura) | `voluntario_[nombre]` | Consulta de su información y de animales |
 
-1. **Planificación (día 1):** el equipo selecciona las historias del Product Backlog priorizadas por el Product Owner, define el objetivo del sprint y confirma el Sprint Backlog.
-2. **Ejecución (días 1–13):** las tareas avanzan por las columnas del tablero Kanban respetando los límites de WIP; se realiza el Daily Stand-up y se registran los avances en la bitácora del sprint.
-3. **Revisión / Demo (día 14):** se presenta el incremento funcional al albergue (entregables E1–E10); el Product Owner aprueba o solicita ajustes.
-4. **Retrospectiva (día 14):** el equipo analiza qué salió bien, qué puede mejorar y acuerda acciones para el siguiente sprint.
+Reglas:
 
-### 3.4. Ceremonias
+- Las cuentas de **voluntario** se crean **exclusivamente** por el administrador desde `Usuarios → Añadir nuevo`, con el rol **Voluntario**.
+- Los voluntarios **no conocen** las credenciales de hosting, BD ni SMTP; solo las propias del panel.
+- Ninguna cuenta de voluntario debe tener rol "Editor" o "Administrador".
+- Los correos asociados a cada cuenta deben ser correos reales y verificados del personal del albergue (no del voluntario externo), salvo que el administrador decida autorizar el acceso.
 
-| Ceremonia | Frecuencia | Participantes | Propósito |
-|-----------|------------|---------------|-----------|
-| **Sprint Planning** | Inicio de cada sprint (día 1) | Product Owner + Equipo + Scrum Master | Definir el objetivo del sprint y el Sprint Backlog |
-| **Daily Stand-up** | Diaria (15 min) | Equipo + Scrum Master | Sincronizar avances, plan del día e impedimentos |
-| **Sprint Review (Demo)** | Fin de sprint (día 14) | Product Owner + Equipo + Interesados | Presentar el incremento funcional y recoger feedback |
-| **Sprint Retrospective** | Fin de sprint (tras la demo) | Equipo + Scrum Master | Mejora continua del proceso |
-| **Backlog Refinement** | Semanal (30–60 min) | Product Owner + Equipo | Priorizar y detallar las historias del backlog |
-| **Comunicación rápida** | Continua (horario laboral) | Equipo + Albergue | Consultas y avances por WhatsApp |
+#### 3.2.2. Hosting (cPanel / Plesk)
 
-> Fuente: TDR_Plan §Reuniones programadas.
+| Dato | Valor de referencia (confirmar en Bóveda) |
+|------|-------------------------------------------|
+| Proveedor | Proveedor contratado por el albergue (bitácora Sprint 4) |
+| Panel de control | cPanel / Plesk |
+| URL de acceso | `https://[cpanel-del-proveedor]` |
+| Usuario | Usuario principal del plan (ver Bóveda) |
+| Contraseña | Ver Bóveda |
 
-### 3.5. Artefactos
+Sea estricto: **no comparta** las credenciales del hosting con voluntarios ni editores. Solo administradores y soporte técnico.
 
-| Artefacto | Descripción |
-|-----------|-------------|
-| **Product Backlog** | Lista priorizada de funcionalidades e historias derivadas de los requerimientos del TDR |
-| **Sprint Backlog** | Tareas comprometidas para el sprint en curso, extraídas del backlog |
-| **Incremento** | Resultado funcional y demostrable de cada sprint (E1–E10) |
-| **Definition of Done (DoD)** | Criterios que una tarea debe cumplir para considerarse terminada (ver §3.8) |
-| **Gráfico burndown** | Evolución del trabajo pendiente durante el sprint |
-| **Bitácora del sprint** | Registro de actividades, incidencias, resultados de la demo y retrospectiva |
+#### 3.2.3. FTP / SFTP / SSH
 
-### 3.6. Tablero Kanban y flujo de trabajo
+| Dato | Valor de referencia |
+|------|---------------------|
+| Protocolo | SFTP recomendado (puerto 22 / 2222 según proveedor) |
+| Usuario | Usuario técnico de despliegue (ver Bóveda) |
+| Puerto | Según proveedor |
+| Acceso | Únicamente para mantenimiento técnico (cargas de tema hijo, corrección de fallos) |
 
-El tablero organiza el trabajo en las siguientes columnas:
+#### 3.2.4. Base de datos
 
-```mermaid
-flowchart LR
-    Backlog["Backlog<br/>(Product Backlog)"] --> ToDo["Por hacer<br/>(Sprint Backlog)"]
-    ToDo --> InProgress["En progreso"]
-    InProgress --> Review["En revisión / QA"]
-    Review --> Done["Hecho"]
-    InProgress -.->|Impedimento| Blocked["Bloqueado"]
-```
+| Dato | Valor de referencia |
+|------|---------------------|
+| Motor | MySQL / MariaDB |
+| Base de datos | BD del sitio (ver Bóveda y `wp-config.php`) |
+| Usuario de aplicación | Usuario de la BD del sitio (sin privilegios de administración global) |
+| Usuario root / administrador | Solo disponible desde el panel del hosting |
 
-| Columna | Política de entrada | Política de salida |
-|---------|---------------------|--------------------|
-| **Backlog** | Historias priorizadas por el Product Owner | Seleccionadas en el Sprint Planning |
-| **Por hacer** | Tareas comprometidas en el Sprint Backlog | La tarea tiene dueño y está lista para iniciarse |
-| **En progreso** | Se respeta el límite de WIP | Funcionalidad implementada y configurada |
-| **En revisión / QA** | La funcionalidad pasa a pruebas | Pruebas superadas sin errores críticos |
-| **Hecho** | Cumple la DoD (§3.8) | Verificada y, si corresponde, aprobada en la demo |
-| **Bloqueado** | Existe un impedimento externo (dependencia del albergue) | Se gestiona el desbloqueo con el Scrum Master |
+> Las credenciales de BD están definidas en `wp-config.php` como constantes PHP. No deben exponerse ni editarse salvo por soporte técnico durante un despliegue o migración.
 
-### 3.7. Límites de trabajo en curso (WIP)
+#### 3.2.5. SMTP — correos automáticos
 
-- Con un equipo pequeño, se establece un **WIP máximo por columna** (p. ej. **2** en "En progreso" y **1** en "En revisión/QA") para evitar la multitarea y reducir el tiempo de ciclo.
-- **Política de flujo:** una tarjeta solo se mueve a la siguiente columna si cumple la política de salida de la columna anterior.
-- **Trabajo bloqueado:** las tarjetas con impedimentos se mueven a la columna "Bloqueado" y se gestionan en el Daily Stand-up.
+| Dato | Valor de referencia |
+|------|---------------------|
+| Servicio | Proveedor SMTP contratado (p. ej. Resend / SendGrid / SMTP del hosting) |
+| Host / Puerto | Ver configuración de WP Mail SMTP (p. ej. `smtp.[proveedor].com` / 587 o 465) |
+| Remitente | `notificaciones@` del dominio del albergue |
+| Usuario / clave API | Ver Bóveda |
 
-### 3.8. Definición de hecho (Definition of Done — DoD)
+> Si los correos de confirmación (pre-adopción, donación, voluntariado) dejan de llegar, revise §11.7 y la pestaña "Correos" de WP Mail SMTP.
 
-Una tarea se considera **terminada** cuando cumple todos los criterios siguientes:
+#### 3.2.6. Dominio, DNS y correo del dominio
 
-1. Cumple los **criterios de aceptación** definidos en la historia o requerimiento.
-2. La configuración o código está **versionada en Git** (GitHub/GitLab).
-3. Está **probada** en el entorno correspondiente (local → staging → producción).
-4. Los **formularios y notificaciones por correo** asociados fueron verificados.
-5. No presenta **errores críticos**, o los bugs conocidos están documentados y aceptados por el Product Owner.
-6. La **documentación y la bitácora del sprint** están actualizadas.
-7. Cuando corresponde a un entregable (E1–E10), fue **aprobada en la demo**.
+| Dato | Valor de referencia |
+|------|---------------------|
+| Dominio | `alberguepeluchin.org.bo` |
+| Registrador | Proveedor del dominio (ver Bóveda) |
+| Registros DNS | A / CNAME apuntando al hosting; verificación en el panel del registrador |
+| Correo del dominio | Cuentas `@alberguepeluchin.org.bo` (p. ej. `info@`, `notificaciones@`) gestionadas en el proveedor del hosting o de correo |
 
-### 3.9. Mapeo con el cronograma del proyecto
+> El dominio y su configuración DNS son **contratación directa del albergue** (fuera de garantía). Las contraseñas del registrador solo deben estar en manos del responsable del albergue.
 
-| Sprint | Semanas | Objetivo | Entregables | Resultado de la demo |
-|--------|---------|----------|-------------|----------------------|
-| **Sprint 1** | 1–2 | Instalación, tema y estructura | E1, E2, E3 | Sitio base + galería de animales |
-| **Sprint 2** | 3–4 | Formularios, donaciones y contenido | E4 | Sitio público completo |
-| **Sprint 3** | 5–6 | Panel de administración y funcionalidades avanzadas | E5, E6 | Panel completo + blog + eventos |
-| **Sprint 4** | 7–8 | QA, despliegue, documentación y capacitación | E7, E8, E9, E10 | Sitio en producción + documentación |
-| **Garantía** | 9–16 | Monitoreo, soporte y actualizaciones | E11 | Fin del contrato |
+#### 3.2.7. Backups remotos (UpdraftPlus)
 
-> Fuente: TDR_Plan §SPRINT 1–4 y §PERÍODO DE GARANTÍA.
+| Dato | Valor de referencia |
+|------|---------------------|
+| Destino remoto | Google Drive / Dropbox (cuenta exclusiva para respaldos del sitio) |
+| Cuenta | Cuenta técnica de respaldos (ver Bóveda) |
+| Cifrado | Activo (clave de cifrado en la Bóveda) |
+| Retención | 30 copias diarias (rotación automática) |
 
-### 3.10. Herramientas de gestión
+#### 3.2.8. Pasarelas y servicios externos
 
-| Herramienta | Uso metodológico |
-|-------------|------------------|
-| Trello / Jira / Notion | Tablero Kanban, backlog y seguimiento de tareas |
-| Git + GitHub / GitLab | Control de versiones del tema y configuración |
-| Figma | Wireframes, mockups y prototipos |
-| Google Meet / Zoom | Reuniones, demos y capacitación |
-| WhatsApp | Comunicación rápida (horario laboral) |
-| Bitácoras (`docs/bitacoras/`) | Registro de cada sprint, demo y retrospectiva |
+| Servicio | Credenciales / notas |
+|----------|-----------------------|
+| QR Simple | Código generado con datos bancarios del albergue; sin credenciales de acceso web propias (solo verificación) |
+| Red Enlace (condicional) | Solo si la ONG completó la habilitación de la API; credenciales mantenidas por el albergue |
+| WhatsApp (`wa.me`) | Enlace público; sin autenticación |
+| Redes sociales (FB/IG) | Fuera del sistema; cuentas propias del albergue |
+
+### 3.3. Política de contraseñas
+
+| Regla | Estándar |
+|-------|----------|
+| Longitud mínima | 12 caracteres |
+| Composición | Letras (mayúsculas y minúsculas) + números + símbolos |
+| Prohibido | Nombre del albergue, fechas personales, palabras comunes, secuencias |
+| Reutilización | No reutilizar contraseñas de otros servicios (hosting ≠ panel ≠ BD) |
+| Compartición | Prohibida; cada persona usa su propia cuenta |
+| Almacenamiento | Únicamente en la Bóveda (§3.1) o en el gestor de contraseñas del navegador del equipo corporativo |
+| Forzar cambio | WordPress: activar "Forzar restablecimiento de contraseña" por usuario si se sospecha exposición |
+
+Las contraseñas del panel se almacenan en la base de datos con **hash seguro (wp_hash_password / PBKDF2)**, de modo que no son legibles ni por el administrador de la BD.
+
+### 3.4. Rotación y recuperación de contraseñas
+
+#### 3.4.1. Cambio de contraseña de un usuario del panel
+
+| Situación | Procedimiento |
+|-----------|---------------|
+| El propio usuario (editor/voluntario) puede cambiarla | `Usuarios → Perfil` → Nueva contraseña → Guardar |
+| El administrador la restablece | `Usuarios → Todos los usuarios` → el usuario → "Enviar restablecimiento de contraseña" (envía enlace por correo) — activar también "Forzar restablecimiento" |
+| Contraseña comprometida | Restablecerla inmediatamente, revisar el historial de entradas de inicio de sesión (Wordfence Live Traffic) y rotar la sesión |
+
+> Tras aprobar el restablecimiento, **anote el cambio en la Bóveda**. Cambiar la contraseña de un usuario **no desactiva** su cuenta; para desactivarla vea §3.7.
+
+#### 3.4.2. Recuperación de la contraseña del administrador
+
+Si el administrador no puede ingresar y olvidó la contraseña:
+
+1. Desde la pantalla de ingreso (`/admin`) pulse **"Olvidé mi contraseña"** e ingrese el correo de la cuenta admin. Recibirá un enlace de restablecimiento en el correo del dominio.
+2. **Si el correo no llega:** verifique SMTP (§3.2.5). Como respaldo, el **administrador de respaldo** (`admin_respaldo`) puede restablecerla desde `Usuarios`.
+3. **Si se pierden ambas cuentas admin:** usar **WP CLI** (`wp user update <id> --user_pass=NuevaClave`) desde SSH/terminal o el restaurar temporalmente mediante FTP un pequeño php de restablecimiento; en todo caso, realice primero una copia de la BD y registre el cambio en la Bóveda.
+4. Actualizar la Bóveda con la nueva contraseña.
+
+#### 3.4.3. Recuperación de la contraseña de un voluntario
+
+Los voluntarios no administran el sistema; la recuperación es competencia del administrador:
+
+1. `Usuarios → Todos los usuarios` → cuenta del voluntario.
+2. "Enviar restablecimiento de contraseña" o definir una temporal y forzar cambio en el primer ingreso.
+3. Entregar la nueva credencial **por un canal seguro** (no por redes sociales públicas).
+4. Actualizar la Bóveda.
+
+#### 3.4.4. Rotación de credenciales de hosting, BD y SMTP
+
+Estas rotaciones se realizan únicamente por el soporte técnico (o por el responsable del albergue con guía técnica):
+
+1. **Hosting (cPanel/Plesk):** cambiar la contraseña principal desde el panel del hosting; revisar que el cambio no rompa las conexiones FTP/SMTP de la aplicación.
+2. **Base de datos:** cambiar la contraseña del usuario de la BD y editar las constantes `DB_PASSWORD` (y en su caso `DB_USER`) en `wp-config.php` vía FTP. Probar el sitio después (página + panel + un formulario).
+3. **SMTP:** regenerar la clave API o contraseña del proveedor SMTP y actualizar la configuración en WP Mail SMTP (pestaña SMTP). Realizar "Enviar correo de prueba" y verificar.
+4. **Backups remotos:** rotar la contraseña de la cuenta de destino y actualizar UpdraftPlus (Ajustes → Remoto).
+5. En todos los casos: **actualizar la Bóveda el mismo día** y registrar en la bitácora técnica.
+
+> **Regla:** toda rotación se hace primero con el sitio en horario de baja afluencia y siempre tras realizar un **backup manual** (§11.3).
+
+### 3.5. Autenticación de doble factor (2FA)
+
+| Perfil | 2FA |
+|--------|-----|
+| Administrador principal y de respaldo | **Requerido** (Wordfence o plugin 2FA, p. ej. Google Authenticator). Localizadores de recuperación guardados en la Bóveda |
+| Editor | **Recomendado** |
+| Voluntario | Opcional según decisión del administrador |
+
+- Configuración: `Wordfence → Login Security` (o plugin de 2FA) → activar por usuario.
+- Si un usuario pierde el código 2FA: desactivar temporalmente el 2FA de esa cuenta desde el panel, volver a escanear el QR y reactivar. Registrar en la Bóveda.
+
+### 3.6. Seguridad de sesión
+
+- Sesión de administración **no compartida**; el navegador del administrador debe estar actualizado.
+- Cerrar sesión en equipos compartidos (Manual de Usuario §2.3).
+- Wordfence bloquea automáticamente IPs tras intentos fallidos; los eventos se revisan en `Wordfence → Live Traffic`.
+- Activar el bloqueo de acceso a `wp-login.php` fuera de horario si se desea endurecer aún más (ver §8.5).
+
+### 3.7. Alta y baja de usuarios
+
+| Operación | Procedimiento |
+|-----------|---------------|
+| Alta de editor | `Usuarios → Añadir nuevo` (rol Editor), correo real, entregar credencial, registrar en Bóveda |
+| Alta de voluntario | `Usuarios → Añadir nuevo` (rol Voluntario), correo del albergue o del voluntario según criterio del admin |
+| Baja de voluntario | El administrador **elimina la cuenta** (`Usuarios → Eliminar`) o la **desactiva**; rotar cualquier contraseña compartida y actualizar la Bóveda |
+| Baja de editor / admin | Eliminar cuenta; en caso de renuncia, rotar también las credenciales de hosting, SMTP y dominio si esa persona las conocía |
+
+> No dejar cuentas inactivas con permisos elevados. Revisar trimestralmente la lista de usuarios del panel.
 
 ---
 
@@ -308,29 +404,29 @@ Una tarea se considera **terminada** cuando cumple todos los criterios siguiente
 ```mermaid
 flowchart TB
     U["Usuario final<br/>(navegador, HTTPS)"] --> LB["Servidor web<br/>Apache / Nginx"]
-    LB --> WP["WordPress + Tema hijo<br/>(PHP)"]
+    LB --> WP["WordPress + Tema hijo Peluchín<br/>(PHP 8+)"]
     WP --> DB[("MySQL / MariaDB")]
     WP --> CACHE["Caché<br/>WP Super Cache / LiteSpeed"]
     WP --> SMTP["SMTP<br/>(correos automáticos)"]
     WP --> PLUG["Plugins<br/>CPT UI · ACF · WPForms · Yoast · Wordfence · UpdraftPlus"]
     PLUG --> QR["QR Simple / Red Enlace<br/>(donaciones, condicional)"]
     PLUG --> WA["WhatsApp API (wa.me)"]
+    WP --> REMOTO["Backups remotos<br/>(UpdraftPlus → Google Drive/Dropbox)"]
 ```
-
-> Fuente: UML §8 (stack WordPress) y diagrama WAE §4. Renderizable en GitHub / mermaid.live.
 
 ### 4.2. Componentes y servicios externos
 
-| Componente | Rol | Estado |
-|------------|-----|--------|
+| Componente | Rol | Estado en producción |
+|------------|-----|----------------------|
 | Servidor web (Apache / Nginx) | Sirve el sitio | Producción |
-| WordPress + tema hijo | Motor PHP / presentación | Producción |
-| Plugins (CPT UI, ACF, WPForms, Yoast, Wordfence, UpdraftPlus, WP Mail SMTP, Really Simple SSL) | Funcionalidad | Producción |
+| WordPress + tema hijo Peluchín | Motor PHP / presentación | Producción |
 | MySQL / MariaDB | Persistencia | Producción |
-| SMTP (Gmail / Resend / SendGrid) | Correos automáticos | Producción |
+| SMTP (Resend / SendGrid / hosting) | Correos automáticos | Producción |
 | QR Simple + datos bancarios | Canal de donación | Producción |
 | WhatsApp API (`wa.me`) | Contacto / compartir | Producción |
-| Red Enlace | Pasarela de pago | Condicional (solo con habilitación de la ONG) |
+| UpdraftPlus → Google Drive/Dropbox | Backups remotos | Producción |
+| Wordfence + Really Simple SSL | Seguridad | Producción |
+| Red Enlace | Pasarela de pago | Condicional (según habilitación de la ONG) |
 
 ### 4.3. Mapa de navegación — sitio público
 
@@ -348,8 +444,6 @@ flowchart TB
 | Contacto | `/contacto` | WhatsApp / formulario |
 | FAQ | `/faq` | — |
 
-> Fuente: `docs/TDR_Diagrama_WAE_Peluchin.md` §2.
-
 ### 4.4. Mapa de navegación — panel de administración
 
 | Página | Ruta | Formularios |
@@ -364,8 +458,6 @@ flowchart TB
 | Eventos | `/admin/eventos` | CRUD + asistentes |
 | Contenido estático | `/admin/contenido` | Edición de secciones |
 
-> Fuente: `docs/TDR_Diagrama_WAE_Peluchin.md` §3.
-
 ---
 
 ## 5. STACK TECNOLÓGICO
@@ -374,50 +466,51 @@ flowchart TB
 
 | Componente | Tecnología | Versión instalada |
 |------------|------------|-------------------|
-| CMS | WordPress | [última estable] |
-| Lenguaje | PHP | 8+ |
-| Base de datos | MySQL / MariaDB | [versión] |
-| Servidor web | Apache / Nginx | [versión] |
+| CMS | WordPress | Última versión estable (ver `/admin` → Actualizaciones) |
+| Lenguaje | PHP | 8.1+ |
+| Base de datos | MySQL / MariaDB | Versión del hosting |
+| Servidor web | Apache / Nginx | Versión del hosting |
+
+> Mantenga WordPress y PHP en versiones con soporte de seguridad (§11.2).
 
 ### 5.2. Tema y constructor visual
 
 | Herramienta | Uso |
 |-------------|-----|
-| Tema base: Astra | Tema principal (según bitácora Sprint 1) |
-| Tema hijo Peluchín | Personalización y marca del albergue |
+| Tema base: Astra | Tema principal |
+| Tema hijo Peluchín | Personalización y marca del albergue (versionado en Git) |
 | Gutenberg / Elementor | Construcción visual |
 | CSS personalizado | Ajustes de diseño |
 
 ### 5.3. Plugins instalados
 
-| Plugin | Funcionalidad | Versión | Estado |
-|--------|---------------|---------|--------|
-| Custom Post Type UI | CPT "Animales", "Eventos" | — | Activo |
-| Advanced Custom Fields (ACF) | Campos personalizados | — | Activo |
-| WPForms Lite / Contact Form 7 | Pre-adopción, donación, voluntarios | — | Activo |
-| GiveWP / Donation Platform | Donaciones | — | Activo |
-| WP Mail SMTP | Correos automáticos | — | Activo |
-| MailPoet / FluentCRM | Notificaciones | — | Activo |
-| Yoast SEO / Rank Math | SEO | — | Activo |
-| Really Simple SSL | SSL/TLS | — | Activo |
-| UpdraftPlus | Backups | — | Activo |
-| Wordfence / Sucuri | Seguridad | — | Activo |
-| WP Super Cache / LiteSpeed | Caché | — | Activo |
-| Smush / EWWW | Optimización de imágenes | — | Activo |
+| Plugin | Funcionalidad | Estado |
+|--------|---------------|--------|
+| Custom Post Type UI | CPT "Animales", "Eventos" | Activo |
+| Advanced Custom Fields (ACF) | Campos personalizados | Activo |
+| WPForms Lite | Pre-adopción, donación, voluntarios | Activo |
+| GiveWP / Donation Platform | Donaciones | Activo |
+| WP Mail SMTP | Correos automáticos | Activo |
+| Yoast SEO | SEO (sitemap, meta, Schema.org) | Activo |
+| Really Simple SSL | SSL/TLS y redirección HTTPS | Activo |
+| UpdraftPlus | Backups automáticos | Activo |
+| Wordfence | Seguridad y firewall | Activo |
+| WP Super Cache | Caché | Activo |
+| Smush / EWWW | Optimización de imágenes | Activo |
+| Members / User Role Editor | Roles y permisos | Activo |
 
-> [Pendiente] Completar versiones y plugins finales en producción. Fuente: `docs/TDR_Plan_Proyecto_Cronograma_Peluchin.md`.
+> El listado exacto de versiones se consulta en `Panel → Plugins → Instalados`. Los plugins se actualizan siguiendo §11.2.
 
-### 5.4. Herramientas de desarrollo, despliegue y calidad
+### 5.4. Herramientas de despliegue y monitoreo
 
 | Herramienta | Uso |
 |-------------|-----|
-| Local by Flywheel / XAMPP | Entorno local |
-| Git + GitHub / GitLab | Control de versiones |
-| All-in-One WP Migration / Migrate Guru | Migración |
+| All-in-One WP Migration | Migraciones y restauraciones |
 | cPanel / Plesk | Administración del hosting |
-| PageSpeed / Lighthouse / GTmetrix | Rendimiento |
-| Responsively / BrowserStack | Responsividad |
-| WPScan | Seguridad WordPress |
+| UptimeRobot | Monitoreo de disponibilidad (meta 99%) |
+| PageSpeed / Lighthouse | Auditoría de rendimiento |
+| Git + GitHub / GitLab | Control de versiones del tema hijo |
+| WPScan | Auditoría de seguridad WordPress |
 
 ---
 
@@ -425,18 +518,18 @@ flowchart TB
 
 ### 6.1. Entidades principales
 
-| Entidad | Descripción | Claves de referencia |
-|---------|-------------|----------------------|
-| Usuario | Usuarios del sistema con rol | UML §3 |
-| Animal | Perros/gatos en adopción | UML §3 |
-| Foto | Galería de cada animal | UML §3 |
-| Solicitante | Persona que postula a adopción | UML §3 |
-| SolicitudAdopcion | Postulación con estados y seguimiento | UML §3, §7 |
-| Donacion | Donaciones registradas (manual o reporte web) | UML §3 |
-| Voluntario | Registro de colaboradores | UML §3 |
-| ArticuloBlog | Noticias y publicaciones | UML §3 |
-| Evento | Eventos y galería | UML §3 |
-| ContenidoEstatico | Quiénes somos, misión, FAQ, donaciones | UML §3 |
+| Entidad | Descripción |
+|---------|-------------|
+| Usuario | Usuarios del panel con rol (admin, editor, voluntario) |
+| Animal | Perros/gatos en adopción |
+| Foto | Galería de cada animal |
+| Solicitante | Persona que postula a adopción |
+| SolicitudAdopcion | Postulación con estados y seguimiento |
+| Donacion | Donaciones registradas (manual o reporte web) |
+| Voluntario | Registro de colaboradores |
+| ArticuloBlog | Noticias y publicaciones |
+| Evento | Eventos y galería |
+| ContenidoEstatico | Quiénes Somos, misión, FAQ, donaciones |
 
 ### 6.2. Diagrama de clases UML
 
@@ -460,8 +553,6 @@ classDiagram
     Usuario "1" --> "*" Donacion : registra
 ```
 
-> Fuente: `docs/TDR_Diagrama_UML_Peluchin.md` §3 (renderizable con mermaid).
-
 ### 6.3. Tipos de contenido personalizados (CPT) y campos ACF
 
 | CPT | Taxonomías | Campos ACF principales |
@@ -470,8 +561,6 @@ classDiagram
 | Solicitudes | — | tipo_vivienda, patio_jardin, experiencia_mascotas, otras_mascotas, referencias, notas_internas, numero_seguimiento |
 | Eventos | — | fecha_hora, ubicacion, imagen, fotos_galeria, asistentes |
 | Blog | categorías | titulo, imagen_destacada, contenido, estado |
-
-> [Pendiente] Documentar la configuración final de CPT UI + ACF del entorno de producción.
 
 ### 6.4. Estados de las entidades
 
@@ -484,7 +573,7 @@ classDiagram
 | Evento | próximo · pasado |
 | Usuario | roles: admin · editor · voluntario |
 
-Diagrama de estados de la solicitud de adopción (UML §7):
+Diagrama de estados de la solicitud de adopción:
 
 ```mermaid
 stateDiagram-v2
@@ -498,88 +587,26 @@ stateDiagram-v2
 
 ---
 
-## 7. DESCRIPCIÓN DETALLADA DE MÓDULOS Y FLUJOS
+## 7. MÓDULOS Y FLUJOS EN PRODUCCIÓN
 
 ### 7.1. Sitio público
 
-#### 7.1.1. Landing y navegación
-
-- Hero con mensaje de bienvenida y llamados a la acción (CTA): **"Quiero Adoptar"**, **"Quiero Donar"**, **"Ser Voluntario"**.
-- Contador de perritos rescatados y sección de animales destacados.
-- Menú de navegación principal, header con logo del albergue y footer con redes sociales.
-- Botón flotante de WhatsApp visible en todo el sitio.
-
-#### 7.1.2. Catálogo y ficha de animales
-
-- Galería con **filtros por taxonomía**: especie, tamaño, edad y estado.
-- Ficha individual con galería de fotos (slider) y datos: nombre, sexo, raza, peso, estado de salud, personalidad, historia y fecha de rescate.
-- CTA según el estado del animal:
-  - `en_adopcion` → botón **"Quiero Adoptar"** (abre el formulario de pre-adopción).
-  - `en_tratamiento` → botón **"Avísame"** (notificación al usuario).
-  - `adoptado` → botón deshabilitado con indicador **"Adoptado"**.
-
-> Referencia: UML §6 (diagrama de actividad).
-
-#### 7.1.3. Formulario de pre-adopción
-
-Formulario multi-paso con notificaciones automáticas:
-
-- **Paso 1:** datos personales del solicitante (nombre, CI, teléfono, correo).
-- **Paso 2:** vivienda y experiencia con mascotas (tipo de vivienda, patio/jardín, otras mascotas, experiencia previa).
-- **Paso 3:** referencias, aceptación del reglamento y envío.
-
-Al enviarse: validaciones por paso, generación de **número de seguimiento**, correo de confirmación al solicitante y notificación de "nueva solicitud pendiente" al administrador. Referencia: UML §4 (secuencia), §6 (actividad).
-
-#### 7.1.4. Donaciones y reporte de donación
-
-- Código **QR Simple** y datos bancarios con botón **"Copiar"**.
-- Formulario de reporte de donación (monto, fecha, comprobante adjunto).
-- Confirmación en pantalla y correo de agradecimiento al donante; notificación al administrador. Referencia: UML §5 (secuencia).
-
-#### 7.1.5. Registro de voluntarios
-
-Formulario con datos personales, **áreas de interés** (paseo, limpieza, veterinaria, difusión, eventos, transporte, captación) y **disponibilidad horaria**. Al enviarse: correo de confirmación al voluntario y notificación de "nuevo voluntario" al administrador.
-
-#### 7.1.6. Blog, eventos, contacto, FAQ
-
-- **Blog:** publicaciones con categorías y editor nativo.
-- **Eventos:** registro/confirmación de asistencia con fecha, ubicación y galería.
-- **Contacto:** botón de WhatsApp (`wa.me`) y mapa de Google Maps.
-- **FAQ:** secciones plegables (acordeón) con preguntas frecuentes.
+- **Landing:** hero con mensajes y CTA (**"Quiero Adoptar"**, **"Quiero Donar"**, **"Ser Voluntario"**), contador de rescatados, animales destacados, botón flotante de WhatsApp en todo el sitio.
+- **Catálogo y ficha:** filtros por taxonomía (especie, tamaño, edad, estado); ficha con slider de fotos y datos; CTA según estado (`en_adopcion` → "Quiero Adoptar"; `en_tratamiento` → "Avísame"; `adoptado` → "Adoptado").
+- **Pre-adopción:** formulario multi-paso (datos del solicitante → vivienda/experiencia → referencias). Al enviarse: número de seguimiento, correo al solicitante y notificación al admin.
+- **Donaciones:** QR Simple, datos bancarios con botón "Copiar", formulario de reporte con comprobante adjunto; confirmación y agradecimiento automático.
+- **Voluntarios:** formulario con áreas de interés (paseo, limpieza, veterinaria, difusión, eventos, transporte, captación) y disponibilidad horaria; confirmación y notificación al admin.
+- **Blog / Eventos / Contacto / FAQ:** publicaciones, asistencia a eventos, botón de WhatsApp + mapa y acordeón de preguntas.
 
 ### 7.2. Panel de administración
 
-#### 7.2.1. Dashboard de KPIs
-
-Widgets con indicadores del albergue: **perritos en adopción**, **solicitudes pendientes**, **donaciones del mes (Bs.)** y **voluntarios activos**.
-
-#### 7.2.2. CRUD de animales
-
-Creación, edición y eliminación de fichas de animales; carga de **múltiples fotos**; cambio de estado (`en_adopcion` → `adoptado` / `en_tratamiento`).
-
-#### 7.2.3. Gestión de solicitudes de adopción
-
-- Flujo de estados: `pendiente` → `en_revision` → `aprobado` / `rechazado` (ver §6.4).
-- **Notas internas** por solicitud y número de seguimiento.
-- **Correos automáticos** al aprobar o rechazar (instrucciones de adopción / mensaje amable).
-
-#### 7.2.4. Registro de donaciones
-
-Registro manual (efectivo, transferencia, QR) con monto, fecha y donante; **exportación** a Excel.
-
-#### 7.2.5. Gestión de voluntarios
-
-Listado con **filtros por área de interés**, edición de datos y exportación.
-
-#### 7.2.6. Blog, eventos y contenido estático
-
-- CRUD de noticias del blog.
-- Gestión de eventos (fecha, ubicación, galería, asistentes).
-- Edición de secciones estáticas (Quiénes Somos, misión, FAQ, donaciones) mediante **ACF Options Pages**.
-
-#### 7.2.7. Reportes exportables
-
-Exportación a Excel de perritos, adopciones y donaciones por mes.
+- **Dashboard KPIs:** perritos en adopción, solicitudes pendientes, donaciones del mes (Bs.) y voluntarios activos, con variaciones respecto al mes anterior.
+- **CRUD de animales:** alta, edición, múltiples fotos y cambio de estado.
+- **Solicitudes:** flujo `pendiente → en_revision → aprobado/rechazado`, notas internas y correos automáticos.
+- **Donaciones:** registro manual (efectivo, transferencia, QR) y exportación a Excel.
+- **Voluntarios:** listado con filtro por área e interés y exportación.
+- **Blog / Eventos / Contenido:** CRUD de publicaciones y eventos, edición de secciones estáticas vía ACF Options Pages.
+- **Reportes:** exportación a Excel de perritos, adopciones y donaciones por mes.
 
 ### 7.3. Notificaciones automáticas por correo
 
@@ -591,7 +618,7 @@ Exportación a Excel de perritos, adopciones y donaciones por mes.
 | Aprobación de adopción | Instrucciones de adopción | — |
 | Rechazo | Mensaje amable | — |
 
-> [Pendiente] Detallar plantillas, remitente (SMTP) y configuración de WP Mail SMTP. Referencia: TDR §4.1 (Notificaciones), UML §4–§5.
+> Plantillas y remitente configurados en WPForms y WP Mail SMTP (remitente `notificaciones@alberguepeluchin.org.bo`).
 
 ---
 
@@ -599,167 +626,222 @@ Exportación a Excel de perritos, adopciones y donaciones por mes.
 
 ### 8.1. Autenticación y roles
 
-- Inicio de sesión en `/admin/login` con roles definidos en §2.2 (Members / User Role Editor).
-- **Límite de intentos** de inicio de sesión (Wordfence) y **autenticación de doble factor (2FA)** recomendada.
-- Principio de **menor privilegio**: cada rol solo accede a lo necesario. Referencia: TDR §5.1, Riesgos T02/T11.
+- Inicio de sesión en `/admin/login` con roles de §2.2.
+- **Límite de intentos** de acceso activo (Wordfence) y **2FA** obligatorio para administradores (§3.5).
+- Principio de **menor privilegio** aplicado a editores y voluntarios.
 
 ### 8.2. SSL/TLS
 
-- Certificado SSL activo (**Let's Encrypt**) en producción (según bitácora Sprint 4).
-- Redirección **HTTP → HTTPS** y renovación automática gestionadas con Really Simple SSL. Referencia: RNF03, E8.
+- Certificado **Let's Encrypt** activo en producción con renovación automática.
+- Redirección **HTTP → HTTPS** gestionada por Really Simple SSL.
+- Verificación periódica del candado y del estado del certificado (tool del navegador o UptimeRobot SSL check).
 
 ### 8.3. Protección OWASP Top 10
 
-| Área | Medida | Plugin / Configuración |
+| Área | Medida | Plugin / configuración |
 |------|--------|------------------------|
 | Inyección SQL | Sanitización de inputs, consultas preparadas | WordPress core + ACF |
 | XSS | Sanitización de salida | WordPress core |
-| CSRF | Nonces de WordPress | WordPress core |
+| CSRF | Nonces | WordPress core |
 | Brute force | Límite de intentos de login | Wordfence |
 | Datos sensibles | Encriptación, HTTPS | Really Simple SSL |
-
-> [Pendiente] Completar con el hardening aplicado (prefijo de BD, etc.). Referencia: TDR §4.1 (Seguridad), RNF03.
+| Divulgación | Permisos de archivos y ocultación de versión | Hardening (§8.5) |
 
 ### 8.4. Backups y recuperación
 
-| Aspecto | Configuración |
-|---------|---------------|
-| Frecuencia | Diario |
+| Aspecto | Configuración en producción |
+|---------|-----------------------------|
+| Frecuencia | Diaria (04:00, horario Bolivia) |
 | Herramienta | UpdraftPlus |
-| Destino remoto | [Google Drive / Dropbox] |
-| Retención | [n] copias |
-| Verificación | [frecuencia] restauración de prueba |
+| Destino remoto | Google Drive / Dropbox (cuenta técnica) |
+| Retención | 30 copias |
+| Cifrado | Activo (clave en Bóveda) |
+| Verificación | Restauración de prueba mensual (§11.3) |
 | Backup previo a migraciones | Manual obligatorio |
 
-> Referencia: Riesgo T10, Plan §Sprint 3.
+### 8.5. Hardening aplicado
+
+- **Prefijo de tablas** de BD distinto de `wp_` (confirmar en `wp-config.php`).
+- Desactivación del **WP File Manager** (eliminado por alerta de Wordfence — bitácora Sprint 3).
+- Ocultación de la versión de WordPress; limitación de `xmlrpc.php`.
+- Permisos de archivos estándar (carpetas `755`, archivos `644`).
+- Desactivado el registro de usuarios públicos del panel; los visitantes solo acceden a formularios del sitio público.
+- Monitoreo de tráfico en vivo (Wordfence Live Traffic) y escaneos periódicos.
 
 ---
 
-## 9. DESPLIEGUE
+## 9. ENTORNOS Y DESPLIEGUE
 
-### 9.1. Entornos (local, staging, producción)
+### 9.1. Entornos
 
 | Entorno | URL | Uso |
 |---------|-----|-----|
-| Local | [localhost] | Desarrollo (Local by Flywheel / XAMPP) |
-| Staging | [URL staging] | Pruebas y QA |
-| Producción | [URL dominio] | Sitio público |
+| Local | `localhost` | Desarrollo y pruebas de cambios (Local by Flywheel / XAMPP) |
+| Staging | Subdominio `staging.` del dominio | Pruebas y QA previas a producción |
+| Producción | `https://alberguepeluchin.org.bo` | Sitio público |
 
-### 9.2. Requisitos de servidor
+### 9.2. Requisitos de servidor instalados
 
 | Requisito | Valor |
 |-----------|-------|
-| PHP | 8+ |
-| MySQL / MariaDB | [versión] |
-| Espacio en disco | [n] GB |
-| PHP.ini (límites de subida) | [n] MB |
-| Extras | [cPanel/Plesk, acceso SSH/FTP] |
+| PHP | 8.1+ |
+| MySQL / MariaDB | Versión del hosting |
+| Memoria PHP (memory_limit) | 256M recomendado |
+| Límite de subida | 64M+ (por defecto del plan según proveedor) |
+| Extras | cPanel/Plesk, acceso SFTP/SSH |
 
-> Referencia: Riesgos T04, T05.
+### 9.3. Configuración de dominio y DNS
 
-### 9.3. Procedimiento de despliegue y migración
+1. Registros DNS (A/CNAME) apuntan a la IP del hosting (`www` → dominio principal).
+2. SSL Let's Encrypt activo y redirección HTTPS configurada.
+3. Para cambios de DNS futuros: editar solo desde el panel del registrador (§3.2.6) y verificar propagación con herramientas públicas.
 
-1. Backup completo en el entorno de origen.
-2. Migración con All-in-One WP Migration / Migrate Guru.
-3. Corrección de rutas y URLs (search-replace si aplica).
-4. Verificación de enlaces, medios y formularios.
-5. Pruebas post-despliegue (smoke test).
-
-> Referencia: Plan §Sprint 4, Riesgos T04. Guía replicable según la retrospectiva del Sprint 4.
-
-### 9.4. Configuración de DNS y SSL
-
-1. Registrar el dominio y apuntar los registros **DNS (A/CNAME)** al hosting.
-2. Instalar el certificado SSL (Let's Encrypt) y activar la redirección HTTPS.
-3. Verificar el candado de seguridad en el navegador y la renovación automática.
+> Procedimiento completo de migración/re-despliegue: All-in-One WP Migration (backup completo → importar → search-replace de URLs → smoke test). Solo por soporte técnico.
 
 ---
 
-## 10. PRUEBAS Y CONTROL DE CALIDAD
+## 10. PRUEBAS Y CONTROL DE CALIDAD (RESULTADOS)
 
 ### 10.1. Pruebas funcionales
 
-| Caso de prueba | Resultado esperado | Estado |
-|----------------|--------------------|--------|
-| Pre-adopción completa | Solicitud guardada + correos + número de seguimiento | [Pendiente] |
-| Reporte de donación | Donación registrada + correo de agradecimiento | [Pendiente] |
-| Registro de voluntario | Voluntario visible en admin | [Pendiente] |
-| CRUD de animales | Crear/editar/eliminar/cambiar estado | [Pendiente] |
-| Cambio de estado de solicitud | Flujo completo con notificaciones | [Pendiente] |
-| Filtros de galería por taxonomía | Resultados correctos por especie/tamaño/edad/estado | [Pendiente] |
-| Botón flotante de WhatsApp | Enlace `wa.me` correcto en móvil y escritorio | [Pendiente] |
-
-> [Pendiente] Ampliar la matriz de pruebas. Referencia: E7, UML §4–§6.
+| Caso de prueba | Resultado |
+|----------------|-----------|
+| Pre-adopción completa | ✅ Solicitud guardada + correos + número de seguimiento |
+| Reporte de donación | ✅ Donación registrada + correo de agradecimiento |
+| Registro de voluntario | ✅ Voluntario visible en admin |
+| CRUD de animales | ✅ Crear/editar/eliminar/cambiar estado |
+| Cambio de estado de solicitud | ✅ Flujo completo con notificaciones |
+| Filtros de galería por taxonomía | ✅ Resultados correctos |
+| Botón flotante de WhatsApp | ✅ Enlace `wa.me` correcto en móvil y escritorio |
 
 ### 10.2. Pruebas de rendimiento
 
-- Herramientas: PageSpeed, Lighthouse, GTmetrix.
-- Meta: carga < 3 s en 4G (**RNF01**) y puntaje Lighthouse ≥ 90 en móvil (según bitácora Sprint 4).
-- Acciones: optimización de imágenes (Smush/EWWW) y activación de caché (WP Super Cache). Referencia: Riesgo T03.
+- **Lighthouse ≥ 90/100** en móvil (bitácora Sprint 4).
+- Carga < 3 s en 4G (**RNF01**).
+- Caché activa (WP Super Cache) e imágenes optimizadas (Smush/EWWW).
 
 ### 10.3. Pruebas de seguridad
 
-- Escaneos con **WPScan** y **Wordfence**; revisión de hardening y de backups restaurables. Referencia: Riesgos T02, T11.
+- Escaneos **WPScan** y **Wordfence** sin vulnerabilidades críticas al cierre.
+- Hardening verificado (§8.5) y restauración de backup probada.
 
 ### 10.4. Pruebas de responsividad
 
-- Dispositivos móviles y navegadores (Chrome, Firefox, Safari, Edge) con Responsively / BrowserStack. Referencia: RNF04.
+- Validado en dispositivos móviles y navegadores (Chrome, Firefox, Safari, Edge).
 
 ---
 
-## 11. MANTENIMIENTO Y SOPORTE
+## 11. MANTENIMIENTO Y OPERACIÓN DEL SISTEMA
 
-### 11.1. Actualizaciones
+### 11.1. Rutina mensual de mantenimiento
+
+| Día sugerido | Tarea | Responsable |
+|--------------|-------|-------------|
+| Día 1 | Verificar que los backups automáticos de los últimos 7 días existan en el destino remoto | Administrador |
+| Día 1 | Revisar alertas y "Live Traffic" de Wordfence; desbloquear IPs legítimas si corresponde | Administrador |
+| Día 2 | Revisar correos (SMTP): enviar correo de prueba y verificar entregabilidad | Administrador |
+| Día 5 | Comprobar estado SSL y uptime (UptimeRobot) | Administrador |
+| Día 10 | Publicar/actualizar contenido (animales, eventos, blog) | Editor |
+| Día 15 | Revisar lista de usuarios del panel; dar de baja cuentas inactivas | Administrador |
+| Día 30 | Probar restauración de una copia de respaldo en un entorno de prueba (§11.3) | Soporte técnico |
+| Cada 90 días | Rotar contraseñas de panel, hosting y dominio (§3.4) | Administrador / Soporte |
+
+### 11.2. Actualizaciones
 
 | Componente | Frecuencia | Procedimiento |
 |------------|------------|---------------|
-| WordPress core | Mensual | Prueba en staging → backup → actualizar |
-| Plugins | Mensual | Prueba en staging → backup → actualizar |
-| Tema hijo | Según cambios | Control de versiones en Git |
+| WordPress core | Mensual (y ante avisos de seguridad) | Test en staging → backup → actualizar → verificar flujos críticos |
+| Plugins | Mensual | Test en staging → backup → actualizar → verificar |
+| Tema Astra | Cuando haya versión estable | Test en staging → backup → actualizar |
+| Tema hijo | Solo cambios controlados | Versionar en Git y desplegar tras prueba |
+| PHP | Solo cuando el proveedor lo exija | Verificar compatibilidad de plugins antes |
 
-> Referencia: Plan §Garantía, Riesgos T01, T06.
+**Procedimiento estándar de actualización:**
+1. Realizar backup completo (UpdraftPlus) y anotarlo.
+2. Actualizar primero en **staging**; verificar formularios, panel y correos.
+3. Aplicar en producción y ejecutar el smoke test (página principal, un formulario, ingreso al panel).
+4. Registrar el cambio en la bitácora técnica.
 
-### 11.2. Procedimientos de operación
+> Las actualizaciones de seguridad se aplican dentro de la garantía conforme a `TDR_Carta_Entrega_Soporte_Peluchin.md` §12.
 
-- **Modo mantenimiento:** activar desde plugin o `.maintenance` para intervenciones.
-- **Restauración de backup:** descargar el backup de UpdraftPlus y restaurar en el entorno afectado.
-- **Cambio de credenciales:** rotar contraseñas del panel, hosting y SMTP ante cualquier sospecha.
-- **Gestión de cuentas:** alta/baja de usuarios del panel según roles (§2.2).
+### 11.3. Verificación y restauración de backups
 
-### 11.3. Monitoreo
+- **Verificación diaria:** confirmar que UpdraftPlus creó la copia y que llegó al destino remoto.
+- **Verificación mensual:** restaurar la copia más reciente en el entorno de **staging** y comprobar login, animales y un formulario; descartar la copia de prueba. Esto valida que los backups son útiles.
+- **Restauración en producción (emergencia):** desde el panel: `UpdraftPlus → Restaurar` (seleccionar copia) o, si el panel no responde, importar el archivo `.gz` con All-in-One WP Migration vía SFTP y el instalador.
+- Registrar toda restauración en la bitácora técnica.
 
-- **Uptime:** monitoreo de disponibilidad (UptimeRobot o similar) — meta 99% (RNF02).
-- **Correos:** verificación de entregabilidad del SMTP (Riesgo T07).
-- **Seguridad:** revisión de alertas de Wordfence y escaneos periódicos. Referencia: Riesgo T08.
+### 11.4. Monitoreo
 
-### 11.4. Solución de problemas comunes (FAQ técnica)
+| Qué monitorear | Herramienta | Frecuencia |
+|----------------|-------------|------------|
+| Uptime (meta 99%) | UptimeRobot | Cada 5 min |
+| Certificado SSL | UptimeRobot / navegador | Diario |
+| Alertas de Wordfence | Panel Wordfence | Diario |
+| Entregabilidad SMTP | WP Mail SMTP | Mensual |
+| Espacio en disco / recursos | Panel del hosting | Mensual |
+| Copias de respaldo | UpdraftPlus / destino remoto | Diario |
+
+### 11.5. Modo mantenimiento
+
+- Activar desde el hosting (`.maintenance`) o plugin de mantenimiento cuando se realicen intervenciones planificadas.
+- Usar una página de aviso de "Mantenimiento en curso".
+- Desactivar al finalizar la intervención y verificar el sitio.
+
+### 11.6. Reporte de incidencias y canales de soporte
+
+| Canal | Uso | Horario |
+|-------|-----|---------|
+| WhatsApp (grupo de coordinación) | Reporte rápido de incidencias | Lun–Vie 9:00–18:00 (Bolivia) |
+| Correo electrónico | Incidencias formales por escrito | Lun–Vie 9:00–18:00 (Bolivia) |
+| Google Meet / Zoom | Reuniones de soporte (aviso 24 h) | Horario laboral |
+
+**Clasificación de incidencias** (garantía): Alta (sitio caído o funcionalidad crítica inoperativa) → respuesta en 24 h hábiles; Media → 48 h; Baja → 72 h. Fuera de garantía, el mantenimiento se contrata como servicio independiente.
+
+### 11.8. Mantenimiento fuera del contrato — contacto técnico
+
+Una vez vencido el período de garantía (E11), todo requerimiento de soporte, mantenimiento, actualización o nueva funcionalidad se gestiona como **servicio independiente** (contrato o servicio mensual a definir), a través del canal técnico del equipo desarrollador:
+
+| Dato | Detalle |
+|------|---------|
+| **Contacto técnico** | Santiago Acha — Scrum Master y coordinador técnico del equipo desarrollador |
+| **Rol** | Coordinación de mantenimiento, soporte técnico y gestión de incidencias |
+| **Canal de comunicación** | WhatsApp y correo del grupo de coordinación (mismos canales de §11.6) |
+| **Horario** | Lunes a viernes, 9:00 a 18:00 (hora de Bolivia) |
+| **Servicios** | Corrección de bugs, actualizaciones de WordPress y plugins, restauración de backups, migraciones, mejoras y nuevas funcionalidades |
+| **Proformas de referencia** | `docs/proformas/Proforma_Hosting_Servidores_Consultora.md` (INF-004) y `docs/proformas/Carta_Entrega_Proformas.md` |
+
+### 11.7. Solución de problemas comunes (FAQ técnica)
 
 | Problema | Causa probable | Solución |
 |----------|----------------|----------|
-| Correos no llegan | SMTP mal configurado | Revisar WP Mail SMTP (Riesgo T07) |
-| Sitio lento | Caché/plugins/imágenes | Purgar caché, optimizar (Riesgo T03) |
-| Pantalla en blanco | Plugin/tema conflictivo | Desactivar vía FTP/phpMyAdmin (Riesgo T01) |
-| Enlaces rotos tras migración | URLs antiguas | Search-replace en BD (Riesgo T04) |
-| Error de conexión a BD | Credenciales/caída de hosting | Verificar `wp-config.php` y hosting (Riesgo T08) |
+| Correos de confirmación no llegan | SMTP mal configurado o clave expirada | WP Mail SMTP → prueba; regenerar clave (§3.2.5, §3.4.4) |
+| Panel inaccesible / bloqueo de login | Wordfence bloqueó la IP o 2FA fallido | Wordfence → Live Traffic → desbloquear IP; verificar 2FA (§3.5) |
+| "Error al conectar a la base de datos" | Credenciales BD o caída del hosting | Verificar `wp-config.php` y el panel del hosting (§3.2.4) |
+| Sitio lento | Caché o imágenes pesadas | Purgar caché, optimizar imágenes, revisar recursos del hosting |
+| Pantalla en blanco (WSOD) | Conflicto de plugin/tema tras actualizar | Desactivar plugin via FTP (renombrar carpeta en `wp-content/plugins`) o phpMyAdmin; revertir actualización |
+| Enlaces rotos tras restaurar un backup | URLs antiguas en la BD | Search-replace de URLs (herramienta del hosting o WP CLI) |
+| Credenciales olvidadas | — | Seguir §3.4 (restablecimiento) |
+| Alerta de seguridad de Wordfence | Escaneo detectó archivo sospechoso | Revisar el hallazgo; en sospecha real: aislar, restaurar desde backup limpio y **rotar todas las credenciales** (§3.4.4) |
 
 ---
 
 ## 12. RIESGOS TÉCNICOS Y CONTINGENCIAS
 
-| ID | Riesgo | Mitigación | Contingencia |
-|----|--------|------------|--------------|
-| T01 | Incompatibilidad de plugins | Staging, plugins con soporte | Desactivar/reeemplazar plugin |
-| T02 | Vulnerabilidades de seguridad | Wordfence, updates, backups | Restaurar backup limpio |
-| T03 | Rendimiento | Mínimo de plugins, caché, CDN | Desactivar plugins no esenciales |
-| T04 | Fallos de migración | Prueba previa, backup | Re-migrar, search-replace |
-| T05 | PHP incompatible | Verificar requisitos | Actualizar PHP en hosting |
-| T06 | Conflictos de tema | Tema hijo + staging | Revertir actualización |
-| T07 | Fallos de correos | SMTP real, pruebas | Cambiar proveedor SMTP |
-| T08 | Caída del hosting | Monitoreo, caché | Escalar plan / VPS |
-| T10 | Pérdida de datos | Backups diarios | Restaurar último backup |
-| T11 | Hackeo | Hardening, 2FA, monitoreo | Restaurar + limpiar + rotar credenciales |
+| ID | Riesgo | Mitigación en producción | Contingencia |
+|----|--------|--------------------------|--------------|
+| T01 | Incompatibilidad de plugins | Pruebas en staging antes de actualizar | Desactivar/reemplazar el plugin afectado |
+| T02 | Vulnerabilidades de seguridad | Wordfence, updates, 2FA, backups | Restaurar backup limpio + rotar credenciales |
+| T03 | Rendimiento | Mínimo de plugins, caché, imágenes optimizadas | Desactivar plugins no esenciales, purgar caché |
+| T04 | Fallos de migración/restauración | Backup previo, prueba en staging | Re-migrar y search-replace de URLs |
+| T05 | PHP incompatible | Verificación de requisitos del hosting | Actualizar PHP del hosting (sin costo) |
+| T06 | Conflictos de tema | Tema hijo + staging | Revertir actualización del tema |
+| T07 | Fallos de correos automáticos | SMTP dedicado y prueba mensual | Cambiar proveedor SMTP o regenerar clave |
+| T08 | Caída del hosting | Monitoreo, caché | Escalar plan / VPS (costo a cargo del albergue) |
+| T10 | Pérdida de datos | Backups diarios cifrados + retención 30 | Restaurar último backup (§11.3) |
+| T11 | Hackeo / robo de credenciales | Hardening, 2FA, rotación de contraseñas | Restaurar backup limpio, limpiar, **rotar todas las contraseñas** (§3.4.4) y notificar |
 
-> **[Insertar]** Mapa completo de riesgos. Fuente: `docs/TDR_Gestion_Riesgos_Peluchin.md`.
+> Contra el riesgo T11 (el más crítico en el mantenimiento), la respuesta contempla como primer paso la **rotación inmediata y total de credenciales** descrita en el capítulo 3.
 
 ---
 
@@ -778,34 +860,32 @@ Exportación a Excel de perritos, adopciones y donaciones por mes.
 | Red Enlace | Pasarela de pago boliviana (condicional) |
 | OWASP Top 10 | Lista de riesgos de seguridad web más comunes |
 | Uptime | Disponibilidad del servicio |
-| Scrum | Marco ágil de gestión basado en sprints, ceremonias y artefactos |
-| Kanban | Método de gestión visual del flujo de trabajo mediante un tablero |
-| ScrumBan | Metodología híbrida que combina Scrum y Kanban |
-| Sprint | Iteración de trabajo con duración fija (2 semanas en este proyecto) |
-| Product Backlog | Lista priorizada de funcionalidades del producto |
-| Sprint Backlog | Tareas comprometidas para el sprint en curso |
-| WIP | Work In Progress: límite de trabajo en curso por columna |
-| Daily Stand-up | Reunión diaria breve de sincronización del equipo |
-| Sprint Review (Demo) | Reunión de fin de sprint para presentar el incremento |
-| Retrospectiva | Reunión de mejora continua del proceso |
-| Definition of Done (DoD) | Criterios que una tarea debe cumplir para considerarse terminada |
-| Burndown | Gráfico del avance del trabajo durante el sprint |
-| Product Owner | Responsable de priorizar el backlog y aceptar entregas |
+| 2FA | Autenticación de doble factor |
+| Bóveda de credenciales | Almacén seguro y controlado de todas las contraseñas del sistema |
+| Rotación de credenciales | Cambio planificado de una contraseña para reducir exposición |
+| Hardening | Endurecimiento de la configuración para reducir vulnerabilidades |
+| WSOD | Pantalla en blanco (White Screen of Death) |
+| Backup | Copia de respaldo de la BD y archivos del sitio |
+| Scrum Master | Rol que facilita el proceso ágil, elimina impedimentos y coordina al equipo; en este proyecto lo ejerce Santiago Acha |
+| Product Owner (PO) | Responsable del albergue que prioriza los cambios y autoriza el mantenimiento |
 
 ---
 
 ## 14. ANEXOS
 
-- **Anexo A:** Diagrama de arquitectura y despliegue (UML §8, WAE §4).
-- **Anexo B:** Mapas de navegación (WAE §2, §3).
-- **Anexo C:** Diagrama de clases y modelo de datos (UML §3).
-- **Anexo D:** Diagramas de secuencia y estados (UML §4–§7).
-- **Anexo E:** Tablero Kanban y plantillas de ceremonias Scrum.
-- **Anexo F:** Registro de riesgos técnicos completo (Gestión de Riesgos §4.1).
-- **Anexo G:** Checklist de pruebas post-despliegue.
+- **Anexo A:** Diagrama de arquitectura y despliegue (§4.1).
+- **Anexo B:** Mapas de navegación (§4.3, §4.4).
+- **Anexo C:** Diagrama de clases y modelo de datos (§6).
+- **Anexo D:** Diagramas de secuencia y estados (§6.4, §7).
+- **Anexo E:** Plantilla de restablecimiento de contraseñas (capítulo 3).
+- **Anexo F:** Hoja de rotación de credenciales (capítulo 3) — uso mensual/trimestral.
+- **Anexo G:** Checklist de mantenimiento mensual (§11.1).
+- **Anexo H:** Proformas de infraestructura y dominio (`docs/proformas/`) — dominio `.bo`/`.com` y hosting (GoDaddy / servidores de la consultora).
 
 ---
 
 ### CIERRE
 
-Este manual es un documento vivo: se actualizará ante cambios de alcance aprobados por adenda, según lo establecido en el contrato (`docs/TDR_Contrato_Peluchin.md`) y en el cierre del documento UML. Cualquier modificación de la configuración, del modelo de datos o de los procedimientos de operación debe quedar registrada en la bitácora del sprint correspondiente.
+Este manual refleja el estado **final del sistema en producción** (entregables E1–E10 aprobados). Se actualizará únicamente ante cambios de alcance aprobados por adenda o ante modificaciones de configuración, modelo de datos o procedimientos de operación, que deberán quedar registrados en la bitácora técnica correspondiente.
+
+**Custodia y confidencialidad:** este documento contiene información sensible sobre la operación del sistema. Debe resguardarse por el responsable del albergue y entregarse únicamente al personal autorizado, en cumplimiento de la cláusula de confidencialidad del contrato (mínimo 2 años tras el cierre).
